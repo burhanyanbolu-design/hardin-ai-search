@@ -9,12 +9,18 @@ from flask_cors import CORS
 import json
 import os
 from datetime import datetime
-from github_knowledge_extractor import GitHubKnowledgeExtractor
 import hashlib
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
-extractor = GitHubKnowledgeExtractor()
+
+# Try to import extractor, but don't fail if it's not available
+try:
+    from github_knowledge_extractor import GitHubKnowledgeExtractor
+    extractor = GitHubKnowledgeExtractor()
+except ImportError:
+    extractor = None
+    print("Warning: github_knowledge_extractor not available")
 
 # Data directory (will be committed to GitHub)
 DATA_DIR = "data"
@@ -22,10 +28,11 @@ TOOLS_DIR = f"{DATA_DIR}/tools"
 CONTRIBUTIONS_DIR = f"{DATA_DIR}/contributions"
 AGENTS_DIR = f"{DATA_DIR}/agents"
 
-# Create directories if they don't exist
-os.makedirs(TOOLS_DIR, exist_ok=True)
-os.makedirs(CONTRIBUTIONS_DIR, exist_ok=True)
-os.makedirs(AGENTS_DIR, exist_ok=True)
+# Don't create directories on Vercel (read-only filesystem)
+# Directories should already exist in the repository
+# os.makedirs(TOOLS_DIR, exist_ok=True)
+# os.makedirs(CONTRIBUTIONS_DIR, exist_ok=True)
+# os.makedirs(AGENTS_DIR, exist_ok=True)
 
 
 def generate_agent_id(agent_name: str) -> str:
@@ -100,6 +107,9 @@ def contribute_discover():
     
     # Extract knowledge from GitHub
     try:
+        if extractor is None:
+            return jsonify({"error": "GitHub extractor not available in serverless environment"}), 503
+            
         profile = extractor.extract_repo_knowledge(data['github_url'])
         
         if 'error' in profile:
