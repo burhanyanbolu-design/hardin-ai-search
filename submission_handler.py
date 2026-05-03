@@ -92,18 +92,55 @@ def submit_tool():
             if 'error' in profile:
                 return jsonify({"error": profile['error']}), 400
         else:
-            # Create basic profile for non-GitHub URLs
+            # Scrape website for real information
             from urllib.parse import urlparse
+            import requests
+            from bs4 import BeautifulSoup
+            
             parsed = urlparse(submitted_url)
             domain = parsed.netloc.replace('www.', '')
             tool_name = domain.split('.')[0].title()
+            
+            # Try to scrape the website for real information
+            try:
+                print(f"🌐 Scraping website: {submitted_url}")
+                response = requests.get(submitted_url, timeout=10, headers={
+                    'User-Agent': 'Mozilla/5.0 (compatible; HardinBot/1.0)'
+                })
+                soup = BeautifulSoup(response.content, 'html.parser')
+                
+                # Extract title
+                title = soup.find('title')
+                if title:
+                    tool_name = title.get_text().strip()
+                
+                # Extract meta description
+                meta_desc = soup.find('meta', attrs={'name': 'description'})
+                if not meta_desc:
+                    meta_desc = soup.find('meta', attrs={'property': 'og:description'})
+                
+                description = meta_desc.get('content').strip() if meta_desc else f"AI tool hosted at {domain}"
+                
+                # Extract tagline from h1 or first paragraph
+                tagline = description
+                h1 = soup.find('h1')
+                if h1:
+                    tagline = h1.get_text().strip()
+                
+                print(f"✅ Scraped: {tool_name}")
+                print(f"📝 Description: {description[:100]}...")
+                
+            except Exception as scrape_error:
+                print(f"⚠️  Scraping failed: {scrape_error}")
+                description = f"AI tool hosted at {domain}"
+                tagline = f"Community-submitted AI tool"
             
             profile = {
                 "name": tool_name,
                 "url": submitted_url,
                 "github_url": submitted_url,
-                "description": f"AI tool hosted at {domain}",
-                "tagline": f"Community-submitted AI tool",
+                "description": description,
+                "tagline": tagline,
                 "category": "ai_tool",
                 "topics": ["ai", "community-submitted"],
                 "language": "Unknown",
