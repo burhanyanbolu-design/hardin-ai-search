@@ -1,0 +1,118 @@
+{
+  "name": "TradingAgents",
+  "full_name": "TauricResearch/TradingAgents",
+  "tagline": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+  "category": "llm_framework",
+  "description": "<p align=\"center\">   <img src=\"assets/TauricResearch.png\" style=\"width: 60%; height: auto;\"> </p>  <div align=\"center\" style=\"line-height: 1;\">   <a href=\"https://arxiv.org/abs/2412.20138\" target=\"_blank\"><img alt=\"arXiv\" src=\"https://img.shields.io/badge/arXiv-2412.20138-B31B1B?logo=arxiv\"/></a>   <a href=\"https://discord.com/invite/hk9PGKShPK\" target=\"_blank\"><img alt=\"Discord\" src=\"https://img.shields.io/badge/Discord-TradingResearch-7289da?logo=discord&logoColor=white&color=7289da\"/></a> ...",
+  "features": [],
+  "use_cases": [],
+  "language": "Python",
+  "license": "Apache License 2.0",
+  "installation": [
+    "."
+  ],
+  "requirements": {
+    "python_version": null,
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [
+      "."
+    ],
+    "javascript": [],
+    "other": []
+  },
+  "stars": 61990,
+  "forks": 11974,
+  "contributors": 19,
+  "last_updated": "2026-05-02T19:25:11Z",
+  "has_tests": true,
+  "has_docs": false,
+  "has_ci": false,
+  "github_url": "https://github.com/TauricResearch/TradingAgents",
+  "homepage": "https://arxiv.org/pdf/2412.20138",
+  "documentation_links": [],
+  "demo_links": [
+    "https://www.youtube.com/watch?v=90gr5lwjIho"
+  ],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "bash",
+      "code": "git clone https://github.com/TauricResearch/TradingAgents.git\ncd TradingAgents"
+    },
+    {
+      "language": "bash",
+      "code": "conda create -n tradingagents python=3.13\nconda activate tradingagents"
+    },
+    {
+      "language": "bash",
+      "code": "pip install ."
+    },
+    {
+      "language": "bash",
+      "code": "cp .env.example .env  # add your API keys\ndocker compose run --rm tradingagents"
+    },
+    {
+      "language": "bash",
+      "code": "docker compose --profile ollama run --rm tradingagents-ollama"
+    },
+    {
+      "language": "bash",
+      "code": "export OPENAI_API_KEY=...          # OpenAI (GPT)\nexport GOOGLE_API_KEY=...          # Google (Gemini)\nexport ANTHROPIC_API_KEY=...       # Anthropic (Claude)\nexport XAI_API_KEY=...             # xAI (Grok)\nexport DEEPSEEK_API_KEY=...        # DeepSeek\nexport DASHSCOPE_API_KEY=...       # Qwen (Alibaba DashScope)\nexport ZHIPU_API_KEY=...           # GLM (Zhipu)\nexport OPENROUTER_API_KEY=...      # OpenRouter\nexport ALPHA_VANTAGE_API_KEY=...   # Alpha Vantage"
+    },
+    {
+      "language": "bash",
+      "code": "cp .env.example .env"
+    },
+    {
+      "language": "bash",
+      "code": "tradingagents          # installed command\npython -m cli.main     # alternative: run directly from source"
+    },
+    {
+      "language": "python",
+      "code": "from tradingagents.graph.trading_graph import TradingAgentsGraph\nfrom tradingagents.default_config import DEFAULT_CONFIG\n\nta = TradingAgentsGraph(debug=True, config=DEFAULT_CONFIG.copy())\n\n# forward propagate\n_, decision = ta.propagate(\"NVDA\", \"2026-01-15\")\nprint(decision)"
+    },
+    {
+      "language": "python",
+      "code": "from tradingagents.graph.trading_graph import TradingAgentsGraph\nfrom tradingagents.default_config import DEFAULT_CONFIG\n\nconfig = DEFAULT_CONFIG.copy()\nconfig[\"llm_provider\"] = \"openai\"        # openai, google, anthropic, xai, deepseek, qwen, glm, openrouter, ollama, azure\nconfig[\"deep_think_llm\"] = \"gpt-5.4\"     # Model for complex reasoning\nconfig[\"quick_think_llm\"] = \"gpt-5.4-mini\" # Model for quick tasks\nconfig[\"max_debate_rounds\"] = 2\n\nta = TradingAgentsGraph(debug=True, config=config)\n_, "
+    },
+    {
+      "language": "bash",
+      "code": "tradingagents analyze --checkpoint           # enable for this run\ntradingagents analyze --clear-checkpoints    # reset before running"
+    },
+    {
+      "language": "python",
+      "code": "config = DEFAULT_CONFIG.copy()\nconfig[\"checkpoint_enabled\"] = True\nta = TradingAgentsGraph(config=config)\n_, decision = ta.propagate(\"NVDA\", \"2026-01-15\")"
+    },
+    {
+      "language": "unknown",
+      "code": "@misc{xiao2025tradingagentsmultiagentsllmfinancial,\n      title={TradingAgents: Multi-Agents LLM Financial Trading Framework}, \n      author={Yijia Xiao and Edward Sun and Di Luo and Wei Wang},\n      year={2025},\n      eprint={2412.20138},\n      archivePrefix={arXiv},\n      primaryClass={q-fin.TR},\n      url={https://arxiv.org/abs/2412.20138}, \n}"
+    }
+  ],
+  "topics": [
+    "agent",
+    "finance",
+    "llm",
+    "multiagent",
+    "trading"
+  ],
+  "created_at": "2024-12-28T03:31:08Z",
+  "extracted_at": "2026-05-02T20:25:58.444529",
+  "keywords": [
+    "tradingagents",
+    "multiagent",
+    "python",
+    "multi",
+    "agent",
+    "trading",
+    "agents",
+    "finance",
+    "financial",
+    "framework",
+    "llm"
+  ],
+  "search_text": "tradingagents tradingagents: multi-agents llm financial trading framework agent finance llm multiagent trading  <p align=\"center\">\n  <img src=\"assets/tauricresearch.png\" style=\"width: 60%; height: auto;\">\n</p>\n\n<div align=\"center\" style=\"line-height: 1;\">\n  <a href=\"https://arxiv.org/abs/2412.20138\" target=\"_blank\"><img alt=\"arxiv\" src=\"https://img.shields.io/badge/arxiv-2412.20138-b31b1b?logo=arxiv\"/></a>\n  <a href=\"https://discord.com/invite/hk9pgkshpk\" target=\"_blank\"><img alt=\"discord\" src=\"https://img.shields.io/badge/discord-tradingresearch-7289da?logo=discord&logocolor=white&color=7289da\"/></a>\n  <a href=\"./assets/wechat.png\" target=\"_blank\"><img alt=\"wechat\" src=\"https://img.shields.io/badge/wechat-tauricresearch-brightgreen?logo=wechat&logocolor=white\"/></a>\n  <a href=\"https://x.com/tauricresearch\" target=\"_blank\"><img alt=\"x follow\" src=\"https://img.shields.io/badge/x-tauricresearch-white?logo=x&logocolor=white\"/></a>\n  <br>\n  <a href=\"https://github.com/tauricresearch/\" target=\"_blank\"><img alt=\"community\" src=\"https://img.shields.io/badge/join_github_community-tauricresearch-14c290?logo=discourse\"/></a>\n</div>\n\n<div align=\"center\">\n  <!-- keep these links. translations will automatically update with the readme. -->\n  <a href=\"https://www.readme-i18n.com/tauricresearch/tradingagents?lang=de\">deutsch</a> | \n  <a href=\"https://www.readme-i18n.com/tauricresearch/tradingagents?lang=es\">español</a> | \n  <a href=\"https://www.readme-i18n.com/tauricresearch/tradingagents?lang=fr\">français</a> | \n  <a href=\"https://www.readme-i18n.com/tauricresearch/tradingagents?lang=ja\">日本語</a> | \n  <a href=\"https://www.readme-i18n.com/tauricresearch/tradingagents?lang=ko\">한국어</a> | \n  <a href=\"https://www.readme-i18n.com/tauricresearch/tradingagents?lang=pt\">português</a> | \n  <a href=\"https://www.readme-i18n.com/tauricresearch/tradingagents?lang=ru\">русский</a> | \n  <a href=\"https://www.readme-i18n.com/tauricresearch/tradingagents?lang=zh\">中文</a>\n</div>\n\n---"
+}

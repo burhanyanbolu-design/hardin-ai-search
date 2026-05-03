@@ -1,0 +1,71 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "<div align=\"center\"> <img src=\"https://raw.githubusercontent.com/karfly/chatgpt_telegram_bot/main/static/header.png\" align=\"center\" style=\"width: 100%\" /> </div>  <br>  <p align=\"center\"> <a href=\"https://t.me/chatgpt_karfly_bot?start=source=github\" alt=\"Run Telegram Bot shield\"><img src=\"https://img.shields.io/badge/RUN-Telegram%20Bot-blue?logo=data:image/svg+xml;base64,PHN2ZyBpZD0iTGl2ZWxsb18xIiBkYXRhLW5hbWU9IkxpdmVsbG8gMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR...",
+  "features": [
+    "Low latency replies (it usually takes about 3-5 seconds)",
+    "No request limits",
+    "Message streaming (watch demo)",
+    "GPT-4 and GPT-4 Turbo support",
+    "GPT-4 Vision support",
+    "Group Chat support (/help_group_chat to get instructions)",
+    "DALLE 2 (choose 👩‍🎨 Artist mode to generate images)",
+    "Voice message recognition",
+    "Code highlighting",
+    "15 special chat modes: 👩🏼‍🎓 Assistant, 👩🏼‍💻 Code Assistant, 👩‍🎨 Artist, 🧠 Psychologist, 🚀 Elon Musk and other. You can easily create your own chat modes by editing `config/chat_modes.yml`",
+    "Support of [ChatGPT API](https://platform.openai.com/docs/guides/chat/introduction)",
+    "List of allowed Telegram users",
+    "Track $ balance spent on OpenAI API"
+  ],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [],
+  "requirements": {
+    "python_version": null,
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [
+      "python-telegram-bot[rate-limiter]",
+      "openai",
+      "tiktoken",
+      "PyYAML",
+      "pymongo",
+      "python-dotenv"
+    ],
+    "javascript": [],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [],
+  "demo_links": [],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "bash",
+      "code": "mv config/config.example.yml config/config.yml\n    mv config/config.example.env config/config.env"
+    },
+    {
+      "language": "bash",
+      "code": "docker-compose --env-file config/config.env up --build"
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:27:08.106200",
+  "keywords": [],
+  "search_text": "   low latency replies (it usually takes about 3-5 seconds) no request limits message streaming (watch demo) gpt-4 and gpt-4 turbo support gpt-4 vision support group chat support (/help_group_chat to get instructions) dalle 2 (choose 👩‍🎨 artist mode to generate images) voice message recognition code highlighting 15 special chat modes: 👩🏼‍🎓 assistant, 👩🏼‍💻 code assistant, 👩‍🎨 artist, 🧠 psychologist, 🚀 elon musk and other. you can easily create your own chat modes by editing `config/chat_modes.yml` support of [chatgpt api](https://platform.openai.com/docs/guides/chat/introduction) list of allowed telegram users track $ balance spent on openai api "
+}

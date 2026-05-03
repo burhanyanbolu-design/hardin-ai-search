@@ -1,0 +1,200 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "[Readme in English](README_en.md)  <div align=\"center\"> <img src=resources/logo.svg width=\"20%\"/> </div> <p align=\"center\">     👋 加入我们的 <a href=\"resources/WECHAT.md\" target=\"_blank\">微信</a> 社区 </p> <p align=\"center\">     👋 关注智谱 AI 输入法 <a href=\"https://x.com/Autotyper_Agent?s=20\" target=\"_blank\">X</a> 账号 </p> <p align=\"center\">     🎤 进一步在我们的产品 <a href=\"https://autoglm.zhipuai.cn/autotyper/\" target=\"_blank\">智谱 AI 输入法</a> 体验“用嘴发指令” </p> <p align=\"center\">     <a href=\"https://mp.weixin.qq.com/s/w...",
+  "features": [],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [
+    "-r",
+    "vllm",
+    "nvidia-cudnn-cu12==9.16.0.29",
+    "-e",
+    "-U"
+  ],
+  "requirements": {
+    "python_version": "3.10",
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [
+      "Pillow",
+      "openai",
+      "requests"
+    ],
+    "javascript": [],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [],
+  "demo_links": [],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "unknown",
+      "code": "访问文档，为我安装 AutoGLM\nhttps://raw.githubusercontent.com/zai-org/Open-AutoGLM/refs/heads/main/README.md"
+    },
+    {
+      "language": "bash",
+      "code": "# 假设解压后的目录为 ~/Downloads/platform-tools。如果不是请自行调整命令。\n  export PATH=${PATH}:~/Downloads/platform-tools"
+    },
+    {
+      "language": "bash",
+      "code": "# 假设解压后的目录为 ~/Downloads/harmonyos-sdk/toolchains。请根据实际路径调整。\n  export PATH=${PATH}:~/Downloads/harmonyos-sdk/toolchains"
+    },
+    {
+      "language": "bash",
+      "code": "pip install -r requirements.txt \npip install -e ."
+    },
+    {
+      "language": "bash",
+      "code": "# 检查已连接的设备\nadb devices\n\n# 输出结果应显示你的设备，如：\n# List of devices attached\n# emulator-5554   device"
+    },
+    {
+      "language": "bash",
+      "code": "# 检查已连接的设备\nhdc list targets\n\n# 输出结果应显示你的设备，如：\n# 7001005458323933328a01bce01c2500"
+    },
+    {
+      "language": "bash",
+      "code": "# 使用智谱 BigModel\npython main.py --base-url https://open.bigmodel.cn/api/paas/v4 --model \"autoglm-phone\" --apikey \"your-bigmodel-api-key\" \"打开美团搜索附近的火锅店\"\n\n# 使用 ModelScope\npython main.py --base-url https://api-inference.modelscope.cn/v1 --model \"ZhipuAI/AutoGLM-Phone-9B\" --apikey \"your-modelscope-api-key\" \"打开美团搜索附近的火锅店\""
+    },
+    {
+      "language": "shell",
+      "code": "> docker pull lmsysorg/sglang:v0.5.6.post1\n>"
+    },
+    {
+      "language": "unknown",
+      "code": "> pip install nvidia-cudnn-cu12==9.16.0.29\n>"
+    },
+    {
+      "language": "shell",
+      "code": "> docker pull vllm/vllm-openai:v0.12.0\n>"
+    },
+    {
+      "language": "unknown",
+      "code": "> pip install -U transformers --pre\n>"
+    },
+    {
+      "language": "shell",
+      "code": "python3 -m vllm.entrypoints.openai.api_server \\\n --served-model-name autoglm-phone-9b \\\n --allowed-local-media-path /   \\\n --mm-encoder-tp-mode data \\\n --mm_processor_cache_type shm \\\n --mm_processor_kwargs \"{\\\"max_pixels\\\":5000000}\" \\\n --max-model-len 25480  \\\n --chat-template-content-format string \\\n --limit-mm-per-prompt \"{\\\"image\\\":10}\" \\\n --model zai-org/AutoGLM-Phone-9B \\\n --port 8000"
+    },
+    {
+      "language": "shell",
+      "code": "python3 -m sglang.launch_server --model-path  zai-org/AutoGLM-Phone-9B \\\n        --served-model-name autoglm-phone-9b  \\\n        --context-length 25480  \\\n        --mm-enable-dp-encoder   \\\n        --mm-process-config '{\"image\":{\"max_pixels\":5000000}}'  \\\n        --port 8000"
+    },
+    {
+      "language": "bash",
+      "code": "python scripts/check_deployment_cn.py --base-url http://你的IP:你的端口/v1 --model 模型名称"
+    },
+    {
+      "language": "unknown",
+      "code": "<think>用户想要比较这个洗发水在京东和淘宝上的价格，然后选择最便宜的平台下单。当前在小红书app上，显示的是一个关于LUMMI MOOD洗发水的帖子。\n\n我需要：\n1. 先启动京东app，搜索这个洗发水\n2. 查看京东的价格\n3. 再启动淘宝app，搜索这个洗发水\n4. 查看淘宝的价格\n5. 比较价格后，选择最便宜的京东或淘宝下单\n\n首先，我需要从当前的小红书界面退出，然后启动京东app。</think>\n<answer>do(action=\"Launch\", app=\"京东\")"
+    },
+    {
+      "language": "bash",
+      "code": "# Android 设备 - 交互模式\npython main.py --base-url http://localhost:8000/v1 --model \"autoglm-phone-9b\"\n\n# Android 设备 - 指定任务\npython main.py --base-url http://localhost:8000/v1 \"打开美团搜索附近的火锅店\"\n\n# 鸿蒙设备 - 交互模式\npython main.py --device-type hdc --base-url http://localhost:8000/v1 --model \"autoglm-phone-9b\"\n\n# 鸿蒙设备 - 指定任务\npython main.py --device-type hdc --base-url http://localhost:8000/v1 \"打开美团搜索附近的火锅店\"\n\n# 使用 API Key 进行认证\npython main.py --apikey sk-xxxxx\n\n# 使用英文 system prompt\npython main.py --lang en --base"
+    },
+    {
+      "language": "python",
+      "code": "from phone_agent import PhoneAgent\nfrom phone_agent.model import ModelConfig\n\n# Configure model\nmodel_config = ModelConfig(\n    base_url=\"http://localhost:8000/v1\",\n    model_name=\"autoglm-phone-9b\",\n)\n\n# 创建 Agent\nagent = PhoneAgent(model_config=model_config)\n\n# 执行任务\nresult = agent.run(\"打开淘宝搜索无线耳机\")\nprint(result)"
+    },
+    {
+      "language": "bash",
+      "code": "# Android 设备 - 通过 WiFi 连接, 改成手机显示的 IP 地址和端口\nadb connect 192.168.1.100:5555\n\n# 验证连接\nadb devices\n# 应显示：192.168.1.100:5555    device\n\n# 鸿蒙设备 - 通过 WiFi 连接\nhdc tconn 192.168.1.100:5555\n\n# 验证连接\nhdc list targets\n# 应显示：192.168.1.100:5555"
+    },
+    {
+      "language": "bash",
+      "code": "# 列出所有已连接设备\nadb devices\n\n# 连接远程设备\nadb connect 192.168.1.100:5555\n\n# 断开指定设备\nadb disconnect 192.168.1.100:5555\n\n# 指定设备执行任务\npython main.py --device-id 192.168.1.100:5555 --base-url http://localhost:8000/v1 --model \"autoglm-phone-9b\" \"打开抖音刷视频\""
+    },
+    {
+      "language": "bash",
+      "code": "# 列出所有已连接设备\nhdc list targets\n\n# 连接远程设备\nhdc tconn 192.168.1.100:5555\n\n# 断开指定设备\nhdc tdisconn 192.168.1.100:5555\n\n# 指定设备执行任务\npython main.py --device-type hdc --device-id 192.168.1.100:5555 --base-url http://localhost:8000/v1 --model \"autoglm-phone-9b\" \"打开抖音刷视频\""
+    },
+    {
+      "language": "python",
+      "code": "from phone_agent.adb import ADBConnection, list_devices\n\n# 创建连接管理器\nconn = ADBConnection()\n\n# 连接远程设备\nsuccess, message = conn.connect(\"192.168.1.100:5555\")\nprint(f\"连接状态: {message}\")\n\n# 列出已连接设备\ndevices = list_devices()\nfor device in devices:\n    print(f\"{device.device_id} - {device.connection_type.value}\")\n\n# 在 USB 设备上启用 TCP/IP\nsuccess, message = conn.enable_tcpip(5555)\nip = conn.get_device_ip()\nprint(f\"设备 IP: {ip}\")\n\n# 断开连接\nconn.disconnect(\"192.168.1.100:5555\")"
+    },
+    {
+      "language": "python",
+      "code": "from phone_agent.hdc import HDCConnection, list_devices\n\n# 创建连接管理器\nconn = HDCConnection()\n\n# 连接远程设备\nsuccess, message = conn.connect(\"192.168.1.100:5555\")\nprint(f\"连接状态: {message}\")\n\n# 列出已连接设备\ndevices = list_devices()\nfor device in devices:\n    print(f\"{device.device_id} - {device.connection_type.value}\")\n\n# 断开连接\nconn.disconnect(\"192.168.1.100:5555\")"
+    },
+    {
+      "language": "python",
+      "code": "from phone_agent.model import ModelConfig\n\nconfig = ModelConfig(\n    base_url=\"http://localhost:8000/v1\",\n    api_key=\"EMPTY\",  # API 密钥(如需要)\n    model_name=\"autoglm-phone-9b\",  # 模型名称\n    max_tokens=3000,  # 最大输出 token 数\n    temperature=0.1,  # 采样温度\n    frequency_penalty=0.2,  # 频率惩罚\n)"
+    },
+    {
+      "language": "python",
+      "code": "from phone_agent.agent import AgentConfig\n\nconfig = AgentConfig(\n    max_steps=100,  # 每个任务最大步数\n    device_id=None,  # ADB 设备 ID(None 为自动检测)\n    lang=\"cn\",  # 语言选择：cn(中文)或 en(英文)\n    verbose=True,  # 打印调试信息(包括思考过程和执行动作)\n)"
+    },
+    {
+      "language": "unknown",
+      "code": "==================================================\n💭 思考过程:\n--------------------------------------------------\n当前在系统桌面，需要先启动小红书应用\n--------------------------------------------------\n🎯 执行动作:\n{\n  \"_metadata\": \"do\",\n  \"action\": \"Launch\",\n  \"app\": \"小红书\"\n}\n==================================================\n\n... (执行动作后继续下一步)\n\n==================================================\n💭 思考过程:\n--------------------------------------------------\n小红书已打开，现在需要点击搜索框\n--------------------------------------------------\n🎯 "
+    },
+    {
+      "language": "python",
+      "code": "def my_confirmation(message: str) -> bool:\n    \"\"\"敏感操作确认回调\"\"\"\n    return input(f\"确认执行 {message}？(y/n): \").lower() == \"y\"\n\n\ndef my_takeover(message: str) -> None:\n    \"\"\"人工接管回调\"\"\"\n    print(f\"请手动完成: {message}\")\n    input(\"完成后按回车继续...\")\n\n\nagent = PhoneAgent(\n    confirmation_callback=my_confirmation,\n    takeover_callback=my_takeover,\n)"
+    },
+    {
+      "language": "bash",
+      "code": "pip install -e \".[dev]\""
+    },
+    {
+      "language": "bash",
+      "code": "pytest tests/"
+    },
+    {
+      "language": "unknown",
+      "code": "phone_agent/\n├── __init__.py          # 包导出\n├── agent.py             # PhoneAgent 主类\n├── adb/                 # ADB 工具\n│   ├── connection.py    # 远程/本地连接管理\n│   ├── screenshot.py    # 屏幕截图\n│   ├── input.py         # 文本输入 (ADB Keyboard)\n│   └── device.py        # 设备控制 (点击、滑动等)\n├── actions/             # 操作处理\n│   └── handler.py       # 操作执行器\n├── config/              # 配置\n│   ├── apps.py          # 支持的应用映射\n│   ├── prompts_zh.py    # 中文系统提示词\n│   └── prompts_en.py    # 英文系统提示词\n└── model/              "
+    },
+    {
+      "language": "bash",
+      "code": "adb kill-server\nadb start-server\nadb devices"
+    },
+    {
+      "language": "bibtex",
+      "code": "@article{liu2024autoglm,\n  title={Autoglm: Autonomous foundation agents for guis},\n  author={Liu, Xiao and Qin, Bo and Liang, Dongzhu and Dong, Guang and Lai, Hanyu and Zhang, Hanchen and Zhao, Hanlin and Iong, Iat Long and Sun, Jiadai and Wang, Jiaqi and others},\n  journal={arXiv preprint arXiv:2411.00820},\n  year={2024}\n}\n@article{xu2025mobilerl,\n  title={MobileRL: Online Agentic Reinforcement Learning for Mobile GUI Agents},\n  author={Xu, Yifan and Liu, Xiao and Liu, Xinghan and Fu, Jiaqi and"
+    },
+    {
+      "language": "bash",
+      "code": "# 1. 安装 ADB 工具\n# MacOS:\nbrew install android-platform-tools\n# 或手动下载：https://developer.android.com/tools/releases/platform-tools\n\n# Windows: 下载后解压，添加到 PATH 环境变量\n\n# 2. 验证 ADB 安装\nadb version\n# 应输出版本信息\n\n# 3. 连接手机并验证\n# 用数据线连接手机，手机上点击「允许 USB 调试」\nadb devices\n# 应输出设备列表，如：\n# List of devices attached\n# XXXXXXXX    device"
+    },
+    {
+      "language": "bash",
+      "code": "# 1. 克隆仓库(如果还没有克隆)\ngit clone https://github.com/zai-org/Open-AutoGLM.git\ncd Open-AutoGLM\n\n# 2. 创建虚拟环境(推荐)\npython -m venv venv\nsource venv/bin/activate  # Windows: venv\\Scripts\\activate\n\n# 3. 安装依赖\npip install -r requirements.txt\npip install -e ."
+    },
+    {
+      "language": "bash",
+      "code": "# 使用智谱 BigModel\npython main.py --base-url https://open.bigmodel.cn/api/paas/v4 --model \"autoglm-phone\" --apikey \"your-bigmodel-api-key\" \"打开美团搜索附近的火锅店\"\n\n# 使用 ModelScope\npython main.py --base-url https://api-inference.modelscope.cn/v1 --model \"ZhipuAI/AutoGLM-Phone-9B\" --apikey \"your-modelscope-api-key\" \"打开美团搜索附近的火锅店\""
+    },
+    {
+      "language": "bash",
+      "code": "# 1. 安装 vLLM\npip install vllm\n\n# 2. 启动模型服务(会自动下载模型，约 20GB)\npython3 -m vllm.entrypoints.openai.api_server \\\n  --served-model-name autoglm-phone-9b \\\n  --allowed-local-media-path / \\\n  --mm-encoder-tp-mode data \\\n  --mm_processor_cache_type shm \\\n  --mm_processor_kwargs \"{\\\"max_pixels\\\":5000000}\" \\\n  --max-model-len 25480 \\\n  --chat-template-content-format string \\\n  --limit-mm-per-prompt \"{\\\"image\\\":10}\" \\\n  --model zai-org/AutoGLM-Phone-9B \\\n  --port 8000\n\n# 模型服务 URL 为：http://localhost:8000/v1"
+    },
+    {
+      "language": "bash",
+      "code": "# 在 Open-AutoGLM 目录下执行\n# 将 {MODEL_URL} 替换为实际的模型服务地址\n\npython main.py --base-url {MODEL_URL} --model \"autoglm-phone-9b\" \"打开微信，对文件传输助手发送消息：部署成功\""
+    },
+    {
+      "language": "bash",
+      "code": "# 检查 ADB 连接\nadb devices\n\n# 重启 ADB 服务\nadb kill-server && adb start-server\n\n# 安装依赖\npip install -r requirements.txt && pip install -e .\n\n# 运行 Agent(交互模式)\npython main.py --base-url {MODEL_URL} --model \"autoglm-phone-9b\"\n\n# 运行 Agent(单次任务)\npython main.py --base-url {MODEL_URL} --model \"autoglm-phone-9b\" \"你的任务描述\"\n\n# 查看支持的应用列表\npython main.py --list-apps"
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:28:17.980270",
+  "keywords": [],
+  "search_text": "    "
+}

@@ -1,0 +1,113 @@
+{
+  "name": "agent-zero",
+  "full_name": "agent0ai/agent-zero",
+  "tagline": "Agent Zero AI framework",
+  "category": "agent",
+  "description": "<div align=\"center\">  <img src=\"docs/res/a0-vector-graphics/horizontal_banner.svg\" alt=\"Agent Zero Banner\" width=\"100%\"/>",
+  "features": [],
+  "use_cases": [],
+  "language": "Python",
+  "license": "Other",
+  "installation": [],
+  "requirements": {
+    "python_version": null,
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [
+      "a2wsgi",
+      "ansio",
+      "docker",
+      "duckduckgo-search",
+      "faiss-cpu",
+      "fastmcp",
+      "fasta2a",
+      "flask[async]",
+      "flask-basicauth",
+      "flaredantic",
+      "GitPython",
+      "giturlparse",
+      "inputimeout",
+      "kokoro",
+      "simpleeval",
+      "langchain-core",
+      "langchain-community",
+      "langchain-unstructured",
+      "openai-whisper",
+      "lxml_html_clean"
+    ],
+    "javascript": [],
+    "other": []
+  },
+  "stars": 17486,
+  "forks": 3569,
+  "contributors": 30,
+  "last_updated": "2026-05-02T21:09:50Z",
+  "has_tests": true,
+  "has_docs": true,
+  "has_ci": true,
+  "github_url": "https://github.com/agent0ai/agent-zero",
+  "homepage": "https://agent-zero.ai",
+  "documentation_links": [
+    "https://img.shields.io/badge/Docs-Read%20the%20guides-1F6FEB?style=for-the-badge&logo=readthedocs&logoColor=white",
+    "#documentation",
+    "./docs/setup/installation.md",
+    "./docs/guides/a0-cli-connector.md",
+    "./docs/guides/projects.md",
+    "./docs/guides/usage.md",
+    "./docs/guides/contribution.md"
+  ],
+  "demo_links": [
+    "#try-these-first"
+  ],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "bash",
+      "code": "curl -fsSL https://bash.agent-zero.ai | bash"
+    },
+    {
+      "language": "powershell",
+      "code": "irm https://ps.agent-zero.ai | iex"
+    },
+    {
+      "language": "bash",
+      "code": "docker run -p 80:80 -v a0_usr:/a0/usr agent0ai/agent-zero"
+    },
+    {
+      "language": "bash",
+      "code": "curl -LsSf https://cli.agent-zero.ai/install.sh | sh"
+    },
+    {
+      "language": "powershell",
+      "code": "irm https://cli.agent-zero.ai/install.ps1 | iex"
+    },
+    {
+      "language": "bash",
+      "code": "a0"
+    }
+  ],
+  "topics": [
+    "agent",
+    "ai",
+    "assistant",
+    "autonomous",
+    "linux",
+    "zero"
+  ],
+  "created_at": "2024-06-10T09:10:45Z",
+  "extracted_at": "2026-05-02T22:46:38.302519",
+  "keywords": [
+    "autonomous",
+    "assistant",
+    "framework",
+    "ai",
+    "linux",
+    "zero",
+    "agent",
+    "python"
+  ],
+  "search_text": "agent-zero agent zero ai framework agent ai assistant autonomous linux zero  <div align=\"center\">\n\n<img src=\"docs/res/a0-vector-graphics/horizontal_banner.svg\" alt=\"agent zero banner\" width=\"100%\"/>"
+}

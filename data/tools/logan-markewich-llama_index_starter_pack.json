@@ -1,0 +1,48 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "This repository provides very basic flask, [Streamlit](https://llama-index.streamlit.app/), and docker examples for the [llama_index](https://github.com/run-llama/llama_index) package.  If you need to quickly create a POC to impress your boss, start here!  If you are having trouble with dependencies, I dump my entire env into `requirements_full.txt`, but otherwise, use the base `requirements.txt`.  The basic demo includes the classic \"Paul Graham Essay\" from the original llama_index repo. Som...",
+  "features": [],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [
+    "-r"
+  ],
+  "requirements": {
+    "python_version": "3.11",
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [],
+  "demo_links": [],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "unknown",
+      "code": "conda create --name llama_index python=3.11\npip install -r requirements.txt"
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:31:39.512068",
+  "keywords": [],
+  "search_text": "    "
+}

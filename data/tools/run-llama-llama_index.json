@@ -1,0 +1,120 @@
+{
+  "name": "llama_index",
+  "full_name": "run-llama/llama_index",
+  "tagline": "LlamaIndex is the leading document agent and OCR platform",
+  "category": "llm_framework",
+  "description": "[![PyPI - Downloads](https://img.shields.io/pypi/dm/llama-index)](https://pypi.org/project/llama-index/) [![Build](https://github.com/run-llama/llama_index/actions/workflows/build_package.yml/badge.svg)](https://github.com/run-llama/llama_index/actions/workflows/build_package.yml) [![GitHub contributors](https://img.shields.io/github/contributors/jerryjliu/llama_index)](https://github.com/jerryjliu/llama_index/graphs/contributors) [![Discord](https://img.shields.io/discord/1059199217496772688...",
+  "features": [],
+  "use_cases": [
+    "document_qa"
+  ],
+  "language": "Python",
+  "license": "MIT License",
+  "installation": [
+    "llama-index-core",
+    "llama-index-llms-openai",
+    "llama-index-llms-ollama",
+    "llama-index-embeddings-huggingface"
+  ],
+  "requirements": {
+    "python_version": "3.13",
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [],
+    "other": []
+  },
+  "stars": 49098,
+  "forks": 7341,
+  "contributors": 0,
+  "last_updated": "2026-05-02T18:32:22Z",
+  "has_tests": null,
+  "has_docs": true,
+  "has_ci": null,
+  "github_url": "https://github.com/run-llama/llama_index",
+  "homepage": "https://developers.llamaindex.ai",
+  "documentation_links": [
+    "https://developers.llamaindex.ai/python/cloud/llamaparse/?utm_medium=li_github&utm_source=github&utm_campaign=2026--",
+    "https://developers.llamaindex.ai/python/cloud/llamaextract/?utm_medium=li_github&utm_source=github&utm_campaign=2026--",
+    "https://developers.llamaindex.ai/python/cloud/llamacloud/?utm_medium=li_github&utm_source=github&utm_campaign=2026--",
+    "https://developers.llamaindex.ai/python/cloud/split/getting_started/?utm_medium=li_github&utm_source=github&utm_campaign=2026--",
+    "https://developers.llamaindex.ai/python/llamaagents/overview/?utm_medium=li_github&utm_source=github&utm_campaign=2026--",
+    "https://developers.llamaindex.ai/python/framework/?utm_medium=li_github&utm_source=github&utm_campaign=2026--",
+    "CONTRIBUTING.md"
+  ],
+  "demo_links": [],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "python",
+      "code": "# typical pattern\nfrom llama_index.core.xxx import ClassABC  # core submodule xxx\nfrom llama_index.xxx.yyy import (\n    SubclassABC,\n)  # integration yyy for submodule xxx\n\n# concrete example\nfrom llama_index.core.llms import LLM\nfrom llama_index.llms.openai import OpenAI"
+    },
+    {
+      "language": "sh",
+      "code": "# custom selection of integrations to work with core\npip install llama-index-core\npip install llama-index-llms-openai\npip install llama-index-llms-ollama\npip install llama-index-embeddings-huggingface"
+    },
+    {
+      "language": "python",
+      "code": "import os\n\nos.environ[\"OPENAI_API_KEY\"] = \"YOUR_OPENAI_API_KEY\"\n\nfrom llama_index.core import VectorStoreIndex, SimpleDirectoryReader\n\ndocuments = SimpleDirectoryReader(\"YOUR_DATA_DIRECTORY\").load_data()\nindex = VectorStoreIndex.from_documents(documents)"
+    },
+    {
+      "language": "python",
+      "code": "from llama_index.core import Settings, VectorStoreIndex, SimpleDirectoryReader\nfrom llama_index.embeddings.huggingface import HuggingFaceEmbedding\nfrom llama_index.llms.ollama import Ollama\nfrom transformers import AutoTokenizer\n\n# set the LLM\nSettings.llm = Ollama(\n    model=\"llama-3.1:latest\",\n    request_timeout=360.0,\n)\n\n# set tokenizer to match LLM\nSettings.tokenizer = AutoTokenizer.from_pretrained(\n    \"meta-llama/Llama-3.1-8B-Instruct\"\n)\n\n# set the embed model\nSettings.embed_model = Huggi"
+    },
+    {
+      "language": "python",
+      "code": "query_engine = index.as_query_engine()\nquery_engine.query(\"YOUR_QUESTION\")"
+    },
+    {
+      "language": "python",
+      "code": "index.storage_context.persist()"
+    },
+    {
+      "language": "python",
+      "code": "from llama_index.core import StorageContext, load_index_from_storage\n\n# rebuild storage context\nstorage_context = StorageContext.from_defaults(persist_dir=\"./storage\")\n# load index\nindex = load_index_from_storage(storage_context)"
+    },
+    {
+      "language": "bash",
+      "code": "#!/bin/bash\nSTATIC_DIR=\"venv/lib/python3.13/site-packages/llama_index/core/_static\"\nREPO=\"run-llama/llama_index\"\n\nfind \"$STATIC_DIR\" -type f | while read -r file; do\n    echo \"Verifying: $file\"\n    gh attestation verify \"$file\" -R \"$REPO\" || echo \"Failed to verify: $file\"\ndone"
+    },
+    {
+      "language": "unknown",
+      "code": "@software{Liu_LlamaIndex_2022,\nauthor = {Liu, Jerry},\ndoi = {10.5281/zenodo.1234},\nmonth = {11},\ntitle = {{LlamaIndex}},\nurl = {https://github.com/jerryjliu/llama_index},\nyear = {2022}\n}"
+    }
+  ],
+  "topics": [
+    "agents",
+    "application",
+    "data",
+    "fine-tuning",
+    "framework",
+    "llamaindex",
+    "llm",
+    "multi-agents",
+    "rag",
+    "vector-database"
+  ],
+  "created_at": "2022-11-02T04:24:54Z",
+  "extracted_at": "2026-05-02T20:26:03.229590",
+  "keywords": [
+    "vector-database",
+    "python",
+    "fine-tuning",
+    "agent",
+    "llamaindex",
+    "agents",
+    "framework",
+    "leading",
+    "rag",
+    "platform",
+    "llm",
+    "document",
+    "multi-agents",
+    "application",
+    "data"
+  ],
+  "search_text": "llama_index llamaindex is the leading document agent and ocr platform agents application data fine-tuning framework llamaindex llm multi-agents rag vector-database  "
+}

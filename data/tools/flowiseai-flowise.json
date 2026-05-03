@@ -1,0 +1,104 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "<!-- markdownlint-disable MD030 -->  <p align=\"center\"> <img src=\"https://github.com/FlowiseAI/Flowise/blob/main/images/flowise_white.svg#gh-light-mode-only\"> <img src=\"https://github.com/FlowiseAI/Flowise/blob/main/images/flowise_dark.svg#gh-dark-mode-only\"> </p>  <div align=\"center\">  [![Release Notes](https://img.shields.io/github/release/FlowiseAI/Flowise)](https://github.com/FlowiseAI/Flowise/releases) [![Discord](https://img.shields.io/discord/1087698854775881778?label=Discord&logo=disc...",
+  "features": [],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [
+    "-g"
+  ],
+  "requirements": {
+    "python_version": null,
+    "node_version": ".",
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [
+    "#-docker",
+    "#-documentation",
+    "CONTRIBUTING.md"
+  ],
+  "demo_links": [],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "bash",
+      "code": "npm install -g flowise"
+    },
+    {
+      "language": "bash",
+      "code": "npx flowise start"
+    },
+    {
+      "language": "bash",
+      "code": "docker build --no-cache -t flowise ."
+    },
+    {
+      "language": "bash",
+      "code": "docker run -d --name flowise -p 3000:3000 flowise"
+    },
+    {
+      "language": "bash",
+      "code": "docker stop flowise"
+    },
+    {
+      "language": "bash",
+      "code": "npm i -g pnpm"
+    },
+    {
+      "language": "bash",
+      "code": "git clone https://github.com/FlowiseAI/Flowise.git"
+    },
+    {
+      "language": "bash",
+      "code": "cd Flowise"
+    },
+    {
+      "language": "bash",
+      "code": "pnpm install"
+    },
+    {
+      "language": "bash",
+      "code": "pnpm build"
+    },
+    {
+      "language": "bash",
+      "code": "# macOS / Linux / Git Bash\n    export NODE_OPTIONS=\"--max-old-space-size=4096\"\n\n    # Windows PowerShell\n    $env:NODE_OPTIONS=\"--max-old-space-size=4096\"\n\n    # Windows CMD\n    set NODE_OPTIONS=--max-old-space-size=4096"
+    },
+    {
+      "language": "bash",
+      "code": "pnpm build"
+    },
+    {
+      "language": "bash",
+      "code": "pnpm start"
+    },
+    {
+      "language": "bash",
+      "code": "pnpm dev"
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:30:59.243944",
+  "keywords": [],
+  "search_text": "    <!-- markdownlint-disable md030 -->\n\n<p align=\"center\">\n<img src=\"https://github.com/flowiseai/flowise/blob/main/images/flowise_white.svg#gh-light-mode-only\">\n<img src=\"https://github.com/flowiseai/flowise/blob/main/images/flowise_dark.svg#gh-dark-mode-only\">\n</p>\n\n<div align=\"center\">\n\n[![release notes](https://img.shields.io/github/release/flowiseai/flowise)](https://github.com/flowiseai/flowise/releases)\n[![discord](https://img.shields.io/discord/1087698854775881778?label=discord&logo=discord)](https://discord.gg/jbahfsrvbw)\n[![twitter follow](https://img.shields.io/twitter/follow/flowiseai?style=social)](https://twitter.com/flowiseai)\n[![github star chart](https://img.shields.io/github/stars/flowiseai/flowise?style=social)](https://star-history.com/#flowiseai/flowise)\n[![github fork](https://img.shields.io/github/forks/flowiseai/flowise?style=social)](https://github.com/flowiseai/flowise/fork)\n\nenglish | [繁體中文](./i18n/readme-tw.md) | [简体中文](./i18n/readme-zh.md) | [日本語](./i18n/readme-ja.md) | [한국어](./i18n/readme-kr.md)\n\n</div>\n\n<h3>build ai agents, visually</h3>\n<a href=\"https://github.com/flowiseai/flowise\">\n<img width=\"100%\" src=\"https://github.com/flowiseai/flowise/blob/main/images/flowise_agentflow.gif?raw=true\"></a>"
+}

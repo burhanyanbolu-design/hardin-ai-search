@@ -1,0 +1,57 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "> [!CAUTION] > > ## Deprecation Notice > > **This project is deprecated and no longer maintained.** >  > For LlamaCloud/LlamaParse usage, check out our docs: https://developers.llamaindex.ai/python/cloud/ > > Thank you to everyone who contributed to and used LlamaIndex.TS.  <p align=\"center\">   <img height=\"100\" width=\"100\" alt=\"LlamaIndex logo\" src=\"https://ts.llamaindex.ai/square.svg\" /> </p> <h1 align=\"center\">LlamaIndex.TS (Deprecated)</h1> <h3 align=\"center\">   Data framework for your LL...",
+  "features": [],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [
+    "@llamaindex/openai",
+    "llamaindex"
+  ],
+  "requirements": {
+    "python_version": null,
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [
+    "CONTRIBUTING.md"
+  ],
+  "demo_links": [],
+  "usage_examples": [
+    "npm install llamaindex\npnpm install llamaindex\nyarn add llamaindex"
+  ],
+  "code_examples": [
+    {
+      "language": "shell",
+      "code": "npm install llamaindex\npnpm install llamaindex\nyarn add llamaindex"
+    },
+    {
+      "language": "shell",
+      "code": "npm install @llamaindex/openai\npnpm install @llamaindex/openai\nyarn add @llamaindex/openai"
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:31:33.123965",
+  "keywords": [],
+  "search_text": "    > [!caution]\n>\n> ## deprecation notice\n>\n> **this project is deprecated and no longer maintained.**\n> \n> for llamacloud/llamaparse usage, check out our docs: https://developers.llamaindex.ai/python/cloud/\n>\n> thank you to everyone who contributed to and used llamaindex.ts.\n\n<p align=\"center\">\n  <img height=\"100\" width=\"100\" alt=\"llamaindex logo\" src=\"https://ts.llamaindex.ai/square.svg\" />\n</p>\n<h1 align=\"center\">llamaindex.ts (deprecated)</h1>\n<h3 align=\"center\">\n  data framework for your llm application.\n</h3>\n\n[![npm version](https://img.shields.io/npm/v/llamaindex)](https://www.npmjs.com/package/llamaindex)\n[![npm license](https://img.shields.io/npm/l/llamaindex)](https://github.com/run-llama/llamaindexts/blob/main/license)\n[![npm downloads](https://img.shields.io/npm/dm/llamaindex)](https://www.npmjs.com/package/llamaindex)\n[![discord](https://img.shields.io/discord/1059199217496772688)](https://discord.com/invite/en6d2hq4ax)\n[![twitter](https://img.shields.io/twitter/follow/llama_index)](https://x.com/llama_index)\n\nuse your own data with large language models (llms, openai chatgpt and others) in js runtime environments with typescript support.\n\ndocumentation: https://ts.llamaindex.ai/\n\ntry examples online:\n\n[![open in stackblitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/run-llama/llamaindexts/tree/main/examples)"
+}

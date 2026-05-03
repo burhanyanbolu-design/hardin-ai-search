@@ -1,0 +1,7 @@
+# AI Tool Search Engine - Python Dependencies
+# All free and open source!
+
+Flask==3.0.0
+Flask-CORS==4.0.0
+requests==2.31.0
+schedule==1.2.0

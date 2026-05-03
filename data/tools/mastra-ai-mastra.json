@@ -1,0 +1,56 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "[![npm version](https://badge.fury.io/js/@mastra%2Fcore.svg)](https://www.npmjs.com/package/@mastra/core) [![CodeQl](https://github.com/mastra-ai/mastra/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/mastra-ai/mastra/actions/workflows/github-code-scanning/codeql) [![GitHub Repo stars](https://img.shields.io/github/stars/mastra-ai/mastra)](https://github.com/mastra-ai/mastra/stargazers) [![Discord](https://img.shields.io/discord/1309558646228779139?logo=discord&la...",
+  "features": [],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [],
+  "requirements": {
+    "python_version": null,
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [
+      "globby",
+      "node-forge",
+      "resolve-from",
+      "tokenx"
+    ],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [
+    "https://mastra.ai/docs/getting-started/installation",
+    "https://mastra.ai/docs",
+    "https://mastra.ai/docs/getting-started/build-with-ai",
+    "./DEVELOPMENT.md"
+  ],
+  "demo_links": [],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "shell",
+      "code": "npm create mastra@latest"
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:28:25.664306",
+  "keywords": [],
+  "search_text": "    "
+}

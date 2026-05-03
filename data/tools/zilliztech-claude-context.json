@@ -1,0 +1,153 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "![](assets/claude-context.png)  > 🆕 **Looking for persistent memory for Claude Code?** Check out [memsearch Claude Code plugin](https://github.com/zilliztech/memsearch#for-claude-code-users) — a markdown-first memory system that gives your AI agent long-term memory across sessions.",
+  "features": [],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [
+    "-g"
+  ],
+  "requirements": {
+    "python_version": null,
+    "node_version": ".",
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [
+    "https://img.shields.io/badge/Documentation-📚-orange.svg",
+    "https://docs.anthropic.com/en/docs/claude-code/mcp",
+    "https://cursor.com/docs/context/mcp",
+    "docs/getting-started/environment-variables.md",
+    "docs/troubleshooting/faq.md",
+    "docs/troubleshooting/troubleshooting-guide.md",
+    "docs/",
+    "CONTRIBUTING.md",
+    "https://milvus.io/docs"
+  ],
+  "demo_links": [
+    "https://github.com/zilliztech/claude-context/blob/643796a0d30e706a2a0dff3d55621c9b5d831807/evaluation/retrieval/custom.py#L88",
+    "packages/mcp/README.md#embedding-provider-configuration"
+  ],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "bash",
+      "code": "claude mcp add claude-context \\\n  -e OPENAI_API_KEY=sk-your-openai-api-key \\\n  -e MILVUS_ADDRESS=your-zilliz-cloud-public-endpoint \\\n  -e MILVUS_TOKEN=your-zilliz-cloud-api-key \\\n  -- npx @zilliz/claude-context-mcp@latest"
+    },
+    {
+      "language": "toml",
+      "code": "# IMPORTANT: the top-level key is `mcp_servers` rather than `mcpServers`.\n[mcp_servers.claude-context]\ncommand = \"npx\"\nargs = [\"@zilliz/claude-context-mcp@latest\"]\nenv = { \"OPENAI_API_KEY\" = \"your-openai-api-key\", \"MILVUS_TOKEN\" = \"your-zilliz-cloud-api-key\" }\n# Optional: override the default 10s startup timeout\nstartup_timeout_ms = 20000"
+    },
+    {
+      "language": "json",
+      "code": "{\n  \"mcpServers\": {\n    \"claude-context\": {\n      \"command\": \"npx\",\n      \"args\": [\"@zilliz/claude-context-mcp@latest\"],\n      \"env\": {\n        \"OPENAI_API_KEY\": \"your-openai-api-key\",\n        \"MILVUS_TOKEN\": \"your-zilliz-cloud-api-key\"\n      }\n    }\n  }\n}"
+    },
+    {
+      "language": "json",
+      "code": "{\n  \"mcpServers\": {\n    \"claude-context\": {\n      \"command\": \"npx\",\n      \"args\": [\"@zilliz/claude-context-mcp@latest\"],\n      \"env\": {\n        \"OPENAI_API_KEY\": \"your-openai-api-key\",\n        \"MILVUS_ADDRESS\": \"your-zilliz-cloud-public-endpoint\",\n        \"MILVUS_TOKEN\": \"your-zilliz-cloud-api-key\"\n      }\n    }\n  }\n}"
+    },
+    {
+      "language": "json",
+      "code": "{\n  \"mcpServers\": {\n    \"claude-context\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@zilliz/claude-context-mcp@latest\"],\n      \"env\": {\n        \"OPENAI_API_KEY\": \"your-openai-api-key\",\n        \"MILVUS_ADDRESS\": \"your-zilliz-cloud-public-endpoint\",\n        \"MILVUS_TOKEN\": \"your-zilliz-cloud-api-key\"\n      }\n    }\n  }\n}"
+    },
+    {
+      "language": "json",
+      "code": "{\n  \"mcpServers\": {\n    \"code-context\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@zilliz/claude-context-mcp@latest\"],\n      \"env\": {\n        \"OPENAI_API_KEY\": \"your-openai-api-key\",\n        \"MILVUS_ADDRESS\": \"your-zilliz-cloud-public-endpoint\",\n        \"MILVUS_TOKEN\": \"your-zilliz-cloud-api-key\"\n      }\n    }\n  }\n}"
+    },
+    {
+      "language": "json",
+      "code": "{\n  \"mcpServers\": {\n    \"claude-context\": {\n      \"command\": \"npx\",\n      \"args\": [\"@zilliz/claude-context-mcp@latest\"],\n      \"env\": {\n        \"OPENAI_API_KEY\": \"your-openai-api-key\",\n        \"MILVUS_ADDRESS\": \"your-zilliz-cloud-public-endpoint\",\n        \"MILVUS_TOKEN\": \"your-zilliz-cloud-api-key\"\n      }\n    }\n  }\n}"
+    },
+    {
+      "language": "json",
+      "code": "{\n  \"mcpServers\": {\n    \"claude-context\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@zilliz/claude-context-mcp@latest\"],\n      \"env\": {\n        \"OPENAI_API_KEY\": \"your-openai-api-key\",\n        \"MILVUS_ADDRESS\": \"your-zilliz-cloud-public-endpoint\",\n        \"MILVUS_TOKEN\": \"your-zilliz-cloud-api-key\"\n      }\n    }\n  }\n}"
+    },
+    {
+      "language": "json",
+      "code": "{\n  \"mcpServers\": {\n    \"claude-context\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@zilliz/claude-context-mcp@latest\"],\n      \"env\": {\n        \"OPENAI_API_KEY\": \"your-openai-api-key\",\n        \"MILVUS_ADDRESS\": \"your-zilliz-cloud-public-endpoint\",\n        \"MILVUS_TOKEN\": \"your-zilliz-cloud-api-key\"\n      }\n    }\n  }\n}"
+    },
+    {
+      "language": "json",
+      "code": "{\n  \"mcpServers\": {\n    \"claude-context\": {\n      \"command\": \"npx\",\n      \"args\": [\"@zilliz/claude-context-mcp@latest\"],\n      \"env\": {\n        \"OPENAI_API_KEY\": \"your-openai-api-key\",\n        \"MILVUS_ADDRESS\": \"your-zilliz-cloud-public-endpoint\",\n        \"MILVUS_TOKEN\": \"your-zilliz-cloud-api-key\"\n      }\n    }\n  }\n}"
+    },
+    {
+      "language": "unknown",
+      "code": "npx @zilliz/claude-context-mcp@latest"
+    },
+    {
+      "language": "json",
+      "code": "\"augment.advanced\": { \n  \"mcpServers\": [ \n    { \n      \"name\": \"claude-context\", \n      \"command\": \"npx\", \n      \"args\": [\"-y\", \"@zilliz/claude-context-mcp@latest\"],\n      \"env\": {\n        \"OPENAI_API_KEY\": \"your-openai-api-key\",\n        \"MILVUS_ADDRESS\": \"your-zilliz-cloud-public-endpoint\",\n        \"MILVUS_TOKEN\": \"your-zilliz-cloud-api-key\"\n      }\n    }\n  ]\n}"
+    },
+    {
+      "language": "json",
+      "code": "{\n  \"mcpServers\": {\n    \"claude-context\": {\n      \"command\": \"npx\",\n      \"args\": [\"@zilliz/claude-context-mcp@latest\"],\n      \"env\": {\n        \"OPENAI_API_KEY\": \"your-openai-api-key\",\n        \"MILVUS_ADDRESS\": \"your-zilliz-cloud-public-endpoint\",\n        \"MILVUS_TOKEN\": \"your-zilliz-cloud-api-key\"\n      }\n    }\n  }\n}"
+    },
+    {
+      "language": "json",
+      "code": "{\n    \"command\": \"npx\",\n    \"args\": [\"@zilliz/claude-context-mcp@latest\"],\n    \"env\": {\n      \"OPENAI_API_KEY\": \"your-openai-api-key\",\n      \"MILVUS_ADDRESS\": \"your-zilliz-cloud-public-endpoint\",\n      \"MILVUS_TOKEN\": \"your-zilliz-cloud-api-key\"\n    }\n}"
+    },
+    {
+      "language": "bash",
+      "code": "npx @zilliz/claude-context-mcp@latest"
+    },
+    {
+      "language": "unknown",
+      "code": "cd your-project-directory\n   claude"
+    },
+    {
+      "language": "unknown",
+      "code": "Index this codebase"
+    },
+    {
+      "language": "unknown",
+      "code": "Check the indexing status"
+    },
+    {
+      "language": "unknown",
+      "code": "Find functions that handle user authentication"
+    },
+    {
+      "language": "typescript",
+      "code": "import { Context, MilvusVectorDatabase, OpenAIEmbedding } from '@zilliz/claude-context-core';\n\n// Initialize embedding provider\nconst embedding = new OpenAIEmbedding({\n    apiKey: process.env.OPENAI_API_KEY || 'your-openai-api-key',\n    model: 'text-embedding-3-small'\n});\n\n// Initialize vector database\nconst vectorDatabase = new MilvusVectorDatabase({\n    address: process.env.MILVUS_ADDRESS || 'your-zilliz-cloud-public-endpoint',\n    token: process.env.MILVUS_TOKEN || 'your-zilliz-cloud-api-key'"
+    },
+    {
+      "language": "bash",
+      "code": "# Clone repository\ngit clone https://github.com/zilliztech/claude-context.git\ncd claude-context\n\n# Install dependencies\npnpm install\n\n# Build all packages\npnpm build\n\n# Start development mode\npnpm dev"
+    },
+    {
+      "language": "powershell",
+      "code": "# Windows PowerShell/Command Prompt\ngit clone https://github.com/zilliztech/claude-context.git\ncd claude-context\n\n# Configure git line endings (recommended)\ngit config core.autocrlf false\n\n# Install dependencies\npnpm install\n\n# Build all packages (uses cross-platform scripts)\npnpm build\n\n# Start development mode\npnpm dev"
+    },
+    {
+      "language": "bash",
+      "code": "# Build all packages (cross-platform)\npnpm build\n\n# Build specific package\npnpm build:core\npnpm build:vscode\npnpm build:mcp\n\n# Performance benchmarking\npnpm benchmark"
+    },
+    {
+      "language": "bash",
+      "code": "# Development with file watching\ncd examples/basic-usage\npnpm dev"
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:30:08.658031",
+  "keywords": [],
+  "search_text": "    ![](assets/claude-context.png)\n\n> 🆕 **looking for persistent memory for claude code?** check out [memsearch claude code plugin](https://github.com/zilliztech/memsearch#for-claude-code-users) — a markdown-first memory system that gives your ai agent long-term memory across sessions."
+}

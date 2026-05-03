@@ -1,0 +1,41 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "./py/README.md",
+  "features": [],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [],
+  "requirements": {
+    "python_version": null,
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [],
+  "demo_links": [],
+  "usage_examples": [],
+  "code_examples": [],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:29:00.672893",
+  "keywords": [],
+  "search_text": "    ./py/readme.md"
+}

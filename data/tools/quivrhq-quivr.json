@@ -1,0 +1,71 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "<div align=\"center\">     <img src=\"./logo.png\" alt=\"Quivr-logo\" width=\"31%\"  style=\"border-radius: 50%; padding-bottom: 20px\"/> </div>  [![Discord Follow](https://dcbadge.vercel.app/api/server/HUpRgp2HG8?style=flat)](https://discord.gg/HUpRgp2HG8) [![GitHub Repo stars](https://img.shields.io/github/stars/quivrhq/quivr?style=social)](https://github.com/quivrhq/quivr) [![Twitter Follow](https://img.shields.io/twitter/follow/StanGirard?style=social)](https://twitter.com/_StanGirard)  Quivr, help...",
+  "features": [],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [
+    "quivr-core"
+  ],
+  "requirements": {
+    "python_version": "3.10",
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [
+    "https://core.quivr.com/",
+    "https://core.quivr.com/"
+  ],
+  "demo_links": [],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "bash",
+      "code": "pip install quivr-core # Check that the installation worked"
+    },
+    {
+      "language": "python",
+      "code": "import tempfile\n\n  from quivr_core import Brain\n\n  if __name__ == \"__main__\":\n      with tempfile.NamedTemporaryFile(mode=\"w\", suffix=\".txt\") as temp_file:\n          temp_file.write(\"Gold is a liquid of blue-like colour.\")\n          temp_file.flush()\n\n          brain = Brain.from_files(\n              name=\"test_brain\",\n              file_paths=[temp_file.name],\n          )\n\n          answer = brain.ask(\n              \"what is gold? asnwer in french\"\n          )\n          print(\"answer:\", answer)"
+    },
+    {
+      "language": "python",
+      "code": "import os\nos.environ[\"OPENAI_API_KEY\"] = \"myopenai_apikey\""
+    },
+    {
+      "language": "yaml",
+      "code": "workflow_config:\n  name: \"standard RAG\"\n  nodes:\n    - name: \"START\"\n      edges: [\"filter_history\"]\n\n    - name: \"filter_history\"\n      edges: [\"rewrite\"]\n\n    - name: \"rewrite\"\n      edges: [\"retrieve\"]\n\n    - name: \"retrieve\"\n      edges: [\"generate_rag\"]\n\n    - name: \"generate_rag\" # the name of the last node, from which we want to stream the answer to the user\n      edges: [\"END\"]\n\n# Maximum number of previous conversation iterations\n# to include in the context of the answer\nmax_history: 10"
+    },
+    {
+      "language": "python",
+      "code": "from quivr_core import Brain\n\nbrain = Brain.from_files(name = \"my smart brain\",\n                        file_paths = [\"./my_first_doc.pdf\", \"./my_second_doc.txt\"],\n                        )"
+    },
+    {
+      "language": "python",
+      "code": "brain.print_info()\n\nfrom rich.console import Console\nfrom rich.panel import Panel\nfrom rich.prompt import Prompt\nfrom quivr_core.config import RetrievalConfig\n\nconfig_file_name = \"./basic_rag_workflow.yaml\"\n\nretrieval_config = RetrievalConfig.from_yaml(config_file_name)\n\nconsole = Console()\nconsole.print(Panel.fit(\"Ask your brain !\", style=\"bold magenta\"))\n\nwhile True:\n    # Get user input\n    question = Prompt.ask(\"[bold cyan]Question[/bold cyan]\")\n\n    # Check if user wants to exit\n    if ques"
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:26:07.025194",
+  "keywords": [],
+  "search_text": "    "
+}

@@ -1,0 +1,107 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT) ![version](https://img.shields.io/badge/version-1.0-blue)  [<img src=\"./assets/header_model_release.png\" alt=\"BitNet Model on Hugging Face\" width=\"800\"/>](https://huggingface.co/microsoft/BitNet-b1.58-2B-4T)  Try it out via this [demo](https://demo-bitnet-h0h8hcfqeqhrf5gf.canadacentral-01.azurewebsites.net/), or build and run it on your own [CPU](https://github.com/microsoft/BitNet?tab=re...",
+  "features": [],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [
+    "-r"
+  ],
+  "requirements": {
+    "python_version": ".",
+    "node_version": null,
+    "system_requirements": [
+      "python>=3.9",
+      "cmake>=3.22",
+      "clang>=18",
+      "For Windows users, install [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/). In the installer, toggle on at least the following options(this also automatically installs the required additional tools like CMake):",
+      "Desktop-development with C++",
+      "C++-CMake Tools for Windows",
+      "Git for Windows",
+      "C++-Clang Compiler for Windows",
+      "MS-Build Support for LLVM-Toolset (clang)",
+      "For Debian/Ubuntu users, you can download with [Automatic installation script](https://apt.llvm.org/)",
+      "https://apt.llvm.org/llvm.sh)\"`",
+      "conda (highly recommend)"
+    ],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [
+      "-r 3rdparty/llama.cpp/requirements/requirements-convert_legacy_llama.txt",
+      "-r 3rdparty/llama.cpp/requirements/requirements-convert_hf_to_gguf.txt",
+      "-r 3rdparty/llama.cpp/requirements/requirements-convert_hf_to_gguf_update.txt",
+      "-r 3rdparty/llama.cpp/requirements/requirements-convert_llama_ggml_to_gguf.txt",
+      "-r 3rdparty/llama.cpp/requirements/requirements-convert_lora_to_gguf.txt"
+    ],
+    "javascript": [],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [
+    "src/README.md"
+  ],
+  "demo_links": [
+    "https://demo-bitnet-h0h8hcfqeqhrf5gf.canadacentral-01.azurewebsites.net/"
+  ],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "bash",
+      "code": "git clone --recursive https://github.com/microsoft/BitNet.git\ncd BitNet"
+    },
+    {
+      "language": "bash",
+      "code": "# (Recommended) Create a new conda environment\nconda create -n bitnet-cpp python=3.9\nconda activate bitnet-cpp\n\npip install -r requirements.txt"
+    },
+    {
+      "language": "bash",
+      "code": "# Manually download the model and run with local path\nhuggingface-cli download microsoft/BitNet-b1.58-2B-4T-gguf --local-dir models/BitNet-b1.58-2B-4T\npython setup_env.py -md models/BitNet-b1.58-2B-4T -q i2_s"
+    },
+    {
+      "language": "bash",
+      "code": "# Run inference with the quantized model\npython run_inference.py -m models/BitNet-b1.58-2B-4T/ggml-model-i2_s.gguf -p \"You are a helpful assistant\" -cnv"
+    },
+    {
+      "language": "bash",
+      "code": "python utils/generate-dummy-bitnet-model.py models/bitnet_b1_58-large --outfile models/dummy-bitnet-125m.tl1.gguf --outtype tl1 --model-size 125M\n\n# Run benchmark with the generated model, use -m to specify the model path, -p to specify the prompt processed, -n to specify the number of token to generate\npython utils/e2e_benchmark.py -m models/dummy-bitnet-125m.tl1.gguf -p 512 -n 128"
+    },
+    {
+      "language": "sh",
+      "code": "# Prepare the .safetensors model file\nhuggingface-cli download microsoft/bitnet-b1.58-2B-4T-bf16 --local-dir ./models/bitnet-b1.58-2B-4T-bf16\n\n# Convert to gguf model\npython ./utils/convert-helper-bitnet.py ./models/bitnet-b1.58-2B-4T-bf16"
+    },
+    {
+      "language": "unknown",
+      "code": "clang -v"
+    },
+    {
+      "language": "unknown",
+      "code": "'clang' is not recognized as an internal or external command, operable program or batch file."
+    },
+    {
+      "language": "unknown",
+      "code": "\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\Tools\\VsDevCmd.bat\" -startdir=none -arch=x64 -host_arch=x64"
+    },
+    {
+      "language": "unknown",
+      "code": "Import-Module \"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\Tools\\Microsoft.VisualStudio.DevShell.dll\" Enter-VsDevShell 3f0e31ad -SkipAutomaticLocation -DevCmdArguments \"-arch=x64 -host_arch=x64\""
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:26:10.929318",
+  "keywords": [],
+  "search_text": "    "
+}

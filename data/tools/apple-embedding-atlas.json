@@ -1,0 +1,70 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "[![NPM Version](https://img.shields.io/npm/v/embedding-atlas)](https://www.npmjs.com/package/embedding-atlas) [![PyPI - Version](https://img.shields.io/pypi/v/embedding-atlas)](https://pypi.org/project/embedding-atlas/) [![Paper](https://img.shields.io/badge/paper-arXiv:2505.06386-b31b1b.svg)](https://arxiv.org/abs/2505.06386) ![Build](https://github.com/apple/embedding-atlas/actions/workflows/ci.yml/badge.svg) [![GitHub License](https://img.shields.io/github/license/apple/embedding-atlas)](....",
+  "features": [],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [
+    "embedding-atlas"
+  ],
+  "requirements": {
+    "python_version": null,
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [
+      "svelte"
+    ],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [],
+  "demo_links": [],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "bash",
+      "code": "pip install embedding-atlas\n\nembedding-atlas <your-dataset.parquet>"
+    },
+    {
+      "language": "python",
+      "code": "from embedding_atlas.widget import EmbeddingAtlasWidget\n\n# Show the Embedding Atlas widget for your data frame:\nEmbeddingAtlasWidget(df)"
+    },
+    {
+      "language": "bash",
+      "code": "npm install embedding-atlas"
+    },
+    {
+      "language": "js",
+      "code": "import { EmbeddingAtlas, EmbeddingView } from \"embedding-atlas\";\n\n// or with React:\nimport { EmbeddingAtlas, EmbeddingView } from \"embedding-atlas/react\";\n\n// or Svelte:\nimport { EmbeddingAtlas, EmbeddingView } from \"embedding-atlas/svelte\";"
+    },
+    {
+      "language": "bibtex",
+      "code": "@misc{ren2025embedding,\n  title={Embedding Atlas: Low-Friction, Interactive Embedding Visualization},\n  author={Donghao Ren and Fred Hohman and Halden Lin and Dominik Moritz},\n  year={2025},\n  eprint={2505.06386},\n  archivePrefix={arXiv},\n  primaryClass={cs.HC},\n  url={https://arxiv.org/abs/2505.06386},\n}"
+    },
+    {
+      "language": "bibtex",
+      "code": "@misc{ren2025scalable,\n  title={A Scalable Approach to Clustering Embedding Projections},\n  author={Donghao Ren and Fred Hohman and Dominik Moritz},\n  year={2025},\n  eprint={2504.07285},\n  archivePrefix={arXiv},\n  primaryClass={cs.HC},\n  url={https://arxiv.org/abs/2504.07285},\n}"
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:30:15.423460",
+  "keywords": [],
+  "search_text": "    "
+}

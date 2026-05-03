@@ -1,0 +1,190 @@
+{
+  "name": "crewAI",
+  "full_name": "crewAIInc/crewAI",
+  "tagline": "Framework for orchestrating role-playing, autonomous AI agents. By fostering collaborative intelligence, CrewAI empowers agents to work together seamlessly, tackling complex tasks.",
+  "category": "llm_framework",
+  "description": "<p align=\"center\">   <a href=\"https://github.com/crewAIInc/crewAI\">     <img src=\"docs/images/crewai_logo.png\" width=\"600px\" alt=\"Open source Multi-AI Agent orchestration framework\">   </a> </p> <p align=\"center\" style=\"display: flex; justify-content: center; gap: 20px; align-items: center;\">   <a href=\"https://trendshift.io/repositories/11239\" target=\"_blank\">     <img src=\"https://trendshift.io/api/badge/repositories/11239\" alt=\"crewAIInc%2FcrewAI | Trendshift\" style=\"width: 250px; height: ...",
+  "features": [
+    "[Can CrewAI handle complex use cases?](#q-can-crewai-handle-complex-use-cases)",
+    "[Can I use CrewAI with local AI models?](#q-can-i-use-crewai-with-local-ai-models)",
+    "[What makes Crews different from Flows?](#q-what-makes-crews-different-from-flows)",
+    "[How is CrewAI better than LangChain?](#q-how-is-crewai-better-than-langchain)",
+    "[Does CrewAI support fine-tuning or training custom models?](#q-does-crewai-support-fine-tuning-or-training-custom-models)"
+  ],
+  "use_cases": [],
+  "language": "Python",
+  "license": "MIT License",
+  "installation": [
+    "crewai",
+    "'crewai[tools]'",
+    "uv lock\nuv sync",
+    "--upgrade",
+    "tiktoken",
+    "'crewai[tools]'`",
+    "dist/*.tar.gz",
+    "'crewai[embeddings]'`"
+  ],
+  "requirements": {
+    "python_version": null,
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [],
+    "other": []
+  },
+  "stars": 50484,
+  "forks": 6960,
+  "contributors": 30,
+  "last_updated": "2026-05-02T20:23:26Z",
+  "has_tests": true,
+  "has_docs": true,
+  "has_ci": true,
+  "github_url": "https://github.com/crewAIInc/crewAI",
+  "homepage": "https://crewai.com",
+  "documentation_links": [
+    "https://docs.crewai.com/mcp",
+    "https://docs.crewai.com/how-to/LLM-Connections/"
+  ],
+  "demo_links": [
+    "#examples",
+    "https://github.com/crewAIInc/crewAI-examples?tab=readme-ov-file",
+    "https://github.com/crewAIInc/crewAI-examples/tree/main/crews/job-posting",
+    "https://github.com/crewAIInc/crewAI-examples/tree/main/crews/trip_planner",
+    "https://github.com/crewAIInc/crewAI-examples/tree/main/crews/stock_analysis",
+    "#q-where-can-i-find-real-world-crewai-examples",
+    "https://github.com/crewAIInc/crewAI-examples"
+  ],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "shell",
+      "code": "/plugin marketplace add crewAIInc/skills\n/plugin install crewai-skills@crewai-plugins\n/reload-plugins"
+    },
+    {
+      "language": "shell",
+      "code": "npx skills add crewaiinc/skills"
+    },
+    {
+      "language": "shell",
+      "code": "uv pip install crewai"
+    },
+    {
+      "language": "shell",
+      "code": "uv pip install 'crewai[tools]'"
+    },
+    {
+      "language": "shell",
+      "code": "crewai create crew <project_name>"
+    },
+    {
+      "language": "unknown",
+      "code": "my_project/\n├── .gitignore\n├── pyproject.toml\n├── README.md\n├── .env\n└── src/\n    └── my_project/\n        ├── __init__.py\n        ├── main.py\n        ├── crew.py\n        ├── tools/\n        │   ├── custom_tool.py\n        │   └── __init__.py\n        └── config/\n            ├── agents.yaml\n            └── tasks.yaml"
+    },
+    {
+      "language": "shell",
+      "code": "crewai create crew latest-ai-development"
+    },
+    {
+      "language": "yaml",
+      "code": "# src/my_project/config/agents.yaml\nresearcher:\n  role: >\n    {topic} Senior Data Researcher\n  goal: >\n    Uncover cutting-edge developments in {topic}\n  backstory: >\n    You're a seasoned researcher with a knack for uncovering the latest\n    developments in {topic}. Known for your ability to find the most relevant\n    information and present it in a clear and concise manner.\n\nreporting_analyst:\n  role: >\n    {topic} Reporting Analyst\n  goal: >\n    Create detailed reports based on {topic} data a"
+    },
+    {
+      "language": "yaml",
+      "code": "# src/my_project/config/tasks.yaml\nresearch_task:\n  description: >\n    Conduct a thorough research about {topic}\n    Make sure you find any interesting and relevant information given\n    the current year is 2025.\n  expected_output: >\n    A list with 10 bullet points of the most relevant information about {topic}\n  agent: researcher\n\nreporting_task:\n  description: >\n    Review the context you got and expand each topic into a full section for a report.\n    Make sure the report is detailed and cont"
+    },
+    {
+      "language": "unknown",
+      "code": "**crew.py**"
+    },
+    {
+      "language": "unknown",
+      "code": "**main.py**"
+    },
+    {
+      "language": "unknown",
+      "code": "### 3. Running Your Crew\n\nBefore running your crew, make sure you have the following keys set as environment variables in your `.env` file:\n\n- An [OpenAI API key](https://platform.openai.com/account/api-keys) (or other LLM API key): `OPENAI_API_KEY=sk-...`\n- A [Serper.dev](https://serper.dev/) API key: `SERPER_API_KEY=YOUR_KEY_HERE`\n\nLock the dependencies and install them by using the CLI command but first, navigate to your project directory:"
+    },
+    {
+      "language": "unknown",
+      "code": "To run your crew, execute the following command in the root of your project:"
+    },
+    {
+      "language": "unknown",
+      "code": "or"
+    },
+    {
+      "language": "unknown",
+      "code": "If an error happens due to the usage of poetry, please run the following command to update your crewai package:"
+    },
+    {
+      "language": "unknown",
+      "code": "You should see the output in the console and the `report.md` file should be created in the root of your project with the full final report.\n\nIn addition to the sequential process, you can use the hierarchical process, which automatically assigns a manager to the defined crew to properly coordinate the planning and execution of tasks through delegation and validation of results. [See more about the processes here](https://docs.crewai.com/core-concepts/Processes/).\n\n## Key Features\n\nCrewAI stands "
+    },
+    {
+      "language": "unknown",
+      "code": "This example demonstrates how to:\n\n1. Use Python code for basic data operations\n2. Create and execute Crews as steps in your workflow\n3. Use Flow decorators to manage the sequence of operations\n4. Implement conditional branching based on Crew results\n\n## Connecting Your Crew to a Model\n\nCrewAI supports using various LLMs through a variety of connection options. By default your agents will use the OpenAI API when querying the model. However, there are several other ways to allow your agents to co"
+    },
+    {
+      "language": "unknown",
+      "code": "### Virtual Env"
+    },
+    {
+      "language": "unknown",
+      "code": "### Pre-commit hooks"
+    },
+    {
+      "language": "unknown",
+      "code": "### Running Tests"
+    },
+    {
+      "language": "unknown",
+      "code": "### Running static type checks"
+    },
+    {
+      "language": "unknown",
+      "code": "### Packaging"
+    },
+    {
+      "language": "unknown",
+      "code": "### Installing Locally"
+    },
+    {
+      "language": "unknown",
+      "code": "## Telemetry\n\nCrewAI uses anonymous telemetry to collect usage data with the main purpose of helping us improve the library by focusing our efforts on the most used features, integrations and tools.\n\nIt's pivotal to understand that **NO data is collected** concerning prompts, task descriptions, agents' backstories or goals, usage of tools, API calls, responses, any data processed by the agents, or secrets and environment variables, with the exception of the conditions mentioned. When the `share_"
+    },
+    {
+      "language": "unknown",
+      "code": "For additional tools, use:"
+    }
+  ],
+  "topics": [
+    "agents",
+    "ai",
+    "ai-agents",
+    "aiagentframework",
+    "llms"
+  ],
+  "created_at": "2023-10-27T03:26:59Z",
+  "extracted_at": "2026-05-02T22:46:28.459070",
+  "keywords": [
+    "autonomous",
+    "crewai",
+    "role",
+    "fostering",
+    "aiagentframework",
+    "agents",
+    "collaborative",
+    "framework",
+    "playing",
+    "orchestrating",
+    "intelligence",
+    "ai",
+    "ai-agents",
+    "llms",
+    "python"
+  ],
+  "search_text": "crewai framework for orchestrating role-playing, autonomous ai agents. by fostering collaborative intelligence, crewai empowers agents to work together seamlessly, tackling complex tasks. agents ai ai-agents aiagentframework llms [can crewai handle complex use cases?](#q-can-crewai-handle-complex-use-cases) [can i use crewai with local ai models?](#q-can-i-use-crewai-with-local-ai-models) [what makes crews different from flows?](#q-what-makes-crews-different-from-flows) [how is crewai better than langchain?](#q-how-is-crewai-better-than-langchain) [does crewai support fine-tuning or training custom models?](#q-does-crewai-support-fine-tuning-or-training-custom-models) <p align=\"center\">\n  <a href=\"https://github.com/crewaiinc/crewai\">\n    <img src=\"docs/images/crewai_logo.png\" width=\"600px\" alt=\"open source multi-ai agent orchestration framework\">\n  </a>\n</p>\n<p align=\"center\" style=\"display: flex; justify-content: center; gap: 20px; align-items: center;\">\n  <a href=\"https://trendshift.io/repositories/11239\" target=\"_blank\">\n    <img src=\"https://trendshift.io/api/badge/repositories/11239\" alt=\"crewaiinc%2fcrewai | trendshift\" style=\"width: 250px; height: 55px;\" width=\"250\" height=\"55\"/>\n  </a>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://crewai.com\">homepage</a>\n  ·\n  <a href=\"https://docs.crewai.com\">docs</a>\n  ·\n  <a href=\"https://app.crewai.com\">start cloud trial</a>\n  ·\n  <a href=\"https://blog.crewai.com\">blog</a>\n  ·\n  <a href=\"https://community.crewai.com\">forum</a>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://github.com/crewaiinc/crewai\">\n    <img src=\"https://img.shields.io/github/stars/crewaiinc/crewai\" alt=\"github repo stars\">\n  </a>\n  <a href=\"https://github.com/crewaiinc/crewai/network/members\">\n    <img src=\"https://img.shields.io/github/forks/crewaiinc/crewai\" alt=\"github forks\">\n  </a>\n  <a href=\"https://github.com/crewaiinc/crewai/issues\">\n    <img src=\"https://img.shields.io/github/issues/crewaiinc/crewai\" alt=\"github issues\">\n  </a>\n  <a href=\"https://github.com/crewaiinc/crewai/pulls\">\n    <img src=\"https://img.shields.io/github/issues-pr/crewaiinc/crewai\" alt=\"github pull requests\">\n  </a>\n  <a href=\"https://opensource.org/licenses/mit\">\n    <img src=\"https://img.shields.io/badge/license-mit-green.svg\" alt=\"license: mit\">\n  </a>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://pypi.org/project/crewai/\">\n    <img src=\"https://img.shields.io/pypi/v/crewai\" alt=\"pypi version\">\n  </a>\n  <a href=\"https://pypi.org/project/crewai/\">\n    <img src=\"https://img.shields.io/pypi/dm/crewai\" alt=\"pypi downloads\">\n  </a>\n  <a href=\"https://twitter.com/crewaiinc\">\n    <img src=\"https://img.shields.io/twitter/follow/crewaiinc?style=social\" alt=\"twitter follow\">\n  </a>\n</p>"
+}

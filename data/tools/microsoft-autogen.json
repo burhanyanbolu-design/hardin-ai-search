@@ -1,0 +1,77 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "<a name=\"readme-top\"></a>  <div align=\"center\"> <img src=\"https://microsoft.github.io/autogen/0.2/img/ag.svg\" alt=\"AutoGen Logo\" width=\"100\">  [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=Follow%20%40pyautogen)](https://twitter.com/pyautogen) [![LinkedIn](https://img.shields.io/badge/LinkedIn-Company?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/company/105812540) [![Discord](https://img.shields.io/badge/discord-chat-...",
+  "features": [],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [
+    "# Install AutoGen Studio for no-code GUI\npip install -U \"autogenstudio\"",
+    "# Install AgentChat and OpenAI client from Extensions\npip install -U \"autogen-agentchat\" \"autogen-ext[openai]\"",
+    "-g",
+    "-U"
+  ],
+  "requirements": {
+    "python_version": "3.10",
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [
+    "https://img.shields.io/badge/Documentation-AutoGen-blue?logo=read-the-docs",
+    "https://learn.microsoft.com/en-us/agent-framework/migration-guide/from-autogen/",
+    "https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/migration-guide.html",
+    "https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/index.html",
+    "https://learn.microsoft.com/en-us/agent-framework/migration-guide/from-autogen/"
+  ],
+  "demo_links": [],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "bash",
+      "code": "# Install AgentChat and OpenAI client from Extensions\npip install -U \"autogen-agentchat\" \"autogen-ext[openai]\""
+    },
+    {
+      "language": "bash",
+      "code": "# Install AutoGen Studio for no-code GUI\npip install -U \"autogenstudio\""
+    },
+    {
+      "language": "python",
+      "code": "import asyncio\nfrom autogen_agentchat.agents import AssistantAgent\nfrom autogen_ext.models.openai import OpenAIChatCompletionClient\n\nasync def main() -> None:\n    model_client = OpenAIChatCompletionClient(model=\"gpt-4.1\")\n    agent = AssistantAgent(\"assistant\", model_client=model_client)\n    print(await agent.run(task=\"Say 'Hello World!'\"))\n    await model_client.close()\n\nasyncio.run(main())"
+    },
+    {
+      "language": "python",
+      "code": "# First run `npm install -g @playwright/mcp@latest` to install the MCP server.\nimport asyncio\nfrom autogen_agentchat.agents import AssistantAgent\nfrom autogen_agentchat.ui import Console\nfrom autogen_ext.models.openai import OpenAIChatCompletionClient\nfrom autogen_ext.tools.mcp import McpWorkbench, StdioServerParams\n\n\nasync def main() -> None:\n    model_client = OpenAIChatCompletionClient(model=\"gpt-4.1\")\n    server_params = StdioServerParams(\n        command=\"npx\",\n        args=[\n            \"@"
+    },
+    {
+      "language": "python",
+      "code": "import asyncio\n\nfrom autogen_agentchat.agents import AssistantAgent\nfrom autogen_agentchat.tools import AgentTool\nfrom autogen_agentchat.ui import Console\nfrom autogen_ext.models.openai import OpenAIChatCompletionClient\n\n\nasync def main() -> None:\n    model_client = OpenAIChatCompletionClient(model=\"gpt-4.1\")\n\n    math_agent = AssistantAgent(\n        \"math_expert\",\n        model_client=model_client,\n        system_message=\"You are a math expert.\",\n        description=\"A math expert assistant.\",\n"
+    },
+    {
+      "language": "bash",
+      "code": "# Run AutoGen Studio on http://localhost:8080\nautogenstudio ui --port 8080 --appdir ./my-app"
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:28:07.274200",
+  "keywords": [],
+  "search_text": "    <a name=\"readme-top\"></a>\n\n<div align=\"center\">\n<img src=\"https://microsoft.github.io/autogen/0.2/img/ag.svg\" alt=\"autogen logo\" width=\"100\">\n\n[![twitter](https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=follow%20%40pyautogen)](https://twitter.com/pyautogen)\n[![linkedin](https://img.shields.io/badge/linkedin-company?style=flat&logo=linkedin&logocolor=white)](https://www.linkedin.com/company/105812540)\n[![discord](https://img.shields.io/badge/discord-chat-green?logo=discord)](https://aka.ms/autogen-discord)\n[![documentation](https://img.shields.io/badge/documentation-autogen-blue?logo=read-the-docs)](https://microsoft.github.io/autogen/)\n[![blog](https://img.shields.io/badge/blog-autogen-blue?logo=blogger)](https://devblogs.microsoft.com/autogen/)\n\n</div>"
+}

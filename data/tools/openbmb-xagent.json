@@ -1,0 +1,95 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "<div align= \"center\">     <h1> <img src=\"assets/readme/xagent_logo.png\" height=40 align=\"texttop\">XAgent</h1> </div>  <div align=\"center\">  [![Twitter](https://img.shields.io/twitter/follow/XAgent?style=social)](https://twitter.com/XAgentTeam) [![Discord](https://img.shields.io/badge/XAgent-Discord-purple?style=flat)](https://discord.gg/zncs5aQkWZ) [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-green.svg)](https://opensource.org/license/apache-2-0/) ![Welcome](https:/...",
+  "features": [],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [
+    "-r"
+  ],
+  "requirements": {
+    "python_version": null,
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [
+      "charset_normalizer",
+      "colorama",
+      "fastapi",
+      "jsonschema",
+      "Markdown",
+      "orjson",
+      "Pillow",
+      "pydantic",
+      "PyYAML",
+      "regex",
+      "Requests",
+      "setuptools",
+      "termcolor",
+      "tiktoken",
+      "tqdm",
+      "uvicorn",
+      "json5",
+      "openai",
+      "python-dotenv",
+      "sqlalchemy"
+    ],
+    "javascript": [],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [],
+  "demo_links": [
+    "assets/readme/demo.gif"
+  ],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "bash",
+      "code": "docker compose up"
+    },
+    {
+      "language": "bash",
+      "code": "docker compose build\ndocker compose up"
+    },
+    {
+      "language": "bash",
+      "code": "docker compose pull"
+    },
+    {
+      "language": "bash",
+      "code": "docker compose build"
+    },
+    {
+      "language": "bash",
+      "code": "pip install -r requirements.txt"
+    },
+    {
+      "language": "bash",
+      "code": "python run.py --task \"put your task here\" --config-file \"assets/config.yml\""
+    },
+    {
+      "language": "angular2",
+      "code": "@misc{xagent2023,\n      title={XAgent: An Autonomous Agent for Complex Task Solving}, \n      author={XAgent Team},\n      year={2023},\n}"
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:27:43.389923",
+  "keywords": [],
+  "search_text": "    <div align= \"center\">\n    <h1> <img src=\"assets/readme/xagent_logo.png\" height=40 align=\"texttop\">xagent</h1>\n</div>\n\n<div align=\"center\">\n\n[![twitter](https://img.shields.io/twitter/follow/xagent?style=social)](https://twitter.com/xagentteam) [![discord](https://img.shields.io/badge/xagent-discord-purple?style=flat)](https://discord.gg/zncs5aqkwz) [![license: apache 2.0](https://img.shields.io/badge/license-apache_2.0-green.svg)](https://opensource.org/license/apache-2-0/) ![welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)\n\n</div>\n\n<p align=\"center\">\n    <a>english</a> •\n    <a href=\"readme_zh.md\">中文</a> •\n    <a href=\"readme_ja.md\">日本語</a>\n</p>\n\n<p align=\"center\">\n  <a href=\"#quickstart\">tutorial</a> •\n  <a href=\"https://www.youtube.com/watch?v=qgkpd-tsfpa\">demo</a> •\n  <a href=\"https://blog.x-agent.net/blog/xagent/\">blog</a> •\n  <a href=\"https://xagent-doc.readthedocs.io/en/latest/\">documentation</a> •\n  <a href=\"#citation\">citation</a>\n</p>"
+}

@@ -1,0 +1,65 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "The OpenAI Agents SDK is a lightweight yet powerful framework for building multi-agent workflows. It is provider-agnostic, supporting the OpenAI Responses and Chat Completions APIs, as well as 100+ other LLMs.  <img src=\"https://cdn.openai.com/API/docs/images/orchestration.png\" alt=\"Image of the Agents Tracing UI\" style=\"max-height: 803px;\">  > [!NOTE] > Looking for the JavaScript/TypeScript version? Check out [Agents SDK JS/TS](https://github.com/openai/openai-agents-js).",
+  "features": [],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [
+    "'openai-agents[voice]'`.",
+    "openai-agents",
+    "'openai-agents[redis]'`."
+  ],
+  "requirements": {
+    "python_version": "3.10",
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [
+    "https://openai.github.io/openai-agents-python/",
+    "https://openai.github.io/openai-agents-python/",
+    "https://github.com/squidfunk/mkdocs-material"
+  ],
+  "demo_links": [
+    "https://github.com/openai/openai-agents-python/tree/main/examples",
+    "https://github.com/openai/openai-agents-python/tree/main/examples"
+  ],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "bash",
+      "code": "python -m venv .venv\nsource .venv/bin/activate  # On Windows: .venv\\Scripts\\activate\npip install openai-agents"
+    },
+    {
+      "language": "bash",
+      "code": "uv init\nuv add openai-agents"
+    },
+    {
+      "language": "python",
+      "code": "from agents import Runner\nfrom agents.run import RunConfig\nfrom agents.sandbox import Manifest, SandboxAgent, SandboxRunConfig\nfrom agents.sandbox.entries import GitRepo\nfrom agents.sandbox.sandboxes import UnixLocalSandboxClient\n\nagent = SandboxAgent(\n    name=\"Workspace Assistant\",\n    instructions=\"Inspect the sandbox workspace before answering.\",\n    default_manifest=Manifest(\n        entries={\n            \"repo\": GitRepo(repo=\"openai/openai-agents-python\", ref=\"main\"),\n        }\n    ),\n)\n\nr"
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:28:14.319688",
+  "keywords": [],
+  "search_text": "    "
+}

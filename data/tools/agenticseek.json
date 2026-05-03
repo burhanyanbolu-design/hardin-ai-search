@@ -1,0 +1,216 @@
+{
+  "name": "agenticSeek",
+  "full_name": "Fosowl/agenticSeek",
+  "tagline": "Fully Local Manus AI. No APIs, No $200 monthly bills. Enjoy an autonomous agent that thinks, browses the web, and code for the sole cost of electricity. 🔔 Official updates only via twitter @Martin993886460 (Beware of fake account)",
+  "category": "llm_framework",
+  "description": "<p align=\"center\"> <img align=\"center\" src=\"./media/agentic_seek_logo.png\" width=\"300\" height=\"300\" alt=\"Agentic Seek Logo\"> <p>    English | [中文](./README_CHS.md) | [繁體中文](./README_CHT.md) | [Français](./README_FR.md) | [日本語](./README_JP.md) | [Português (Brasil)](./README_PTBR.md) | [Español](./README_ES.md) | [Türkçe](./README_TR.md)  *A **100% local alternative to Manus AI**, this voice-enabled AI assistant autonomously browses the web, writes code, and plans tasks while keeping all data ...",
+  "features": [],
+  "use_cases": [],
+  "language": "Python",
+  "license": "GNU General Public License v3.0",
+  "installation": [],
+  "requirements": {
+    "python_version": "3.10.",
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [
+      "certifi",
+      "fastapi",
+      "flask",
+      "celery",
+      "aiofiles",
+      "uvicorn",
+      "pydantic",
+      "pydantic_core",
+      "setuptools",
+      "sacremoses",
+      "requests",
+      "numpy",
+      "colorama",
+      "python-dotenv",
+      "playsound3",
+      "soundfile",
+      "transformers",
+      "torch",
+      "ollama",
+      "scipy"
+    ],
+    "javascript": [],
+    "other": []
+  },
+  "stars": 26165,
+  "forks": 2929,
+  "contributors": 30,
+  "last_updated": "2026-05-02T20:45:03Z",
+  "has_tests": true,
+  "has_docs": true,
+  "has_ci": true,
+  "github_url": "https://github.com/Fosowl/agenticSeek",
+  "homepage": "http://agenticseek.tech",
+  "documentation_links": [
+    "https://docs.docker.com/engine/install/",
+    "https://docs.docker.com/compose/install/",
+    "./docs/CONTRIBUTING.md"
+  ],
+  "demo_links": [],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "sh",
+      "code": "git clone https://github.com/Fosowl/agenticSeek.git\ncd agenticSeek\nmv .env.example .env"
+    },
+    {
+      "language": "sh",
+      "code": "SEARXNG_BASE_URL=\"http://searxng:8080\" # http://127.0.0.1:8080 if running on host\nREDIS_BASE_URL=\"redis://redis:6379/0\"\nWORK_DIR=\"/Users/mlg/Documents/workspace_for_ai\"\nOLLAMA_PORT=\"11434\"\nLM_STUDIO_PORT=\"1234\"\nCUSTOM_ADDITIONAL_LLM_PORT=\"11435\"\nOPENAI_API_KEY='optional'\nDEEPSEEK_API_KEY='optional'\nOPENROUTER_API_KEY='optional'\nTOGETHER_API_KEY='optional'\nGOOGLE_API_KEY='optional'\nANTHROPIC_API_KEY='optional'"
+    },
+    {
+      "language": "sh",
+      "code": "sudo systemctl start docker"
+    },
+    {
+      "language": "sh",
+      "code": "docker info"
+    },
+    {
+      "language": "sh",
+      "code": "export OLLAMA_HOST=0.0.0.0:11434"
+    },
+    {
+      "language": "sh",
+      "code": "ollama serve"
+    },
+    {
+      "language": "sh",
+      "code": "[MAIN]\nis_local = True # Whenever you are running locally or with remote provider.\nprovider_name = ollama # or lm-studio, openai, etc..\nprovider_model = deepseek-r1:14b # choose a model that fit your hardware\nprovider_server_address = 127.0.0.1:11434\nagent_name = Jarvis # name of your AI\nrecover_last_session = True # whenever to recover the previous session\nsave_session = True # whenever to remember the current session\nspeak = False # text to speech\nlisten = False # Speech to text, only for CLI,"
+    },
+    {
+      "language": "sh",
+      "code": "export PROVIDER_API_KEY=\"your_api_key_here\" \n    # Replace PROVIDER_API_KEY with the specific variable name, e.g., OPENAI_API_KEY, GOOGLE_API_KEY"
+    },
+    {
+      "language": "sh",
+      "code": "export TOGETHER_API_KEY=\"xxxxxxxxxxxxxxxxxxxxxx\""
+    },
+    {
+      "language": "cmd",
+      "code": "set PROVIDER_API_KEY=your_api_key_here"
+    },
+    {
+      "language": "powershell",
+      "code": "$env:PROVIDER_API_KEY=\"your_api_key_here\""
+    },
+    {
+      "language": "ini",
+      "code": "[MAIN]\nis_local = False\nprovider_name = openai # Or google, deepseek, togetherAI, huggingface\nprovider_model = gpt-3.5-turbo # Or gemini-1.5-flash, deepseek-chat, mistralai/Mixtral-8x7B-Instruct-v0.1 etc.\nprovider_server_address = # Typically ignored or can be left blank when is_local = False for most APIs\n# ... other settings ..."
+    },
+    {
+      "language": "sh",
+      "code": "./start_services.sh full # MacOS\nstart start_services.cmd full # Window"
+    },
+    {
+      "language": "sh",
+      "code": "./install.sh\n./install.bat # windows"
+    },
+    {
+      "language": "sh",
+      "code": "SEARXNG_BASE_URL=\"http://localhost:8080\""
+    },
+    {
+      "language": "sh",
+      "code": "./start_services.sh # MacOS\nstart start_services.cmd # Window"
+    },
+    {
+      "language": "sh",
+      "code": "ip a | grep \"inet \" | grep -v 127.0.0.1 | awk '{print $2}' | cut -d/ -f1 # local ip\ncurl https://ipinfo.io/ip # public ip"
+    },
+    {
+      "language": "sh",
+      "code": "git clone --depth 1 https://github.com/Fosowl/agenticSeek.git\ncd agenticSeek/llm_server/"
+    },
+    {
+      "language": "sh",
+      "code": "pip3 install -r requirements.txt"
+    },
+    {
+      "language": "sh",
+      "code": "python3 app.py --provider ollama --port 3333"
+    },
+    {
+      "language": "sh",
+      "code": "[MAIN]\nis_local = False\nprovider_name = server\nprovider_model = deepseek-r1:70b\nprovider_server_address = http://x.x.x.x:3333"
+    },
+    {
+      "language": "unknown",
+      "code": "listen = True"
+    },
+    {
+      "language": "unknown",
+      "code": "agent_name = Friday"
+    },
+    {
+      "language": "unknown",
+      "code": "\"do it\", \"go ahead\", \"execute\", \"run\", \"start\", \"thanks\", \"would ya\", \"please\", \"okay?\", \"proceed\", \"continue\", \"go on\", \"do that\", \"go it\", \"do you understand?\""
+    },
+    {
+      "language": "unknown",
+      "code": "[MAIN]\nis_local = True\nprovider_name = ollama\nprovider_model = deepseek-r1:32b\nprovider_server_address = http://127.0.0.1:11434 # Example for Ollama; use http://127.0.0.1:1234 for LM-Studio\nagent_name = Friday\nrecover_last_session = False\nsave_session = False\nspeak = False\nlisten = False\n\njarvis_personality = False\nlanguages = en zh # List of languages for TTS and potentially routing.\n[BROWSER]\nheadless_browser = False\nstealth_mode = False"
+    },
+    {
+      "language": "bash",
+      "code": "# Place the downloaded chromedriver binary in your project root\ncp path/to/downloaded/chromedriver ./chromedriver\nchmod +x ./chromedriver  # Make executable on Linux/macOS"
+    },
+    {
+      "language": "bash",
+      "code": "# Linux/macOS\nsudo mv chromedriver /usr/local/bin/\nsudo chmod +x /usr/local/bin/chromedriver\n\n# Windows: Place chromedriver.exe in a folder that's in your PATH"
+    },
+    {
+      "language": "bash",
+      "code": "# Test the ChromeDriver version\n./chromedriver --version\n# OR if in PATH:\nchromedriver --version"
+    },
+    {
+      "language": "unknown",
+      "code": "Exception: Provider lm-studio failed: HTTP request failed: No connection adapters were found for '127.0.0.1:1234/v1/chat/completions'` (Note: port may vary)"
+    },
+    {
+      "language": "unknown",
+      "code": "raise ValueError(\"SearxNG base URL must be provided either as an argument or via the SEARXNG_BASE_URL environment variable.\")\nValueError: SearxNG base URL must be provided either as an argument or via the SEARXNG_BASE_URL environment variable.`"
+    }
+  ],
+  "topics": [
+    "agentic-ai",
+    "agents",
+    "ai",
+    "autonomous-agents",
+    "deepseek-r1",
+    "llm",
+    "llm-agents",
+    "voice-assistant"
+  ],
+  "created_at": "2025-02-19T18:03:06Z",
+  "extracted_at": "2026-05-02T22:46:33.422284",
+  "keywords": [
+    "local",
+    "autonomous-agents",
+    "fully",
+    "agent",
+    "bills",
+    "llm-agents",
+    "deepseek-r1",
+    "autonomous",
+    "voice-assistant",
+    "agents",
+    "monthly",
+    "ai",
+    "agentic-ai",
+    "manus",
+    "python",
+    "llm",
+    "that",
+    "enjoy",
+    "apis"
+  ],
+  "search_text": "agenticseek fully local manus ai. no apis, no $200 monthly bills. enjoy an autonomous agent that thinks, browses the web, and code for the sole cost of electricity. 🔔 official updates only via twitter @martin993886460 (beware of fake account) agentic-ai agents ai autonomous-agents deepseek-r1 llm llm-agents voice-assistant  "
+}

@@ -1,0 +1,162 @@
+{
+  "name": "ragflow",
+  "full_name": "infiniflow/ragflow",
+  "tagline": "RAGFlow is a leading open-source Retrieval-Augmented Generation (RAG) engine that fuses cutting-edge RAG with Agent capabilities to create a superior context layer for LLMs",
+  "category": "llm_framework",
+  "description": "<div align=\"center\"> <a href=\"https://cloud.ragflow.io/\"> <img src=\"web/src/assets/logo-with-text.svg\" width=\"520\" alt=\"ragflow logo\"> </a> </div>  <p align=\"center\">   <a href=\"./README.md\"><img alt=\"README in English\" src=\"https://img.shields.io/badge/English-DBEDFA\"></a>   <a href=\"./README_zh.md\"><img alt=\"简体中文版自述文件\" src=\"https://img.shields.io/badge/简体中文-DFE0E5\"></a>   <a href=\"./README_tzh.md\"><img alt=\"繁體版中文自述文件\" src=\"https://img.shields.io/badge/繁體中文-DFE0E5\"></a>   <a href=\"./README_j...",
+  "features": [],
+  "use_cases": [
+    "content_creation"
+  ],
+  "language": "Python",
+  "license": "Apache License 2.0",
+  "installation": [],
+  "requirements": {
+    "python_version": "3.12",
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [],
+    "other": []
+  },
+  "stars": 79463,
+  "forks": 9019,
+  "contributors": 30,
+  "last_updated": "2026-05-02T20:15:35Z",
+  "has_tests": true,
+  "has_docs": true,
+  "has_ci": true,
+  "github_url": "https://github.com/infiniflow/ragflow",
+  "homepage": "https://ragflow.io",
+  "documentation_links": [
+    "#-build-a-docker-image",
+    "#-documentation",
+    "./deepdoc/README.md",
+    "https://docs.docker.com/engine/install/",
+    "https://ragflow.io/docs/dev/build_docker_image",
+    "./docker/docker-compose.yml",
+    "./docker/docker-compose.yml",
+    "./docker/README.md",
+    "./docker/docker-compose.yml",
+    "https://ragflow.io/docs/category/user-guides",
+    "https://ragflow.io/docs/category/developer-guides",
+    "https://ragflow.io/docs/dev/contributing"
+  ],
+  "demo_links": [
+    "#-demo"
+  ],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "bash",
+      "code": "> $ sysctl vm.max_map_count\n   >"
+    },
+    {
+      "language": "bash",
+      "code": "> # In this case, we set it to 262144:\n   > $ sudo sysctl -w vm.max_map_count=262144\n   >"
+    },
+    {
+      "language": "bash",
+      "code": "> vm.max_map_count=262144\n   >"
+    },
+    {
+      "language": "bash",
+      "code": "$ git clone https://github.com/infiniflow/ragflow.git"
+    },
+    {
+      "language": "bash",
+      "code": "$ cd ragflow/docker\n\n   # git checkout v0.25.1\n   # Optional: use a stable tag (see releases: https://github.com/infiniflow/ragflow/releases)\n   # This step ensures the **entrypoint.sh** file in the code matches the Docker image version.\n\n   # Use CPU for DeepDoc tasks:\n   $ docker compose -f docker-compose.yml up -d\n\n   # To use GPU to accelerate DeepDoc tasks:\n   # sed -i '1i DEVICE=gpu' .env\n   # docker compose -f docker-compose.yml up -d"
+    },
+    {
+      "language": "bash",
+      "code": "$ docker logs -f docker-ragflow-cpu-1"
+    },
+    {
+      "language": "bash",
+      "code": "____   ___    ______ ______ __\n        / __ \\ /   |  / ____// ____// /____  _      __\n       / /_/ // /| | / / __ / /_   / // __ \\| | /| / /\n      / _, _// ___ |/ /_/ // __/  / // /_/ /| |/ |/ /\n     /_/ |_|/_/  |_|\\____//_/    /_/ \\____/ |__/|__/\n\n    * Running on all addresses (0.0.0.0)"
+    },
+    {
+      "language": "bash",
+      "code": "> $ docker compose -f docker-compose.yml up -d\n>"
+    },
+    {
+      "language": "bash",
+      "code": "$ docker compose -f docker/docker-compose.yml down -v"
+    },
+    {
+      "language": "bash",
+      "code": "$ docker compose -f docker-compose.yml up -d"
+    },
+    {
+      "language": "bash",
+      "code": "git clone https://github.com/infiniflow/ragflow.git\ncd ragflow/\ndocker build --platform linux/amd64 -f Dockerfile -t infiniflow/ragflow:nightly ."
+    },
+    {
+      "language": "bash",
+      "code": "docker build --platform linux/amd64 \\\n  --build-arg http_proxy=http://YOUR_PROXY:PORT \\\n  --build-arg https_proxy=http://YOUR_PROXY:PORT \\\n  -f Dockerfile -t infiniflow/ragflow:nightly ."
+    },
+    {
+      "language": "bash",
+      "code": "pipx install uv pre-commit"
+    },
+    {
+      "language": "bash",
+      "code": "git clone https://github.com/infiniflow/ragflow.git\n   cd ragflow/\n   uv sync --python 3.12 # install RAGFlow dependent python modules\n   uv run python3 download_deps.py\n   pre-commit install"
+    },
+    {
+      "language": "bash",
+      "code": "docker compose -f docker/docker-compose-base.yml up -d"
+    },
+    {
+      "language": "unknown",
+      "code": "127.0.0.1       es01 infinity mysql minio redis sandbox-executor-manager"
+    },
+    {
+      "language": "bash",
+      "code": "export HF_ENDPOINT=https://hf-mirror.com"
+    },
+    {
+      "language": "bash",
+      "code": "# Ubuntu\n   sudo apt-get install libjemalloc-dev\n   # CentOS\n   sudo yum install jemalloc\n   # OpenSUSE\n   sudo zypper install jemalloc\n   # macOS\n   sudo brew install jemalloc"
+    },
+    {
+      "language": "bash",
+      "code": "source .venv/bin/activate\n   export PYTHONPATH=$(pwd)\n   bash docker/launch_backend_service.sh"
+    },
+    {
+      "language": "bash",
+      "code": "cd web\n   npm install"
+    },
+    {
+      "language": "bash",
+      "code": "npm run dev"
+    },
+    {
+      "language": "bash",
+      "code": "pkill -f \"ragflow_server.py|task_executor.py\""
+    }
+  ],
+  "topics": [
+    "llm-app"
+  ],
+  "created_at": "2023-12-12T06:13:13Z",
+  "extracted_at": "2026-05-02T21:36:13.466775",
+  "keywords": [
+    "open",
+    "that",
+    "leading",
+    "python",
+    "retrieval",
+    "augmented",
+    "engine",
+    "ragflow",
+    "source",
+    "llm-app",
+    "generation",
+    "fuses"
+  ],
+  "search_text": "ragflow ragflow is a leading open-source retrieval-augmented generation (rag) engine that fuses cutting-edge rag with agent capabilities to create a superior context layer for llms llm-app  <div align=\"center\">\n<a href=\"https://cloud.ragflow.io/\">\n<img src=\"web/src/assets/logo-with-text.svg\" width=\"520\" alt=\"ragflow logo\">\n</a>\n</div>\n\n<p align=\"center\">\n  <a href=\"./readme.md\"><img alt=\"readme in english\" src=\"https://img.shields.io/badge/english-dbedfa\"></a>\n  <a href=\"./readme_zh.md\"><img alt=\"简体中文版自述文件\" src=\"https://img.shields.io/badge/简体中文-dfe0e5\"></a>\n  <a href=\"./readme_tzh.md\"><img alt=\"繁體版中文自述文件\" src=\"https://img.shields.io/badge/繁體中文-dfe0e5\"></a>\n  <a href=\"./readme_ja.md\"><img alt=\"日本語のreadme\" src=\"https://img.shields.io/badge/日本語-dfe0e5\"></a>\n  <a href=\"./readme_ko.md\"><img alt=\"한국어\" src=\"https://img.shields.io/badge/한국어-dfe0e5\"></a>\n  <a href=\"./readme_id.md\"><img alt=\"bahasa indonesia\" src=\"https://img.shields.io/badge/bahasa indonesia-dfe0e5\"></a>\n  <a href=\"./readme_pt_br.md\"><img alt=\"português(brasil)\" src=\"https://img.shields.io/badge/português(brasil)-dfe0e5\"></a>\n  <a href=\"./readme_fr.md\"><img alt=\"readme en français\" src=\"https://img.shields.io/badge/français-dfe0e5\"></a>\n  <a href=\"./readme_ar.md\"><img alt=\"readme in arabic\" src=\"https://img.shields.io/badge/arabic-dfe0e5\"></a>\n  <a href=\"./readme_tr.md\"><img alt=\"türkçe readme\" src=\"https://img.shields.io/badge/türkçe-dfe0e5\"></a>\n</p>\n\n<p align=\"center\">\n    <a href=\"https://x.com/intent/follow?screen_name=infiniflowai\" target=\"_blank\">\n        <img src=\"https://img.shields.io/twitter/follow/infiniflow?logo=x&color=%20%23f5f5f5\" alt=\"follow on x(twitter)\">\n    </a>\n    <a href=\"https://cloud.ragflow.io\" target=\"_blank\">\n        <img alt=\"static badge\" src=\"https://img.shields.io/badge/online-demo-4e6b99\">\n    </a>\n    <a href=\"https://hub.docker.com/r/infiniflow/ragflow\" target=\"_blank\">\n        <img src=\"https://img.shields.io/docker/pulls/infiniflow/ragflow?label=docker%20pulls&color=0db7ed&logo=docker&logocolor=white&style=flat-square\" alt=\"docker pull infiniflow/ragflow:v0.25.1\">\n    </a>\n    <a href=\"https://github.com/infiniflow/ragflow/releases/latest\">\n        <img src=\"https://img.shields.io/github/v/release/infiniflow/ragflow?color=blue&label=latest%20release\" alt=\"latest release\">\n    </a>\n    <a href=\"https://github.com/infiniflow/ragflow/blob/main/license\">\n        <img height=\"21\" src=\"https://img.shields.io/badge/license-apache--2.0-ffffff?labelcolor=d4eaf7&color=2e6cc4\" alt=\"license\">\n    </a>\n    <a href=\"https://deepwiki.com/infiniflow/ragflow\">\n        <img alt=\"ask deepwiki\" src=\"https://deepwiki.com/badge.svg\">\n    </a>\n</p>\n\n<h4 align=\"center\">\n  <a href=\"https://ragflow.io/docs/dev/\">document</a> |\n  <a href=\"https://github.com/infiniflow/ragflow/issues/12241\">roadmap</a> |\n  <a href=\"https://twitter.com/infiniflowai\">twitter</a> |\n  <a href=\"https://discord.gg/njyzjd3gm3\">discord</a> |\n  <a href=\"https://cloud.ragflow.io\">demo</a>\n</h4>\n\n<div align=\"center\" style=\"margin-top:20px;margin-bottom:20px;\">\n<img src=\"https://raw.githubusercontent.com/infiniflow/ragflow-docs/refs/heads/image/image/ragflow-octoverse.png\" width=\"1200\"/>\n</div>\n\n<div align=\"center\">\n<a href=\"https://trendshift.io/repositories/9064\" target=\"_blank\"><img src=\"https://trendshift.io/api/badge/repositories/9064\" alt=\"infiniflow%2fragflow | trendshift\" style=\"width: 250px; height: 55px;\" width=\"250\" height=\"55\"/></a>\n</div>\n\n<details open>\n<summary><b>📕 table of contents</b></summary>\n\n- 💡 [what is ragflow?](#-what-is-ragflow)\n- 🎮 [demo](#-demo)\n- 📌 [latest updates](#-latest-updates)\n- 🌟 [key features](#-key-features)\n- 🔎 [system architecture](#-system-architecture)\n- 🎬 [get started](#-get-started)\n- 🔧 [configurations](#-configurations)\n- 🔧 [build a docker image](#-build-a-docker-image)\n- 🔨 [launch service from source for development](#-launch-service-from-source-for-development)\n- 📚 [documentation](#-documentation)\n- 📜 [roadmap](#-roadmap)\n- 🏄 [community](#-community)\n- 🙌 [contributing](#-contributing)\n\n</details>"
+}

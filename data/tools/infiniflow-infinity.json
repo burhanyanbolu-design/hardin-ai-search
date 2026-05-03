@@ -1,0 +1,62 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "<div align=\"center\">   <img width=\"187\" src=\"https://github.com/infiniflow/infinity/assets/7248/015e1f02-1f7f-4b09-a0c2-9d261cd4858b\" alt=\"Infinity logo\"/> </div>   <p align=\"center\">     <b>The AI-native database built for LLM applications, providing incredibly fast hybrid search of dense embedding, sparse embedding, tensor and full-text</b> </p>  <h4 align=\"center\">   <a href=\"https://infiniflow.org/docs/dev/category/get-started\">Document</a> |   <a href=\"https://infiniflow.org/docs/dev/ben...",
+  "features": [],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [
+    "infinity-sdk==0.7.0.dev5"
+  ],
+  "requirements": {
+    "python_version": "3.11",
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [
+    "#-document"
+  ],
+  "demo_links": [],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "bash",
+      "code": "sudo mkdir -p /var/infinity && sudo chown -R $USER /var/infinity\ndocker pull infiniflow/infinity:nightly\ndocker run -d --name infinity -v /var/infinity/:/var/infinity --ulimit nofile=500000:500000 --network=host infiniflow/infinity:nightly"
+    },
+    {
+      "language": "bash",
+      "code": "sudo mkdir -p /var/infinity && sudo chown -R $USER /var/infinity\n   docker pull infiniflow/infinity:nightly\n   docker run -d --name infinity -v /var/infinity/:/var/infinity --ulimit nofile=500000:500000 --network=host infiniflow/infinity:nightly"
+    },
+    {
+      "language": "unknown",
+      "code": "pip install infinity-sdk==0.7.0.dev5"
+    },
+    {
+      "language": "python",
+      "code": "import infinity\n\ninfinity_obj = infinity.connect(infinity.NetworkAddress(\"<SERVER_IP_ADDRESS>\", 23817)) \ndb_object = infinity_object.get_database(\"default_db\")\ntable_object = db_object.create_table(\"my_table\", {\"num\": {\"type\": \"integer\"}, \"body\": {\"type\": \"varchar\"}, \"vec\": {\"type\": \"vector, 4, float\"}})\ntable_object.insert([{\"num\": 1, \"body\": \"unnecessary and harmful\", \"vec\": [1.0, 1.2, 0.8, 0.9]}])\ntable_object.insert([{\"num\": 2, \"body\": \"Office for Harmful Blooms\", \"vec\": [4.0, 4.2, 4.3, 4.5]"
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:30:19.017806",
+  "keywords": [],
+  "search_text": "    <div align=\"center\">\n  <img width=\"187\" src=\"https://github.com/infiniflow/infinity/assets/7248/015e1f02-1f7f-4b09-a0c2-9d261cd4858b\" alt=\"infinity logo\"/>\n</div>\n\n\n<p align=\"center\">\n    <b>the ai-native database built for llm applications, providing incredibly fast hybrid search of dense embedding, sparse embedding, tensor and full-text</b>\n</p>\n\n<h4 align=\"center\">\n  <a href=\"https://infiniflow.org/docs/dev/category/get-started\">document</a> |\n  <a href=\"https://infiniflow.org/docs/dev/benchmark\">benchmark</a> |\n  <a href=\"https://twitter.com/infiniflowai\">twitter</a> |\n  <a href=\"https://discord.gg/jefruweyev\">discord</a>\n</h4>\n\n\ninfinity is a cutting-edge ai-native database that provides a wide range of search capabilities for rich data types such as dense vector, sparse vector, tensor, full-text, and structured data. it provides robust support for various llm applications, including search, recommenders, question-answering, conversational ai, copilot, content generation, and many more **rag** (retrieval-augmented generation) applications.\n\n- [key features](#-key-features)\n- [get started](#-get-started)\n- [document](#-document)\n- [roadmap](#-roadmap)\n- [community](#-community)"
+}

@@ -1,0 +1,43 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "<a href=\"https://cloud.lancedb.com\" target=\"_blank\">   <img src=\"https://github.com/user-attachments/assets/92dad0a2-2a37-4ce1-b783-0d1b4f30a00c\" alt=\"LanceDB Cloud Public Beta\" width=\"100%\" style=\"max-width: 100%;\"> </a> <div align=\"center\">  [![LanceDB](docs/src/assets/hero-header.png)](https://lancedb.com) [![Website](https://img.shields.io/badge/-Website-100000?style=for-the-badge&labelColor=645cfb&color=645cfb)](https://lancedb.com/) [![Blog](https://img.shields.io/badge/Blog-100000?styl...",
+  "features": [],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [],
+  "requirements": {
+    "python_version": ".",
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [
+    "https://docs.lancedb.com"
+  ],
+  "demo_links": [],
+  "usage_examples": [],
+  "code_examples": [],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:30:12.139851",
+  "keywords": [],
+  "search_text": "    <a href=\"https://cloud.lancedb.com\" target=\"_blank\">\n  <img src=\"https://github.com/user-attachments/assets/92dad0a2-2a37-4ce1-b783-0d1b4f30a00c\" alt=\"lancedb cloud public beta\" width=\"100%\" style=\"max-width: 100%;\">\n</a>\n<div align=\"center\">\n\n[![lancedb](docs/src/assets/hero-header.png)](https://lancedb.com)\n[![website](https://img.shields.io/badge/-website-100000?style=for-the-badge&labelcolor=645cfb&color=645cfb)](https://lancedb.com/)\n[![blog](https://img.shields.io/badge/blog-100000?style=for-the-badge&labelcolor=645cfb&color=645cfb)](https://blog.lancedb.com/)\n[![discord](https://img.shields.io/badge/-discord-100000?style=for-the-badge&logo=discord&logocolor=white&labelcolor=645cfb&color=645cfb)](https://discord.gg/zmm32dvntd)\n[![twitter](https://img.shields.io/badge/-twitter-100000?style=for-the-badge&logo=x&logocolor=white&labelcolor=645cfb&color=645cfb)](https://twitter.com/lancedb)\n[![linkedin](https://img.shields.io/badge/-linkedin-100000?style=for-the-badge&logo=linkedin&logocolor=white&labelcolor=645cfb&color=645cfb)](https://www.linkedin.com/company/lancedb/)\n\n\n<img src=\"docs/src/assets/lancedb.png\" alt=\"lancedb\" width=\"50%\">"
+}

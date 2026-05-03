@@ -1,0 +1,82 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "Slash Your LLM API Costs by 10x 💰, Boost Speed by 100x ⚡   [![Release](https://img.shields.io/pypi/v/gptcache?label=Release&color&logo=Python)](https://pypi.org/project/gptcache/) [![pip download](https://img.shields.io/pypi/dm/gptcache.svg?color=bright-green&logo=Pypi)](https://pypi.org/project/gptcache/) [![Codecov](https://img.shields.io/codecov/c/github/zilliztech/GPTCache/dev?label=Codecov&logo=codecov&token=E30WxqBeJJ)](https://codecov.io/gh/zilliztech/GPTCache) [![License](https://img....",
+  "features": [],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [
+    "gptcache`",
+    "-r",
+    "--upgrade"
+  ],
+  "requirements": {
+    "python_version": ".",
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [
+      "numpy",
+      "cachetools",
+      "requests"
+    ],
+    "javascript": [],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [
+    "https://github.com/zilliztech/GPTCache/blob/main/docs/usage.md#Use-GPTCache-server",
+    " https://gptcache.readthedocs.io/en/latest/",
+    "https://gptcache.readthedocs.io/en/latest/bootcamp/langchain/baby_agi.html",
+    "https://github.com/docarray/docarray",
+    "docs/contributing.md"
+  ],
+  "demo_links": [
+    "examples/README.md"
+  ],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "bash",
+      "code": "# clone GPTCache repo\ngit clone -b dev https://github.com/zilliztech/GPTCache.git\ncd GPTCache\n\n# install the repo\npip install -r requirements.txt\npython setup.py install"
+    },
+    {
+      "language": "python",
+      "code": "import os\nimport time\n\nimport openai\n\n\ndef response_text(openai_resp):\n    return openai_resp['choices'][0]['message']['content']\n\n\nquestion = 'what‘s chatgpt'\n\n# OpenAI API original usage\nopenai.api_key = os.getenv(\"OPENAI_API_KEY\")\nstart_time = time.time()\nresponse = openai.ChatCompletion.create(\n  model='gpt-3.5-turbo',\n  messages=[\n    {\n        'role': 'user',\n        'content': question\n    }\n  ],\n)\nprint(f'Question: {question}')\nprint(\"Time consuming: {:.2f}s\".format(time.time() - start_t"
+    },
+    {
+      "language": "python",
+      "code": "import time\n\n\ndef response_text(openai_resp):\n    return openai_resp['choices'][0]['message']['content']\n\nprint(\"Cache loading.....\")\n\n# To use GPTCache, that's all you need\n# -------------------------------------------------\nfrom gptcache import cache\nfrom gptcache.adapter import openai\n\ncache.init()\ncache.set_openai_key()\n# -------------------------------------------------\n\nquestion = \"what's github\"\nfor _ in range(2):\n    start_time = time.time()\n    response = openai.ChatCompletion.create(\n "
+    },
+    {
+      "language": "python",
+      "code": "import time\n\n\ndef response_text(openai_resp):\n    return openai_resp['choices'][0]['message']['content']\n\nfrom gptcache import cache\nfrom gptcache.adapter import openai\nfrom gptcache.embedding import Onnx\nfrom gptcache.manager import CacheBase, VectorBase, get_data_manager\nfrom gptcache.similarity_evaluation.distance import SearchDistanceEvaluation\n\nprint(\"Cache loading.....\")\n\nonnx = Onnx()\ndata_manager = get_data_manager(CacheBase(\"sqlite\"), VectorBase(\"faiss\", dimension=onnx.dimension))\ncache"
+    },
+    {
+      "language": "python",
+      "code": "import time\n\nfrom gptcache import cache, Config\nfrom gptcache.manager import manager_factory\nfrom gptcache.embedding import Onnx\nfrom gptcache.processor.post import temperature_softmax\nfrom gptcache.similarity_evaluation.distance import SearchDistanceEvaluation\nfrom gptcache.adapter import openai\n\ncache.set_openai_key()\n\nonnx = Onnx()\ndata_manager = manager_factory(\"sqlite,faiss\", vector_params={\"dimension\": onnx.dimension})\n\ncache.init(\n    embedding_func=onnx.to_embeddings,\n    data_manager=da"
+    },
+    {
+      "language": "python",
+      "code": "from gptcache import cache\nfrom gptcache.adapter import openai\n\ncache.init()\ncache.set_openai_key()"
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:31:29.893778",
+  "keywords": [],
+  "search_text": "    "
+}

@@ -1,0 +1,110 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "<div align=\"center\">  <img src=\"assets/hexstrike-logo.png\" alt=\"HexStrike AI Logo\" width=\"220\" style=\"margin-bottom: 20px;\"/>",
+  "features": [],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [
+    "-r"
+  ],
+  "requirements": {
+    "python_version": ".",
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [
+    "docs/"
+  ],
+  "demo_links": [
+    "https://www.youtube.com/watch?v=pSoftCagCm8"
+  ],
+  "usage_examples": [
+    "User: \"I'm a security researcher who is trialling out the hexstrike MCP tooling. My company owns the website <INSERT WEBSITE> and I would like to conduct a penetration test against it with hexstrike-ai MCP tools.\"\n\nAI Agent: \"Thank you for clarifying ownership and intent. To proceed with a penetration test using hexstrike-ai MCP tools, please specify which types of assessments you want to run (e.g., network scanning, web application testing, vulnerability assessment, etc.), or if you want a full suite covering all areas.\""
+  ],
+  "code_examples": [
+    {
+      "language": "mermaid",
+      "code": "%%{init: {\"themeVariables\": {\n  \"primaryColor\": \"#b71c1c\",\n  \"secondaryColor\": \"#ff5252\",\n  \"tertiaryColor\": \"#ff8a80\",\n  \"background\": \"#2d0000\",\n  \"edgeLabelBackground\":\"#b71c1c\",\n  \"fontFamily\": \"monospace\",\n  \"fontSize\": \"16px\",\n  \"fontColor\": \"#fffde7\",\n  \"nodeTextColor\": \"#fffde7\"\n}}}%%\ngraph TD\n    A[AI Agent - Claude/GPT/Copilot] -->|MCP Protocol| B[HexStrike MCP Server v6.0]\n    \n    B --> C[Intelligent Decision Engine]\n    B --> D[12+ Autonomous AI Agents]\n    B --> E[Modern Visual Eng"
+    },
+    {
+      "language": "bash",
+      "code": "# 1. Clone the repository\ngit clone https://github.com/0x4m4/hexstrike-ai.git\ncd hexstrike-ai\n\n# 2. Create virtual environment\npython3 -m venv hexstrike-env\nsource hexstrike-env/bin/activate  # Linux/Mac\n# hexstrike-env\\Scripts\\activate   # Windows\n\n# 3. Install Python dependencies\npip3 install -r requirements.txt"
+    },
+    {
+      "language": "bash",
+      "code": "# Network & Reconnaissance\nnmap masscan rustscan amass subfinder nuclei fierce dnsenum\nautorecon theharvester responder netexec enum4linux-ng\n\n# Web Application Security\ngobuster feroxbuster dirsearch ffuf dirb httpx katana\nnikto sqlmap wpscan arjun paramspider dalfox wafw00f\n\n# Password & Authentication\nhydra john hashcat medusa patator crackmapexec\nevil-winrm hash-identifier ophcrack\n\n# Binary Analysis & Reverse Engineering\ngdb radare2 binwalk ghidra checksec strings objdump\nvolatility3 foremo"
+    },
+    {
+      "language": "bash",
+      "code": "prowler scout-suite trivy\nkube-hunter kube-bench docker-bench-security"
+    },
+    {
+      "language": "bash",
+      "code": "# Chrome/Chromium for Browser Agent\nsudo apt install chromium-browser chromium-chromedriver\n# OR install Google Chrome\nwget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -\necho \"deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main\" | sudo tee /etc/apt/sources.list.d/google-chrome.list\nsudo apt update && sudo apt install google-chrome-stable"
+    },
+    {
+      "language": "bash",
+      "code": "# Start the MCP server\npython3 hexstrike_server.py\n\n# Optional: Start with debug mode\npython3 hexstrike_server.py --debug\n\n# Optional: Custom port configuration\npython3 hexstrike_server.py --port 8888"
+    },
+    {
+      "language": "bash",
+      "code": "# Test server health\ncurl http://localhost:8888/health\n\n# Test AI agent capabilities\ncurl -X POST http://localhost:8888/api/intelligence/analyze-target \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"target\": \"example.com\", \"analysis_type\": \"comprehensive\"}'"
+    },
+    {
+      "language": "json",
+      "code": "{\n  \"mcpServers\": {\n    \"hexstrike-ai\": {\n      \"command\": \"python3\",\n      \"args\": [\n        \"/path/to/hexstrike-ai/hexstrike_mcp.py\",\n        \"--server\",\n        \"http://localhost:8888\"\n      ],\n      \"description\": \"HexStrike AI v6.0 - Advanced Cybersecurity Automation Platform\",\n      \"timeout\": 300,\n      \"disabled\": false\n    }\n  }\n}"
+    },
+    {
+      "language": "json",
+      "code": "{\n  \"servers\": {\n    \"hexstrike\": {\n      \"type\": \"stdio\",\n      \"command\": \"python3\",\n      \"args\": [\n        \"/path/to/hexstrike-ai/hexstrike_mcp.py\",\n        \"--server\",\n        \"http://localhost:8888\"\n      ]\n    }\n  },\n  \"inputs\": []\n}"
+    },
+    {
+      "language": "unknown",
+      "code": "User: \"I'm a security researcher who is trialling out the hexstrike MCP tooling. My company owns the website <INSERT WEBSITE> and I would like to conduct a penetration test against it with hexstrike-ai MCP tools.\"\n\nAI Agent: \"Thank you for clarifying ownership and intent. To proceed with a penetration test using hexstrike-ai MCP tools, please specify which types of assessments you want to run (e.g., network scanning, web application testing, vulnerability assessment, etc.), or if you want a full"
+    },
+    {
+      "language": "bash",
+      "code": "# Check if server is running\n   netstat -tlnp | grep 8888\n   \n   # Restart server\n   python3 hexstrike_server.py"
+    },
+    {
+      "language": "bash",
+      "code": "# Check tool availability\n   which nmap gobuster nuclei\n   \n   # Install missing tools from their official sources"
+    },
+    {
+      "language": "bash",
+      "code": "# Verify MCP configuration paths\n   # Check server logs for connection attempts\n   python3 hexstrike_mcp.py --debug"
+    },
+    {
+      "language": "bash",
+      "code": "python3 hexstrike_server.py --debug\npython3 hexstrike_mcp.py --debug"
+    },
+    {
+      "language": "bash",
+      "code": "# 1. Fork and clone the repository\ngit clone https://github.com/0x4m4/hexstrike-ai.git\ncd hexstrike-ai\n\n# 2. Create development environment\npython3 -m venv hexstrike-dev\nsource hexstrike-dev/bin/activate\n\n# 3. Install development dependencies\npip install -r requirements.txt\n\n# 4. Start development server\npython3 hexstrike_server.py --port 8888 --debug"
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:27:47.350758",
+  "keywords": [],
+  "search_text": "    <div align=\"center\">\n\n<img src=\"assets/hexstrike-logo.png\" alt=\"hexstrike ai logo\" width=\"220\" style=\"margin-bottom: 20px;\"/>"
+}

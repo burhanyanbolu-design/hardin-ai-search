@@ -1,0 +1,43 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "<div align=\"center\" id=\"sglangtop\"> <img src=\"https://raw.githubusercontent.com/sgl-project/sglang/main/assets/logo.png\" alt=\"logo\" width=\"400\" margin=\"10px\"></img>  [![PyPI](https://img.shields.io/pypi/v/sglang)](https://pypi.org/project/sglang) ![PyPI - Downloads](https://static.pepy.tech/badge/sglang?period=month) [![license](https://img.shields.io/github/license/sgl-project/sglang.svg)](https://github.com/sgl-project/sglang/tree/main/LICENSE) [![issue resolution](https://img.shields.io/gi...",
+  "features": [],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [],
+  "requirements": {
+    "python_version": null,
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [
+    "https://docs.sglang.io/developer_guide/contribution_guide.html"
+  ],
+  "demo_links": [],
+  "usage_examples": [],
+  "code_examples": [],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:26:18.264657",
+  "keywords": [],
+  "search_text": "    <div align=\"center\" id=\"sglangtop\">\n<img src=\"https://raw.githubusercontent.com/sgl-project/sglang/main/assets/logo.png\" alt=\"logo\" width=\"400\" margin=\"10px\"></img>\n\n[![pypi](https://img.shields.io/pypi/v/sglang)](https://pypi.org/project/sglang)\n![pypi - downloads](https://static.pepy.tech/badge/sglang?period=month)\n[![license](https://img.shields.io/github/license/sgl-project/sglang.svg)](https://github.com/sgl-project/sglang/tree/main/license)\n[![issue resolution](https://img.shields.io/github/issues-closed-raw/sgl-project/sglang)](https://github.com/sgl-project/sglang/issues)\n[![open issues](https://img.shields.io/github/issues-raw/sgl-project/sglang)](https://github.com/sgl-project/sglang/issues)\n[![ask deepwiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/sgl-project/sglang)\n\n</div>\n\n--------------------------------------------------------------------------------\n\n<p align=\"center\">\n<a href=\"https://lmsys.org/blog/\"><b>blog</b></a> |\n<a href=\"https://docs.sglang.io/\"><b>documentation</b></a> |\n<a href=\"https://roadmap.sglang.io/\"><b>roadmap</b></a> |\n<a href=\"https://slack.sglang.io/\"><b>join slack</b></a> |\n<a href=\"https://meet.sglang.io/\"><b>weekly dev meeting</b></a> |\n<a href=\"https://github.com/sgl-project/sgl-learning-materials?tab=readme-ov-file#slides\"><b>slides</b></a>\n</p>"
+}

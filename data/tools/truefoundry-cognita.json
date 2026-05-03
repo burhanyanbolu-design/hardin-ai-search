@@ -1,0 +1,82 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "Cognita is an open-source framework to organize your RAG codebase along with a frontend to play around with different RAG customizations. It provides a simple way to organize your codebase so that it becomes easy to test it locally while also being able to deploy it in a production ready environment. The key issues that arise while productionizing RAG system from a Jupyter Notebook are:  1. **Chunking and Embedding Job**: The chunking and embedding code usually needs to be abstracted out and ...",
+  "features": [],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [],
+  "requirements": {
+    "python_version": ".",
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [
+    "#whale-using-docker-compose-recommended",
+    "https://docs.docker.com/compose/install/",
+    "./CONTRIBUTING.md"
+  ],
+  "demo_links": [],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "shell",
+      "code": "cp models_config.sample.yaml models_config.yaml"
+    },
+    {
+      "language": "shell",
+      "code": "docker-compose --env-file compose.env up"
+    },
+    {
+      "language": "shell",
+      "code": "docker-compose --env-file compose.env --profile ollama --profile infinity up"
+    },
+    {
+      "language": "shell",
+      "code": "docker-compose --env-file compose.env up --build"
+    },
+    {
+      "language": "shell",
+      "code": "docker-compose --env-file compose.env --profile ollama --profile infinity up --build"
+    },
+    {
+      "language": "python",
+      "code": "from backend.modules.dataloaders import LocalDirLoader\n  from backend.types import DataSource\n\n  data_source = DataSource(\n  type=\"local\",\n  uri=\"sample-data/creditcards\",\n  )\n\n  loader = LocalDirLoader()\n\n\n  loaded_data_pts = loader.load_full_data(\n      data_source=data_source,\n      dest_dir=\"test/creditcards\",\n  )\n\n\n  for data_pt in loaded_data_pts:\n      print(data_pt)"
+    },
+    {
+      "language": "python",
+      "code": "import asyncio\n  from backend.modules.parsers import MarkdownParser\n\n  parser = MarkdownParser()\n  chunks =  asyncio.run(\n      parser.get_chunks(\n          filepath=\"sample-data/creditcards/diners-club-black.md\",\n      )\n  )\n  print(chunks)"
+    },
+    {
+      "language": "unknown",
+      "code": "- Add methods to this controller as per your needs and use our http decorators like `post, get, delete` to make your methods an API"
+    },
+    {
+      "language": "unknown",
+      "code": "- Import your custom controller class at `backend/modules/query_controllers/__init__.py`"
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:29:12.020028",
+  "keywords": [],
+  "search_text": "    cognita is an open-source framework to organize your rag codebase along with a frontend to play around with different rag customizations. it provides a simple way to organize your codebase so that it becomes easy to test it locally while also being able to deploy it in a production ready environment. the key issues that arise while productionizing rag system from a jupyter notebook are:\n\n1. **chunking and embedding job**: the chunking and embedding code usually needs to be abstracted out and deployed as a job. sometimes the job will need to run on a schedule or be triggered via an event to keep the data updated.\n2. **query service**: the code that generates the answer from the query needs to be wrapped up in a api server like fastapi and should be deployed as a service. this service should be able to handle multiple queries at the same time and also autoscale with higher traffic.\n3. **llm / embedding model deployment**: often times, if we are using open-source models, we load the model in the jupyter notebook. this will need to be hosted as a separate service in production and model will need to be called as an api.\n4. **vector db deployment**: most testing happens on vector dbs in memory or on disk. however, in production, the dbs need to be deployed in a more scalable and reliable way.\n\ncognita makes it really easy to customize and experiment everything about a rag system and still be able to deploy it in a good way. it also ships with a ui that makes it easier to try out different rag configurations and see the results in real time. you can use it locally or with/without using any truefoundry components. however, using truefoundry components makes it easier to test different models and deploy the system in a scalable way. cognita allows you to host multiple rag systems using one app."
+}

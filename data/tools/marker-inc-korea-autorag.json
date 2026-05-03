@@ -1,0 +1,118 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "RAG AutoML tool for automatically finding an optimal RAG pipeline for your data.  ![Thumbnail](https://github.com/user-attachments/assets/6bab243d-a4b3-431a-8ac0-fe17336ab4de)  ![PyPI - Downloads](https://img.shields.io/pypi/dm/AutoRAG) [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/company/104375108/admin/dashboard/) ![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/AutoRAG_HQ) [![Hugging Face](htt...",
+  "features": [],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [
+    "\"AutoRAG[gpu]\"",
+    "AutoRAG",
+    "\"AutoRAG[gpu,parse]\""
+  ],
+  "requirements": {
+    "python_version": null,
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [
+    "https://marker-inc-korea.github.io/AutoRAG/",
+    "https://marker-inc-korea.github.io/AutoRAG/optimization/sample_config.html",
+    "https://marker-inc-korea.github.io/AutoRAG/optimization/custom_config.html"
+  ],
+  "demo_links": [],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "bash",
+      "code": "pip install AutoRAG"
+    },
+    {
+      "language": "bash",
+      "code": "pip install \"AutoRAG[gpu]\""
+    },
+    {
+      "language": "bash",
+      "code": "pip install \"AutoRAG[gpu,parse]\""
+    },
+    {
+      "language": "yaml",
+      "code": "modules:\n  - module_type: langchain_parse\n    parse_method: pdfminer"
+    },
+    {
+      "language": "python",
+      "code": "from autorag.parser import Parser\n\nparser = Parser(data_path_glob=\"your/data/path/*\")\nparser.start_parsing(\"your/path/to/parse_config.yaml\")"
+    },
+    {
+      "language": "yaml",
+      "code": "modules:\n  - module_type: llama_index_chunk\n    chunk_method: Token\n    chunk_size: 1024\n    chunk_overlap: 24\n    add_file_name: en"
+    },
+    {
+      "language": "python",
+      "code": "from autorag.chunker import Chunker\n\nchunker = Chunker.from_parquet(parsed_data_path=\"your/parsed/data/path\")\nchunker.start_chunking(\"your/path/to/chunk_config.yaml\")"
+    },
+    {
+      "language": "python",
+      "code": "import pandas as pd\nfrom llama_index.llms.openai import OpenAI\n\nfrom autorag.data.qa.filter.dontknow import dontknow_filter_rule_based\nfrom autorag.data.qa.generation_gt.llama_index_gen_gt import (\n\tmake_basic_gen_gt,\n\tmake_concise_gen_gt,\n)\nfrom autorag.data.qa.schema import Raw, Corpus\nfrom autorag.data.qa.query.llama_gen_query import factoid_query_gen\nfrom autorag.data.qa.sample import random_single_hop\n\nllm = OpenAI()\nraw_df = pd.read_parquet(\"your/path/to/parsed.parquet\")\nraw_instance = Raw"
+    },
+    {
+      "language": "yaml",
+      "code": "node_lines:\n  - node_line_name: retrieve_node_line\n    nodes:\n      - node_type: lexical_retrieval\n        strategy:\n          metrics: [ retrieval_f1, retrieval_recall, retrieval_ndcg, retrieval_mrr ]\n        top_k: 3\n        modules:\n          - module_type: bm25\n      - node_type: semantic_retrieval\n        strategy:\n          metrics: [ retrieval_f1, retrieval_recall, retrieval_ndcg, retrieval_mrr ]\n        top_k: 3\n        modules:\n          - module_type: vectordb\n            vectordb: def"
+    },
+    {
+      "language": "python",
+      "code": "from autorag.evaluator import Evaluator\n\nevaluator = Evaluator(qa_data_path='your/path/to/qa.parquet', corpus_data_path='your/path/to/corpus.parquet')\nevaluator.start_trial('your/path/to/config.yaml')"
+    },
+    {
+      "language": "bash",
+      "code": "autorag evaluate --config your/path/to/default_config.yaml --qa_data_path your/path/to/qa.parquet --corpus_data_path your/path/to/corpus.parquet"
+    },
+    {
+      "language": "bash",
+      "code": "autorag dashboard --trial_dir /your/path/to/trial_dir"
+    },
+    {
+      "language": "python",
+      "code": "from autorag.deploy import Runner\n\nrunner = Runner.from_trial_folder('/your/path/to/trial_dir')\nrunner.run('your question')"
+    },
+    {
+      "language": "python",
+      "code": "import nest_asyncio\nfrom autorag.deploy import ApiRunner\n\nnest_asyncio.apply()\n\nrunner = ApiRunner.from_trial_folder('/your/path/to/trial_dir')\nrunner.run_api_server()"
+    },
+    {
+      "language": "bash",
+      "code": "autorag run_api --trial_dir your/path/to/trial_dir --host 0.0.0.0 --port 8000"
+    },
+    {
+      "language": "bash",
+      "code": "autorag run_web --trial_path your/path/to/trial_path"
+    },
+    {
+      "language": "bibtex",
+      "code": "@misc{kim2024autoragautomatedframeworkoptimization,\n      title={AutoRAG: Automated Framework for optimization of Retrieval Augmented Generation Pipeline},\n      author={Dongkyu Kim and Byoungwook Kim and Donggeon Han and Matouš Eibich},\n      year={2024},\n      eprint={2410.20878},\n      archivePrefix={arXiv},\n      primaryClass={cs.CL},\n      url={https://arxiv.org/abs/2410.20878},\n}"
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:29:07.958153",
+  "keywords": [],
+  "search_text": "    "
+}

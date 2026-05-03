@@ -1,0 +1,72 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "<div align=\"center\">   <a href=\"https://haystack.deepset.ai/\"><img src=\"https://raw.githubusercontent.com/deepset-ai/haystack/main/images/banner.png\" alt=\"Blue banner with the Haystack logo and the text ‘haystack by deepset – The Open Source AI Framework for Production Ready RAG & Agents’ surrounded by abstract icons representing search, documents, agents, pipelines, and cloud systems.\"></a>  |         |                                                                                          ...",
+  "features": [
+    "Design flexible systems with explicit control over how information is retrieved, ranked, filtered, combined, structured, and routed before it reaches the model. Define pipelines and agent workflows where retrieval, memory, tools, and generation are transparent and traceable.",
+    "and vendor-agnostic**",
+    "Use built-in components for retrieval, indexing, tool calling, memory, and evaluation, or create your own. Add loops, branches, and conditional logic to precisely control how context moves through your pipelines and agent workflows.",
+    "Build and share custom components through a consistent interface that makes it easy for the community and third parties to extend Haystack and contribute to an open ecosystem.",
+    "or **MCP servers**? [Hayhooks](https://github.com/deepset-ai/hayhooks) provides a simple way for you to wrap pipelines and agents with custom logic and expose them through HTTP endpoints or MCP. It also supports OpenAI-compatible chat completion endpoints and works with chat UIs like [open-webui](https://openwebui.com/)."
+  ],
+  "use_cases": [
+    "content_creation",
+    "research"
+  ],
+  "language": null,
+  "license": null,
+  "installation": [
+    "pip install --pre haystack-ai",
+    "--pre",
+    "pip install haystack-ai",
+    "haystack-ai"
+  ],
+  "requirements": {
+    "python_version": ".",
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [
+    "#documentation",
+    "https://docs.haystack.deepset.ai/docs/installation",
+    "https://haystack.deepset.ai/overview/quick-start",
+    "https://docs.haystack.deepset.ai/docs/intro",
+    "https://docs.haystack.deepset.ai/docs/telemetry",
+    "https://github.com/deepset-ai/haystack/blob/main/CONTRIBUTING.md",
+    "https://github.com/deepset-ai/haystack/tree/main/docs-website"
+  ],
+  "demo_links": [],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "sh",
+      "code": "pip install haystack-ai"
+    },
+    {
+      "language": "sh",
+      "code": "pip install --pre haystack-ai"
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:28:22.093584",
+  "keywords": [],
+  "search_text": "   design flexible systems with explicit control over how information is retrieved, ranked, filtered, combined, structured, and routed before it reaches the model. define pipelines and agent workflows where retrieval, memory, tools, and generation are transparent and traceable. and vendor-agnostic** use built-in components for retrieval, indexing, tool calling, memory, and evaluation, or create your own. add loops, branches, and conditional logic to precisely control how context moves through your pipelines and agent workflows. build and share custom components through a consistent interface that makes it easy for the community and third parties to extend haystack and contribute to an open ecosystem. or **mcp servers**? [hayhooks](https://github.com/deepset-ai/hayhooks) provides a simple way for you to wrap pipelines and agents with custom logic and expose them through http endpoints or mcp. it also supports openai-compatible chat completion endpoints and works with chat uis like [open-webui](https://openwebui.com/). <div align=\"center\">\n  <a href=\"https://haystack.deepset.ai/\"><img src=\"https://raw.githubusercontent.com/deepset-ai/haystack/main/images/banner.png\" alt=\"blue banner with the haystack logo and the text ‘haystack by deepset – the open source ai framework for production ready rag & agents’ surrounded by abstract icons representing search, documents, agents, pipelines, and cloud systems.\"></a>\n\n|         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |\n| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |\n| ci/cd   | [![tests](https://github.com/deepset-ai/haystack/actions/workflows/tests.yml/badge.svg)](https://github.com/deepset-ai/haystack/actions/workflows/tests.yml) [![types - mypy](https://img.shields.io/badge/types-mypy-blue.svg)](https://github.com/python/mypy) [![coverage badge](https://raw.githubusercontent.com/deepset-ai/haystack/python-coverage-comment-action-data/badge.svg)](https://htmlpreview.github.io/?https://github.com/deepset-ai/haystack/blob/python-coverage-comment-action-data/htmlcov/index.html) [![ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff) |\n| docs    | [![website](https://img.shields.io/website?label=documentation&up_message=online&url=https%3a%2f%2fdocs.haystack.deepset.ai)](https://docs.haystack.deepset.ai)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |\n| package | [![pypi](https://img.shields.io/pypi/v/haystack-ai)](https://pypi.org/project/haystack-ai/) ![pypi - downloads](https://img.shields.io/pypi/dm/haystack-ai?color=blue&logo=pypi&logocolor=gold) ![pypi - python version](https://img.shields.io/pypi/pyversions/haystack-ai?logo=python&logocolor=gold) [![conda version](https://img.shields.io/conda/vn/conda-forge/haystack-ai.svg)](https://anaconda.org/conda-forge/haystack-ai) [![github](https://img.shields.io/github/license/deepset-ai/haystack?color=blue)](license) [![license compliance](https://github.com/deepset-ai/haystack/actions/workflows/license_compliance.yml/badge.svg)](https://github.com/deepset-ai/haystack/actions/workflows/license_compliance.yml) |\n| meta    | [![discord](https://img.shields.io/discord/993534733298450452?logo=discord)](https://discord.com/invite/qzxjm4bahu) [![twitter follow](https://img.shields.io/twitter/follow/haystack_ai)](https://twitter.com/haystack_ai)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |\n</div>\n\n[haystack](https://haystack.deepset.ai/) is an open-source ai orchestration framework for building production-ready llm applications in python.\n\ndesign modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. build scalable rag systems, multimodal applications, semantic search, question answering, and autonomous agents, all in a transparent architecture that lets you experiment, customize deeply, and deploy with confidence."
+}

@@ -1,0 +1,173 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "<p align=\"center\">   <img height=\"100\" src=\"https://cdn.trieve.ai/trieve-logo.png\" alt=\"Trieve Logo\"> </p> <p align=\"center\"> <strong><a href=\"https://dashboard.trieve.ai\">Sign Up (1k chunks free)</a> | <a href=\"https://pdf2md.trieve.ai\">PDF2MD</a> | <a href=\"https://docs.trieve.ai\">Hacker News Search Engine</a> | <a href=\"https://docs.trieve.ai\">Documentation</a> | <a href=\"https://cal.com/nick.k/meet\">Meet a Maintainer</a> | <a href=\"https://discord.gg/eBJXXZDB8z\">Discord</a> | <a href=\"htt...",
+  "features": [
+    "**🔒 Self-Hosting in your VPC or on-prem**: We have full self-hosting guides for AWS, GCP, Kubernetes generally, and docker compose available on our [documentation page here](https://docs.trieve.ai/self-hosting/docker-compose).",
+    "**🧠 Semantic Dense Vector Search**: Integrates with OpenAI or Jina embedding models and [Qdrant](https://qdrant.tech) to provide semantic vector search.",
+    "**🔍 Typo Tolerant Full-Text/Neural Search**: Every uploaded chunk is vector'ized with [naver/efficient-splade-VI-BT-large-query](https://huggingface.co/naver/efficient-splade-VI-BT-large-query) for typo tolerant, quality neural sparse-vector search.",
+    "**🖊️ Sub-Sentence Highlighting**: Highlight the matching words or sentences within a chunk and bold them on search to enhance UX for your users. Shout out to the [simsearch](https://github.com/smartdatalake/simsearch) crate!",
+    "**🌟 Recommendations**: Find similar chunks (or files if using grouping) with the recommendation API. Very helpful if you have a platform where users' favorite, bookmark, or upvote content.",
+    "**🤖 Convenient RAG API Routes**: We integrate with OpenRouter to provide you with access to any LLM you would like for RAG. Try our routes for [fully-managed RAG with topic-based memory management](https://api.trieve.ai/redoc#tag/message/operation/create_message_completion_handler) or [select your own context RAG](https://api.trieve.ai/redoc#tag/chunk/operation/generate_off_chunks).",
+    "**💼 Bring Your Own Models**: If you'd like, you can bring your own text-embedding, SPLADE, cross-encoder re-ranking, and/or large-language model (LLM) and plug it into our infrastructure.",
+    "**🔄 Hybrid Search with cross-encoder re-ranking**: For the best results, use hybrid search with [BAAI/bge-reranker-large](https://huggingface.co/BAAI/bge-reranker-large) re-rank optimization.",
+    "**📆 Recency Biasing**: Easily bias search results for what was most recent to prevent staleness",
+    "**🛠️ Tunable Merchandizing**: Adjust relevance using signals like clicks, add-to-carts, or citations",
+    "**🕳️ Filtering**: Date-range, substring match, tag, numeric, and other filter types are supported.",
+    "**👥 Grouping**: Mark multiple chunks as being part of the same file and search on the file-level such that the same top-level result never appears twice",
+    "- call us at [628-222-4090](mailto:+16282224090), make a [Github issue](https://github.com/devflowinc/trieve/issues), or join the [Matrix community](https://matrix.to/#/#trieve-general:trieve.ai) and tell us! We are a small company who is still very hands-on and eager to build what you need; professional services are available."
+  ],
+  "use_cases": [
+    "document_qa",
+    "content_creation"
+  ],
+  "language": null,
+  "license": null,
+  "installation": [
+    "cargo-watch",
+    "npx -y @smithery/cli install trieve-mcp-server --client claude",
+    "-g"
+  ],
+  "requirements": {
+    "python_version": "3",
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [
+      "conf",
+      "homedir",
+      "os"
+    ],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [
+    "https://docs.trieve.ai/api-reference",
+    "https://docs.trieve.ai/self-hosting/docker-compose",
+    "https://blog.streamlit.io/beginners-guide-to-openai-api/#get-your-own-openai-api-key",
+    "https://gist.github.com/skeptrunedev/101c7a13bb9b9242999830655470efac",
+    "http://localhost:8090/redoc"
+  ],
+  "demo_links": [],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "bash",
+      "code": "npx -y @smithery/cli install trieve-mcp-server --client claude"
+    },
+    {
+      "language": "sh",
+      "code": "sudo apt install curl \\\ngcc \\\ng++ \\\nmake \\\npkg-config \\\npython3 \\\npython3-pip \\\nlibpq-dev \\\nlibssl-dev \\\nopenssl"
+    },
+    {
+      "language": "sh",
+      "code": "sudo pacman -S base-devel postgresql-libs"
+    },
+    {
+      "language": "sh",
+      "code": "# Install Xcode command line tools\nxcode-select --install\n\n# Install Homebrew if not already installed\n/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"\n\n# Install required packages\nbrew install pkg-config openssl"
+    },
+    {
+      "language": "unknown",
+      "code": "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash"
+    },
+    {
+      "language": "unknown",
+      "code": "nvm install --lts\nnpm install -g yarn"
+    },
+    {
+      "language": "unknown",
+      "code": "mkdir server/tmp"
+    },
+    {
+      "language": "unknown",
+      "code": "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"
+    },
+    {
+      "language": "unknown",
+      "code": "cargo install cargo-watch"
+    },
+    {
+      "language": "unknown",
+      "code": "cp .env.analytics ./frontends/analytics/.env\ncp .env.chat ./frontends/chat/.env\ncp .env.search ./frontends/search/.env\ncp .env.example ./server/.env\ncp .env.dashboard ./frontends/dashboard/.env"
+    },
+    {
+      "language": "unknown",
+      "code": "export OPENAI_API_KEY=\"your_OpenAI_api_key\" \\\nLLM_API_KEY=\"your_OpenAI_api_key\" \\\nPAGEFIND_CDN_BASE_URL=\"lZP8X4h0Q5Sj2ZmV,aAmu1W92T6DbFUkJ,DZ5pMvz8P1kKNH0r,QAqwvKh8rI5sPmuW,YMwgsBz7jLfN0oX8\" \\\nS3_SECRET_KEY_CSVJSONL=\"Gq6wzS3mjC5kL7i4KwexnL3gP8Z1a5Xv,V2c4ZnL0uHqBzFvR2NcN8Pb1g6CjmX9J,TfA1h8LgI5zYkH9A9p7NvWlL0sZzF9p8N,pKr81pLq5n6MkNzT1X09R7Qb0Vn5cFr0d,DzYwz82FQiW6T3u9A4z9h7HLOlJb7L2V1\" \\\nGROQ_API_KEY=\"GROQ_API_KEY_if_applicable\""
+    },
+    {
+      "language": "unknown",
+      "code": "cat .env.chat .env.search .env.server .env.docker-compose > .env\n\n./convenience.sh -l"
+    },
+    {
+      "language": "sh",
+      "code": "docker compose -f docker-compose-cpu-embeddings.yml up -d"
+    },
+    {
+      "language": "sh",
+      "code": "docker compose -f docker-compose-gpu-embeddings.yml up -d"
+    },
+    {
+      "language": "unknown",
+      "code": "SPARSE_SERVER_QUERY_ORIGIN\nSPARSE_SERVER_DOC_ORIGIN\nEMBEDDING_SERVER_ORIGIN\nSPARSE_SERVER_QUERY_ORIGIN"
+    },
+    {
+      "language": "unknown",
+      "code": "cp docker-compose-cpu-embeddings.override.mac docker-compose-cpu-embeddings.override.yml\ndocker-compose -f docker-compose-cpu-embeddings.yml -f docker-compose-cpu-embeddings.override.yml docker up -d"
+    },
+    {
+      "language": "unknown",
+      "code": "cd frontends\nyarn"
+    },
+    {
+      "language": "unknown",
+      "code": "cd clients/ts-sdk\nyarn build"
+    },
+    {
+      "language": "unknown",
+      "code": "cd frontends\nyarn\nyarn dev"
+    },
+    {
+      "language": "unknown",
+      "code": "cd server\ncargo watch -x run"
+    },
+    {
+      "language": "unknown",
+      "code": "cd server\ncargo run --bin ingestion-worker"
+    },
+    {
+      "language": "unknown",
+      "code": "cd server\ncargo run --bin file-worker"
+    },
+    {
+      "language": "unknown",
+      "code": "cd server\ncargo run --bin delete-worker"
+    },
+    {
+      "language": "unknown",
+      "code": "cd search\nyarn\nyarn dev"
+    },
+    {
+      "language": "bash",
+      "code": "OPENAI_API_KEY=your-key  npx mcp-eval evals.ts clients/mcp-server/src/index.ts"
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:30:33.131665",
+  "keywords": [],
+  "search_text": "   **🔒 self-hosting in your vpc or on-prem**: we have full self-hosting guides for aws, gcp, kubernetes generally, and docker compose available on our [documentation page here](https://docs.trieve.ai/self-hosting/docker-compose). **🧠 semantic dense vector search**: integrates with openai or jina embedding models and [qdrant](https://qdrant.tech) to provide semantic vector search. **🔍 typo tolerant full-text/neural search**: every uploaded chunk is vector'ized with [naver/efficient-splade-vi-bt-large-query](https://huggingface.co/naver/efficient-splade-vi-bt-large-query) for typo tolerant, quality neural sparse-vector search. **🖊️ sub-sentence highlighting**: highlight the matching words or sentences within a chunk and bold them on search to enhance ux for your users. shout out to the [simsearch](https://github.com/smartdatalake/simsearch) crate! **🌟 recommendations**: find similar chunks (or files if using grouping) with the recommendation api. very helpful if you have a platform where users' favorite, bookmark, or upvote content. **🤖 convenient rag api routes**: we integrate with openrouter to provide you with access to any llm you would like for rag. try our routes for [fully-managed rag with topic-based memory management](https://api.trieve.ai/redoc#tag/message/operation/create_message_completion_handler) or [select your own context rag](https://api.trieve.ai/redoc#tag/chunk/operation/generate_off_chunks). **💼 bring your own models**: if you'd like, you can bring your own text-embedding, splade, cross-encoder re-ranking, and/or large-language model (llm) and plug it into our infrastructure. **🔄 hybrid search with cross-encoder re-ranking**: for the best results, use hybrid search with [baai/bge-reranker-large](https://huggingface.co/baai/bge-reranker-large) re-rank optimization. **📆 recency biasing**: easily bias search results for what was most recent to prevent staleness **🛠️ tunable merchandizing**: adjust relevance using signals like clicks, add-to-carts, or citations **🕳️ filtering**: date-range, substring match, tag, numeric, and other filter types are supported. **👥 grouping**: mark multiple chunks as being part of the same file and search on the file-level such that the same top-level result never appears twice - call us at [628-222-4090](mailto:+16282224090), make a [github issue](https://github.com/devflowinc/trieve/issues), or join the [matrix community](https://matrix.to/#/#trieve-general:trieve.ai) and tell us! we are a small company who is still very hands-on and eager to build what you need; professional services are available. <p align=\"center\">\n  <img height=\"100\" src=\"https://cdn.trieve.ai/trieve-logo.png\" alt=\"trieve logo\">\n</p>\n<p align=\"center\">\n<strong><a href=\"https://dashboard.trieve.ai\">sign up (1k chunks free)</a> | <a href=\"https://pdf2md.trieve.ai\">pdf2md</a> | <a href=\"https://docs.trieve.ai\">hacker news search engine</a> | <a href=\"https://docs.trieve.ai\">documentation</a> | <a href=\"https://cal.com/nick.k/meet\">meet a maintainer</a> | <a href=\"https://discord.gg/ebjxxzdb8z\">discord</a> | <a href=\"https://matrix.to/#/#trieve-general:trieve.ai\">matrix</a>\n</strong>\n</p>\n\n<p align=\"center\">\n    <a href=\"https://github.com/devflowinc/trieve/stargazers\">\n        <img src=\"https://img.shields.io/github/stars/devflowinc/trieve.svg?style=flat&color=yellow\" alt=\"github stars\"/>\n    </a>\n    <a href=\"https://discord.gg/cujvfgzf54\">\n        <img src=\"https://img.shields.io/discord/1130153053056684123.svg?label=discord&logo=discord&colorb=7289da&style=flat\" alt=\"join discord\"/>\n    </a>\n    <a href=\"https://matrix.to/#/#trieve-general:trieve.ai\">\n        <img src=\"https://img.shields.io/badge/matrix-join-purple?style=flat&logo=matrix&logocolor=white\" alt=\"join matrix\"/>\n    </a>\n    <a href=\"https://smithery.ai/server/trieve-mcp-server\">\n        <img src=\"https://smithery.ai/badge/trieve-mcp-server\" alt=\"smithery badge\"/>\n    </a>\n    <a href=\"https://insiders.vscode.dev/redirect?url=vscode%3amcp%2finstall%3f%257b%2522name%2522%253a%2522trieve-mcp-server%2522%252c%2522command%2522%253a%2522npx%2522%252c%2522args%2522%253a%255b%2522more%2520args...%2522%255d%257d\">\n        <img src=\"https://img.shields.io/badge/vscode-mcp-install?style=flat&logocolor=%230078d4&label=vscode-mcp&labelcolor=%230078d4&link=https%3a%2f%2finsiders.vscode.dev%2fredirect%3furl%3dvscode%253amcp%252finstall%253f%25257b%252522name%252522%25253a%252522trieve-mcp-server%252522%25252c%252522command%252522%25253a%252522npx%252522%25252c%252522args%252522%25253a%25255b%252522more%252520args...%252522%25255d%25257d\" alt=\"vscode mcp install badge\"/>\n    </a>\n</p>\n\n<h2 align=\"center\">\n    <b>all-in-one solution for search, recommendations, and rag</b>\n</h2>\n\n<a href=\"https://trieve.ai\">\n  <img src=\"https://cdn.trieve.ai/landing-tabs/light-api.webp\">\n</a>"
+}

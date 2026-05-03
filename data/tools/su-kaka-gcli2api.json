@@ -1,0 +1,172 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "**将 GeminiCLI 和 Antigravity 转换为 OpenAI 、GEMINI 和 Claude API 兼容接口**  [![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/) [![License: CNC-1.0](https://img.shields.io/badge/License-CNC--1.0-red.svg)](LICENSE) [![Docker](https://img.shields.io/badge/docker-available-blue.svg)](https://github.com/su-kaka/gcli2api/pkgs/container/gcli2api)  [English](docs/README_EN.md) | 中文 | [日本語](docs/README_JA.md)",
+  "features": [],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [],
+  "requirements": {
+    "python_version": "3.12",
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [
+    "https://img.shields.io/badge/docker-available-blue.svg"
+  ],
+  "demo_links": [],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "bash",
+      "code": "curl -o termux-install.sh \"https://raw.githubusercontent.com/su-kaka/gcli2api/refs/heads/master/termux-install.sh\" && chmod +x termux-install.sh && ./termux-install.sh"
+    },
+    {
+      "language": "bash",
+      "code": "cd gcli2api\nbash termux-start.sh"
+    },
+    {
+      "language": "powershell",
+      "code": "iex (iwr \"https://raw.githubusercontent.com/su-kaka/gcli2api/refs/heads/master/install.ps1\" -UseBasicParsing).Content"
+    },
+    {
+      "language": "bash",
+      "code": "curl -o install.sh \"https://raw.githubusercontent.com/su-kaka/gcli2api/refs/heads/master/install.sh\" && chmod +x install.sh && ./install.sh"
+    },
+    {
+      "language": "bash",
+      "code": "cd gcli2api\nbash start.sh"
+    },
+    {
+      "language": "bash",
+      "code": "curl -o darwin-install.sh \"https://raw.githubusercontent.com/su-kaka/gcli2api/refs/heads/master/darwin-install.sh\" && chmod +x darwin-install.sh && ./darwin-install.sh"
+    },
+    {
+      "language": "bash",
+      "code": "cd gcli2api\nbash start.sh"
+    },
+    {
+      "language": "bash",
+      "code": "# 使用通用密码\ndocker run -d --name gcli2api --network host -e PASSWORD=pwd -e PORT=7861 -v $(pwd)/data/creds:/app/creds ghcr.io/su-kaka/gcli2api:latest\n\n# 使用分离密码\ndocker run -d --name gcli2api --network host -e API_PASSWORD=api_pwd -e PANEL_PASSWORD=panel_pwd -e PORT=7861 -v $(pwd)/data/creds:/app/creds ghcr.io/su-kaka/gcli2api:latest"
+    },
+    {
+      "language": "bash",
+      "code": "# 使用通用密码\ndocker run -d \\\n  --name gcli2api \\\n  -p 7861:7861 \\\n  -p 8080:8080 \\\n  -e PASSWORD=pwd \\\n  -e PORT=7861 \\\n  -v \"$(pwd)/data/creds\":/app/creds \\\n  ghcr.io/su-kaka/gcli2api:latest"
+    },
+    {
+      "language": "bash",
+      "code": "# 使用分离密码\ndocker run -d \\\n--name gcli2api \\\n-p 7861:7861 \\\n-p 8080:8080 \\\n-e API_PASSWORD=api_pwd \\\n-e PANEL_PASSWORD=panel_pwd \\\n-e PORT=7861 \\\n-v $(pwd)/data/creds:/app/creds \\\nghcr.io/su-kaka/gcli2api:latest"
+    },
+    {
+      "language": "yaml",
+      "code": "version: '3.8'\n\n    services:\n      gcli2api:\n        image: ghcr.io/su-kaka/gcli2api:latest\n        container_name: gcli2api\n        restart: unless-stopped\n        network_mode: host\n        environment:\n          # 使用通用密码（推荐用于简单部署）\n          - PASSWORD=pwd\n          - PORT=7861\n          # 或使用分离密码（推荐用于生产环境）\n          # - API_PASSWORD=your_api_password\n          # - PANEL_PASSWORD=your_panel_password\n        volumes:\n          - ./data/creds:/app/creds\n        healthcheck:\n          test: [\"CM"
+    },
+    {
+      "language": "bash",
+      "code": "docker-compose up -d"
+    },
+    {
+      "language": "bash",
+      "code": "# 本地 MongoDB\nexport MONGODB_URI=\"mongodb://localhost:27017\"\n\n# MongoDB Atlas 云服务\nexport MONGODB_URI=\"mongodb+srv://username:password@cluster.mongodb.net\"\n\n# 带认证的 MongoDB\nexport MONGODB_URI=\"mongodb://admin:password@localhost:27017/admin\"\n\n# 可选：自定义数据库名称（默认: gcli2api）\nexport MONGODB_DATABASE=\"my_gcli_db\""
+    },
+    {
+      "language": "bash",
+      "code": "# 应用会自动检测 MongoDB 配置并使用 MongoDB 存储\npython web.py"
+    },
+    {
+      "language": "bash",
+      "code": "# 单机 MongoDB 部署\ndocker run -d --name gcli2api \\\n  -e MONGODB_URI=\"mongodb://mongodb:27017\" \\\n  -e API_PASSWORD=your_password \\\n  --network your_network \\\n  ghcr.io/su-kaka/gcli2api:latest\n\n# 使用 MongoDB Atlas\ndocker run -d --name gcli2api \\\n  -e MONGODB_URI=\"mongodb+srv://user:pass@cluster.mongodb.net/gcli2api\" \\\n  -e API_PASSWORD=your_password \\\n  -p 7861:7861 \\\n  ghcr.io/su-kaka/gcli2api:latest"
+    },
+    {
+      "language": "yaml",
+      "code": "version: '3.8'\n\nservices:\n  mongodb:\n    image: mongo:7\n    container_name: gcli2api-mongodb\n    restart: unless-stopped\n    environment:\n      MONGO_INITDB_ROOT_USERNAME: admin\n      MONGO_INITDB_ROOT_PASSWORD: password123\n    volumes:\n      - mongodb_data:/data/db\n    ports:\n      - \"27017:27017\"\n\n  gcli2api:\n    image: ghcr.io/su-kaka/gcli2api:latest\n    container_name: gcli2api\n    restart: unless-stopped\n    depends_on:\n      - mongodb\n    environment:\n      - MONGODB_URI=mongodb://admin:pa"
+    },
+    {
+      "language": "bash",
+      "code": "# 连接池和超时配置\nexport MONGODB_URI=\"mongodb://localhost:27017?maxPoolSize=10&serverSelectionTimeoutMS=5000\"\n\n# 副本集配置\nexport MONGODB_URI=\"mongodb://host1:27017,host2:27017,host3:27017/gcli2api?replicaSet=myReplicaSet\"\n\n# 读写分离配置\nexport MONGODB_URI=\"mongodb://localhost:27017/gcli2api?readPreference=secondaryPreferred\""
+    },
+    {
+      "language": "bash",
+      "code": "# 使用通用密码\ndocker run -d --name gcli2api \\\n  -e PASSWORD=mypassword \\\n  -e PORT=7861 \\\n  ghcr.io/su-kaka/gcli2api:latest\n\n# 使用分离密码\ndocker run -d --name gcli2api \\\n  -e API_PASSWORD=my_api_password \\\n  -e PANEL_PASSWORD=my_panel_password \\\n  -e PORT=7861 \\\n  ghcr.io/su-kaka/gcli2api:latest"
+    },
+    {
+      "language": "json",
+      "code": "{\n  \"model\": \"gemini-2.5-pro\",\n  \"messages\": [\n    {\"role\": \"system\", \"content\": \"You are a helpful assistant\"},\n    {\"role\": \"user\", \"content\": \"Hello\"}\n  ],\n  \"temperature\": 0.7,\n  \"stream\": true\n}"
+    },
+    {
+      "language": "json",
+      "code": "{\n  \"model\": \"gemini-2.5-pro\",\n  \"contents\": [\n    {\"role\": \"user\", \"parts\": [{\"text\": \"Hello\"}]}\n  ],\n  \"systemInstruction\": {\"parts\": [{\"text\": \"You are a helpful assistant\"}]},\n  \"generationConfig\": {\n    \"temperature\": 0.7\n  }\n}"
+    },
+    {
+      "language": "bash",
+      "code": "# 使用 x-goog-api-key 头部\ncurl -X POST \"http://127.0.0.1:7861/v1/models/gemini-2.5-pro:generateContent\" \\\n  -H \"x-goog-api-key: your_api_password\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"contents\": [\n      {\"role\": \"user\", \"parts\": [{\"text\": \"Hello\"}]}\n    ]\n  }'\n\n# 使用 URL 参数\ncurl -X POST \"http://127.0.0.1:7861/v1/models/gemini-2.5-pro:streamGenerateContent?key=your_api_password\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"contents\": [\n      {\"role\": \"user\", \"parts\": [{\"te"
+    },
+    {
+      "language": "bash",
+      "code": "curl -X POST \"http://127.0.0.1:7861/v1/messages\" \\\n  -H \"x-api-key: your_api_password\" \\\n  -H \"anthropic-version: 2023-06-01\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"model\": \"gemini-2.5-pro\",\n    \"max_tokens\": 1024,\n    \"messages\": [\n      {\"role\": \"user\", \"content\": \"Hello, Claude!\"}\n    ]\n  }'"
+    },
+    {
+      "language": "json",
+      "code": "{\n  \"model\": \"gemini-2.5-pro\",\n  \"max_tokens\": 1024,\n  \"system\": \"You are a helpful assistant\",\n  \"messages\": [\n    {\"role\": \"user\", \"content\": \"Hello\"}\n  ]\n}"
+    },
+    {
+      "language": "bash",
+      "code": "curl -X POST \"http://127.0.0.1:7861/antigravity/v1/chat/completions\" \\\n  -H \"Authorization: Bearer your_api_password\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"model\": \"claude-sonnet-4-5\",\n    \"messages\": [\n      {\"role\": \"user\", \"content\": \"Hello\"}\n    ],\n    \"stream\": true\n  }'"
+    },
+    {
+      "language": "bash",
+      "code": "# Gemini 格式非流式请求\ncurl -X POST \"http://127.0.0.1:7861/antigravity/v1/models/claude-sonnet-4-5:generateContent\" \\\n  -H \"x-goog-api-key: your_api_password\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"contents\": [\n      {\"role\": \"user\", \"parts\": [{\"text\": \"Hello\"}]}\n    ],\n    \"generationConfig\": {\n      \"temperature\": 0.7\n    }\n  }'\n\n# Gemini 格式流式请求\ncurl -X POST \"http://127.0.0.1:7861/antigravity/v1/models/gemini-2.5-flash:streamGenerateContent?key=your_api_password\" \\\n  -H \"Content-Type"
+    },
+    {
+      "language": "bash",
+      "code": "curl -X POST \"http://127.0.0.1:7861/antigravity/v1/messages\" \\\n  -H \"x-api-key: your_api_password\" \\\n  -H \"anthropic-version: 2023-06-01\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"model\": \"claude-sonnet-4-5\",\n    \"max_tokens\": 1024,\n    \"messages\": [\n      {\"role\": \"user\", \"content\": \"Hello\"}\n    ]\n  }'"
+    },
+    {
+      "language": "python",
+      "code": "from io import BytesIO\nfrom PIL import Image\nfrom google.genai import Client\nfrom google.genai.types import HttpOptions\nfrom google.genai import types\n# The client gets the API key from the environment variable `GEMINI_API_KEY`.\n\nclient = Client(\n            api_key=\"pwd\",\n            http_options=HttpOptions(base_url=\"http://127.0.0.1:7861\"),\n        )\n\nprompt = (\n    \"\"\"\n    画一只猫\n    \"\"\"\n)\n\nresponse = client.models.generate_content(\n    model=\"gemini-3.1-flash-image\",\n    contents=[prompt],\n  "
+    },
+    {
+      "language": "json",
+      "code": "{\n  \"model\": \"gemini-2.5-pro\",\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": [\n        {\"type\": \"text\", \"text\": \"描述这张图片\"},\n        {\n          \"type\": \"image_url\",\n          \"image_url\": {\n            \"url\": \"data:image/jpeg;base64,/9j/4AAQSkZJRgABA...\"\n          }\n        }\n      ]\n    }\n  ]\n}"
+    },
+    {
+      "language": "json",
+      "code": "{\n  \"model\": \"gemini-2.5-pro-maxthinking\",\n  \"messages\": [\n    {\"role\": \"user\", \"content\": \"复杂数学问题\"}\n  ]\n}"
+    },
+    {
+      "language": "json",
+      "code": "{\n  \"choices\": [{\n    \"message\": {\n      \"role\": \"assistant\",\n      \"content\": \"最终答案\",\n      \"reasoning_content\": \"详细的思考过程...\"\n    }\n  }]\n}"
+    },
+    {
+      "language": "json",
+      "code": "{\n  \"model\": \"流式抗截断/gemini-2.5-pro\",\n  \"messages\": [\n    {\"role\": \"user\", \"content\": \"写一篇长文章\"}\n  ],\n  \"stream\": true\n}"
+    },
+    {
+      "language": "bash",
+      "code": "# 启用兼容性模式\nexport COMPATIBILITY_MODE=true"
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:27:11.920382",
+  "keywords": [],
+  "search_text": "    "
+}

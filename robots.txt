@@ -1,0 +1,47 @@
+# AI Tool Search Engine - robots.txt
+# We WELCOME all AI crawlers!
+
+# Allow all AI bots
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+# Allow all other bots
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://yourdomain.com/sitemap.xml
+Sitemap: https://yourdomain.com/ai-sitemap.xml
+
+# Crawl delay (be nice to our free hosting)
+Crawl-delay: 1

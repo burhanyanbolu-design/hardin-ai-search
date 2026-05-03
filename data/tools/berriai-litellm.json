@@ -1,0 +1,111 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "<h1 align=\"center\">         🚅 LiteLLM     </h1>     <p align=\"center\">         <p align=\"center\">LiteLLM AI Gateway         </p>         <p align=\"center\">Open Source AI Gateway for 100+ LLMs. Self-hosted. Enterprise-ready. Call any LLM in OpenAI format.</p>         <p align=\"center\">         <a href=\"https://render.com/deploy?repo=https://github.com/BerriAI/litellm\" target=\"_blank\" rel=\"nofollow\"><img src=\"https://render.com/images/deploy-to-render-button.svg\" alt=\"Deploy to Render\"></a>    ...",
+  "features": [
+    "Call 100+ LLMs (Python SDK + AI Gateway)</summary>",
+    "`/chat/completions`, `/responses`, `/embeddings`, `/images`, `/audio`, `/batches`, `/rerank`, `/a2a`, `/messages` and more."
+  ],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [],
+  "requirements": {
+    "python_version": null,
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [
+      "prism-react-renderer",
+      "prisma",
+      "react-copy-to-clipboard"
+    ],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [
+    "https://docs.litellm.ai/docs/simple_proxy",
+    "https://docs.litellm.ai/docs/providers",
+    "https://docs.litellm.ai/docs/a2a",
+    "https://docs.litellm.ai/docs/mcp",
+    "https://docs.litellm.ai/docs/providers",
+    "https://docs.litellm.ai/docs/",
+    "https://github.com/BerriAI/litellm-docs",
+    "https://docs.litellm.ai",
+    "https://google.github.io/styleguide/pyguide.html"
+  ],
+  "demo_links": [
+    "https://calendly.com/d/4mp-gd3-k5k/berriai-1-1-onboarding-litellm-hosted-version"
+  ],
+  "usage_examples": [
+    "git clone https://github.com/BerriAI/litellm.git\ncd litellm\nmake install-dev    # Install development dependencies\nmake format         # Format your code\nmake lint           # Run all linting checks\nmake test-unit      # Run unit tests\nmake format-check   # Check formatting only"
+  ],
+  "code_examples": [
+    {
+      "language": "shell",
+      "code": "uv add litellm"
+    },
+    {
+      "language": "python",
+      "code": "from litellm import completion\nimport os\n\nos.environ[\"OPENAI_API_KEY\"] = \"your-openai-key\"\nos.environ[\"ANTHROPIC_API_KEY\"] = \"your-anthropic-key\"\n\n# OpenAI\nresponse = completion(model=\"openai/gpt-4o\", messages=[{\"role\": \"user\", \"content\": \"Hello!\"}])\n\n# Anthropic  \nresponse = completion(model=\"anthropic/claude-sonnet-4-20250514\", messages=[{\"role\": \"user\", \"content\": \"Hello!\"}])"
+    },
+    {
+      "language": "shell",
+      "code": "uv tool install 'litellm[proxy]'\nlitellm --model gpt-4o"
+    },
+    {
+      "language": "python",
+      "code": "import openai\n\nclient = openai.OpenAI(api_key=\"anything\", base_url=\"http://0.0.0.0:4000\")\nresponse = client.chat.completions.create(\n    model=\"gpt-4o\",\n    messages=[{\"role\": \"user\", \"content\": \"Hello!\"}]\n)"
+    },
+    {
+      "language": "python",
+      "code": "from litellm.a2a_protocol import A2AClient\nfrom a2a.types import SendMessageRequest, MessageSendParams\nfrom uuid import uuid4\n\nclient = A2AClient(base_url=\"http://localhost:10001\")\n\nrequest = SendMessageRequest(\n    id=str(uuid4()),\n    params=MessageSendParams(\n        message={\n            \"role\": \"user\",\n            \"parts\": [{\"kind\": \"text\", \"text\": \"Hello!\"}],\n            \"messageId\": uuid4().hex,\n        }\n    )\n)\nresponse = await client.send_message(request)"
+    },
+    {
+      "language": "python",
+      "code": "from a2a.client import A2ACardResolver, A2AClient\nfrom a2a.types import MessageSendParams, SendMessageRequest\nfrom uuid import uuid4\nimport httpx\n\nbase_url = \"http://localhost:4000/a2a/my-agent\"  # LiteLLM proxy + agent name\nheaders = {\"Authorization\": \"Bearer sk-1234\"}    # LiteLLM Virtual Key\n\nasync with httpx.AsyncClient(headers=headers) as httpx_client:\n    resolver = A2ACardResolver(httpx_client=httpx_client, base_url=base_url)\n    agent_card = await resolver.get_agent_card()\n    client = A"
+    },
+    {
+      "language": "python",
+      "code": "from mcp import ClientSession, StdioServerParameters\nfrom mcp.client.stdio import stdio_client\nfrom litellm import experimental_mcp_client\nimport litellm\n\nserver_params = StdioServerParameters(command=\"python\", args=[\"mcp_server.py\"])\n\nasync with stdio_client(server_params) as (read, write):\n    async with ClientSession(read, write) as session:\n        await session.initialize()\n\n        # Load MCP tools in OpenAI format\n        tools = await experimental_mcp_client.load_mcp_tools(session=sessio"
+    },
+    {
+      "language": "bash",
+      "code": "curl -X POST 'http://0.0.0.0:4000/v1/chat/completions' \\\n  -H 'Authorization: Bearer sk-1234' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n    \"model\": \"gpt-4o\",\n    \"messages\": [{\"role\": \"user\", \"content\": \"Summarize the latest open PR\"}],\n    \"tools\": [{\n      \"type\": \"mcp\",\n      \"server_url\": \"litellm_proxy/mcp/github\",\n      \"server_label\": \"github_mcp\",\n      \"require_approval\": \"never\"\n    }]\n  }'"
+    },
+    {
+      "language": "json",
+      "code": "{\n  \"mcpServers\": {\n    \"LiteLLM\": {\n      \"url\": \"http://localhost:4000/mcp/\",\n      \"headers\": {\n        \"x-litellm-api-key\": \"Bearer sk-1234\"\n      }\n    }\n  }\n}"
+    },
+    {
+      "language": "bash",
+      "code": "cosign verify \\\n  --key https://raw.githubusercontent.com/BerriAI/litellm/0112e53046018d726492c814b3644b7d376029d0/cosign.pub \\\n  ghcr.io/berriai/litellm:<release-tag>"
+    },
+    {
+      "language": "bash",
+      "code": "cosign verify \\\n  --key https://raw.githubusercontent.com/BerriAI/litellm/<release-tag>/cosign.pub \\\n  ghcr.io/berriai/litellm:<release-tag>"
+    },
+    {
+      "language": "bash",
+      "code": "git clone https://github.com/BerriAI/litellm.git\ncd litellm\nmake install-dev    # Install development dependencies\nmake format         # Format your code\nmake lint           # Run all linting checks\nmake test-unit      # Run unit tests\nmake format-check   # Check formatting only"
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:26:42.032728",
+  "keywords": [],
+  "search_text": "   call 100+ llms (python sdk + ai gateway)</summary> `/chat/completions`, `/responses`, `/embeddings`, `/images`, `/audio`, `/batches`, `/rerank`, `/a2a`, `/messages` and more. <h1 align=\"center\">\n        🚅 litellm\n    </h1>\n    <p align=\"center\">\n        <p align=\"center\">litellm ai gateway\n        </p>\n        <p align=\"center\">open source ai gateway for 100+ llms. self-hosted. enterprise-ready. call any llm in openai format.</p>\n        <p align=\"center\">\n        <a href=\"https://render.com/deploy?repo=https://github.com/berriai/litellm\" target=\"_blank\" rel=\"nofollow\"><img src=\"https://render.com/images/deploy-to-render-button.svg\" alt=\"deploy to render\"></a>\n        <a href=\"https://railway.com/deploy/rhvhdc?referralcode=7mrv9k&utm_medium=integration&utm_source=template&utm_campaign=generic\">\n          <img src=\"https://railway.com/button.svg\" alt=\"deploy on railway\">\n        </a>\n        </p>\n    </p>\n<h4 align=\"center\"><a href=\"https://docs.litellm.ai/docs/simple_proxy\" target=\"_blank\">litellm proxy server (ai gateway)</a> | <a href=\"https://docs.litellm.ai/docs/enterprise#hosted-litellm-proxy\" target=\"_blank\"> hosted proxy</a> | <a href=\"https://litellm.ai/enterprise\"target=\"_blank\">enterprise tier</a> | <a href=\"https://www.litellm.ai/ai-gateway\" target=\"_blank\">website</a></h4>\n<h4 align=\"center\">\n    <a href=\"https://pypi.org/project/litellm/\" target=\"_blank\">\n        <img src=\"https://img.shields.io/pypi/v/litellm.svg\" alt=\"pypi version\">\n    </a>\n    <a href=\"https://github.com/berriai/litellm\" target=\"_blank\">\n        <img src=\"https://img.shields.io/github/stars/berriai/litellm.svg?style=social\" alt=\"github stars\">\n    </a>\n    <a href=\"https://www.ycombinator.com/companies/berriai\">\n        <img src=\"https://img.shields.io/badge/y%20combinator-w23-orange?style=flat-square\" alt=\"y combinator w23\">\n    </a>\n    <a href=\"https://wa.link/huol9n\">\n        <img src=\"https://img.shields.io/static/v1?label=chat%20on&message=whatsapp&color=success&logo=whatsapp&style=flat-square\" alt=\"whatsapp\">\n    </a>\n    <a href=\"https://discord.gg/wupm9drgdw\">\n        <img src=\"https://img.shields.io/static/v1?label=chat%20on&message=discord&color=blue&logo=discord&style=flat-square\" alt=\"discord\">\n    </a>\n    <a href=\"https://www.litellm.ai/support\">\n        <img src=\"https://img.shields.io/static/v1?label=chat%20on&message=slack&color=black&logo=slack&style=flat-square\" alt=\"slack\">\n    </a>\n    <a href=\"https://codspeed.io/berriai/litellm?utm_source=badge\">\n        <img src=\"https://img.shields.io/endpoint?url=https://codspeed.io/badge.json\" alt=\"codspeed\"/>\n    </a>\n</h4>\n\n<img width=\"2688\" height=\"1600\" alt=\"group 7154 (1)\" src=\"https://github.com/user-attachments/assets/c5ee0412-6fb5-4fb6-ab5b-bafae4209ca6\" />\n\n---"
+}

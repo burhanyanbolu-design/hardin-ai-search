@@ -1,0 +1,80 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "<div align=\"center\">  <img width=\"947\" alt=\"Upsonic_README\" src=\"https://github.com/user-attachments/assets/acb3f413-e4fe-44a6-9aff-40d4e9031188\" />",
+  "features": [],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [
+    "\"upsonic[ocr]\"",
+    "upsonic",
+    "uv pip install upsonic\n# pip install upsonic"
+  ],
+  "requirements": {
+    "python_version": null,
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [
+    "https://img.shields.io/badge/docs-upsonic.ai-brightgreen.svg",
+    "https://docs.upsonic.ai",
+    "https://docs.upsonic.ai/concepts/ocr/overview",
+    "https://docs.upsonic.ai",
+    "https://docs.upsonic.ai/get-started/quickstart",
+    "CONTRIBUTING.md"
+  ],
+  "demo_links": [
+    "https://docs.upsonic.ai/examples",
+    "https://docs.upsonic.ai/examples"
+  ],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "bash",
+      "code": "uv pip install upsonic\n# pip install upsonic"
+    },
+    {
+      "language": "python",
+      "code": "from upsonic import AutonomousAgent, Task\n\nagent = AutonomousAgent(\n    model=\"anthropic/claude-sonnet-4-5\",\n    workspace=\"/path/to/logs\"\n)\n\ntask = Task(\"Analyze server logs and detect anomaly patterns\")\n\nagent.print_do(task)"
+    },
+    {
+      "language": "python",
+      "code": "from upsonic import Agent, Task\n\nagent = Agent(model=\"anthropic/claude-sonnet-4-5\", name=\"Stock Analyst Agent\")\n\ntask = Task(description=\"Analyze the current market trends\")\n\nagent.print_do(task)"
+    },
+    {
+      "language": "python",
+      "code": "from upsonic import Agent, Task\nfrom upsonic.tools import tool\n\n@tool\ndef sum_tool(a: float, b: float) -> float:\n    \"\"\"\n    Add two numbers together.\n\n    Args:\n        a: First number\n        b: Second number\n\n    Returns:\n        The sum of a and b\n    \"\"\"\n    return a + b\n\ntask = Task(\n    description=\"Calculate 15 + 27\",\n    tools=[sum_tool]\n)\n\nagent = Agent(model=\"anthropic/claude-sonnet-4-5\", name=\"Calculator Agent\")\n\nresult = agent.print_do(task)"
+    },
+    {
+      "language": "bash",
+      "code": "uv pip install \"upsonic[ocr]\""
+    },
+    {
+      "language": "python",
+      "code": "from upsonic.ocr import OCR\nfrom upsonic.ocr.layer_1.engines import EasyOCREngine\n\nengine = EasyOCREngine(languages=[\"en\"])\nocr = OCR(layer_1_ocr_engine=engine)\n\ntext = ocr.get_text(\"invoice.pdf\")\nprint(text)"
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:27:54.175387",
+  "keywords": [],
+  "search_text": "    <div align=\"center\">\n\n<img width=\"947\" alt=\"upsonic_readme\" src=\"https://github.com/user-attachments/assets/acb3f413-e4fe-44a6-9aff-40d4e9031188\" />"
+}

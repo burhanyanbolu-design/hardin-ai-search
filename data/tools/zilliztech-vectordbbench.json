@@ -1,0 +1,266 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "To facilitate the presentation of test results and provide a comprehensive performance analysis report, we offer a [leaderboard page](https://zilliz.com/benchmark). It allows us to choose from QPS, QP$, and latency metrics, and provides a comprehensive assessment of a system's performance based on the test results of various cases and a set of scoring mechanisms (to be introduced later). On this leaderboard, we can select the systems and models to be compared, and filter out cases we do not w...",
+  "features": [],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [
+    "vectordb-bench[pgvecto_rs]`",
+    "vectordb-bench[hologres]`",
+    "vectordb-bench[redis]`",
+    "pip install vectordb-bench",
+    "vectordb-bench[aliyun_opensearch]`",
+    "'vectordb-bench[pinecone]'",
+    "vectordb-bench[zvec]`",
+    "-e",
+    "vectordb-bench[doris]`",
+    "pip install 'vectordb-bench[pinecone]'",
+    "vectordb-bench`",
+    "vectordb-bench[weaviate]`",
+    "vectordb-bench",
+    "'vectordb-bench[hologres]'",
+    "vectordb-bench[mongodb]`",
+    "vectordb-bench[lindorm]`",
+    "vectordb-bench[opensearch]`",
+    "vectordb-bench[polardb]`",
+    "vectordb-bench[oceanbase]`",
+    "vectordb-bench[cockroachdb]`",
+    "vectordb-bench[memorydb]`",
+    "'vectordb-bench[alisql]'`",
+    "vectordb-bench[qdrant]`",
+    "vectordb-bench[elastic]`",
+    "vectordb-bench[pgvector]`",
+    "vectordb-bench[tidb]`",
+    "vectordb-bench[pinecone]`",
+    "vectordb-bench[endee]`",
+    "vectordb-bench[chromadb]`",
+    "vectordb-bench[vespa]`",
+    "vectordb-bench[tencent_es]`"
+  ],
+  "requirements": {
+    "python_version": null,
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [],
+  "demo_links": [],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "unknown",
+      "code": "### Install\n**Install vectordb-bench with only PyMilvus**"
+    },
+    {
+      "language": "unknown",
+      "code": "**Install the specific database client**"
+    },
+    {
+      "language": "unknown",
+      "code": "All the database client supported\n\n| Optional database client | install command                             |\n|--------------------------|---------------------------------------------|\n| pymilvus, zilliz_cloud (*default*)     | `pip install vectordb-bench`                |\n| qdrant                   | `pip install vectordb-bench[qdrant]`        |\n| pinecone                 | `pip install vectordb-bench[pinecone]`      |\n| weaviate                 | `pip install vectordb-bench[weaviate]`      |\n|"
+    },
+    {
+      "language": "unknown",
+      "code": "OR:\n\n### Run from the command line."
+    },
+    {
+      "language": "unknown",
+      "code": "To list the clients that are runnable via the commandline option, execute: `vectordbbench --help`"
+    },
+    {
+      "language": "unknown",
+      "code": "To list the options for each command, execute `vectordbbench [command] --help`"
+    },
+    {
+      "language": "unknown",
+      "code": "### Run VectorChord (vchordrq) from command line\n\nVectorChord is a PostgreSQL extension for scalable vector similarity search using IVF + RaBitQ indexing.\nIt is fully compatible with pgvector data types and provides faster queries and index builds."
+    },
+    {
+      "language": "unknown",
+      "code": "Key VectorChord-specific options:\n| Option | Description |\n|--------|-------------|\n| `--lists` | Number of IVF lists for vchordrq index |\n| `--probes` | Number of probes during search (default: 10) |\n| `--epsilon` | Reranking precision factor, 0.0-4.0 (default: 1.9) |\n| `--residual-quantization` | Enable residual quantization |\n| `--spherical-centroids` | L2-normalize centroids (recommended for cosine/IP) |\n| `--build-threads` | Number of threads for index building (1-255) |\n| `--degree-of-para"
+    },
+    {
+      "language": "unknown",
+      "code": "To list the options for awsopensearch, execute `vectordbbench awsopensearch --help`"
+    },
+    {
+      "language": "unknown",
+      "code": "### Run Elastic Cloud from command line\n\nElastic Cloud supports multiple index types: HNSW, HNSW_INT8, HNSW_INT4, and HNSW_BBQ.\n\n**Example: Run HNSW index test**"
+    },
+    {
+      "language": "unknown",
+      "code": "**Example: Run HNSW_INT8 index test**"
+    },
+    {
+      "language": "unknown",
+      "code": "**Example: Run HNSW_INT4 index test**"
+    },
+    {
+      "language": "unknown",
+      "code": "**Example: Run HNSW_BBQ index test**"
+    },
+    {
+      "language": "unknown",
+      "code": "**Example: Run Label Filter Performance test**"
+    },
+    {
+      "language": "unknown",
+      "code": "To list all options for Elastic Cloud, execute `vectordbbench elasticcloudhnsw --help`. The following are Elastic Cloud-specific command-line options:"
+    },
+    {
+      "language": "unknown",
+      "code": "### Run OceanBase from command line\n\nExecute tests for the index types: HNSW, HNSW_SQ, or HNSW_BQ."
+    },
+    {
+      "language": "unknown",
+      "code": "To list the options for oceanbase, execute `vectordbbench oceanbasehnsw --help`, The following are some OceanBase-specific command-line options."
+    },
+    {
+      "language": "unknown",
+      "code": "Execute tests for the index types: IVF_FLAT, IVF_SQ8, or IVF_PQ."
+    },
+    {
+      "language": "unknown",
+      "code": "To list the options for oceanbase, execute `vectordbbench oceanbaseivf --help`, The following are some OceanBase-specific command-line options."
+    },
+    {
+      "language": "unknown",
+      "code": "### Run Hologres from command line\n\nIt is recommended to use the following code for installation."
+    },
+    {
+      "language": "unknown",
+      "code": "Execute tests for the index types: HGraph."
+    },
+    {
+      "language": "unknown",
+      "code": "To list the options for Hologres, execute `vectordbbench hologreshgraph --help`, The following are some Hologres-specific command-line options."
+    },
+    {
+      "language": "unknown",
+      "code": "### Run Zvec from command line"
+    },
+    {
+      "language": "unknown",
+      "code": "To list the options for zvec, execute vectordbbench zvec --help"
+    },
+    {
+      "language": "unknown",
+      "code": "### Run Doris from command line\n\nDoris supports ann index with type hnsw from version 4.0.x"
+    },
+    {
+      "language": "unknown",
+      "code": "Using flag `--session-var`, if you want to test doris with some customized session variables. For example:"
+    },
+    {
+      "language": "unknown",
+      "code": "Mote options:"
+    },
+    {
+      "language": "unknown",
+      "code": "### Run Lindorm from command line\n\nLindorm supports index types: hnsw, ivfpq, or ivfbq.\n\n**Example: Run hnsw index test**"
+    },
+    {
+      "language": "unknown",
+      "code": "**Example: Run ivfpq index test**"
+    },
+    {
+      "language": "unknown",
+      "code": "**Example: Run ivfbq index test**"
+    },
+    {
+      "language": "unknown",
+      "code": "To list the options for Lindorm, execute `vectordbbench lindormhnsw --help`, The following are some Lindorm-specific command-line options."
+    },
+    {
+      "language": "unknown",
+      "code": "### Run PolarDB from command line\n\nPolarDB supports index types: faiss_hnsw_flat, faiss_hnsw_pq, and faiss_hnsw_sq.\n\n**Example: Run faiss_hnsw_flat benchmark**"
+    },
+    {
+      "language": "unknown",
+      "code": "To list the options for PolarDB, execute `vectordbbench polardbhnswflat --help`. The following are some PolarDB-specific command-line options."
+    },
+    {
+      "language": "unknown",
+      "code": "#### Using a configuration file.\n\nThe vectordbbench command can optionally read some or all the options from a yaml formatted configuration file.\n\nBy default, configuration files are expected to be in vectordb_bench/config-files/, this can be overridden by setting\nthe environment variable CONFIG_LOCAL_DIR or by passing the full path to the file.\n\nThe required format is:"
+    },
+    {
+      "language": "unknown",
+      "code": "Example:"
+    },
+    {
+      "language": "unknown",
+      "code": "> Notes:\n> - Options passed on the command line will override the configuration file*\n> - Parameter names use an _ not -\n> - For `LabelFilterPerformanceCase` and `NewIntFilterPerformanceCase`, you must specify `dataset_with_size_type` in addition to `case_type`\n\n#### Using a batch configuration file.\n\nThe vectordbbench command can read a batch configuration file to run all the test cases in the yaml formatted configuration file.\n\nBy default, configuration files are expected to be in vectordb_ben"
+    },
+    {
+      "language": "unknown",
+      "code": "Example:"
+    },
+    {
+      "language": "unknown",
+      "code": "> Notes:\n> - Options can only be passed through configuration files\n> - Parameter names use an _ not -\n> - For `LabelFilterPerformanceCase` and `NewIntFilterPerformanceCase`, you must specify `dataset_with_size_type` in addition to `case_type`\n\nHow to use?"
+    },
+    {
+      "language": "unknown",
+      "code": "## Leaderboard\n### Introduction\nTo facilitate the presentation of test results and provide a comprehensive performance analysis report, we offer a [leaderboard page](https://zilliz.com/benchmark). It allows us to choose from QPS, QP$, and latency metrics, and provides a comprehensive assessment of a system's performance based on the test results of various cases and a set of scoring mechanisms (to be introduced later). On this leaderboard, we can select the systems and models to be compared, and"
+    },
+    {
+      "language": "unknown",
+      "code": "### Run test server"
+    },
+    {
+      "language": "unknown",
+      "code": "OR:"
+    },
+    {
+      "language": "unknown",
+      "code": "OR:\n\nIf you are using [dev container](https://code.visualstudio.com/docs/devcontainers/containers), create\nthe following dataset directory first:"
+    },
+    {
+      "language": "unknown",
+      "code": "After reopen the repository in container, run `python -m vectordb_bench` in the container's bash.\n\n### Check coding styles"
+    },
+    {
+      "language": "unknown",
+      "code": "To fix the coding styles automatically"
+    },
+    {
+      "language": "unknown",
+      "code": "## How does it work?\n### Result Page\n![image](https://github.com/zilliztech/VectorDBBench/assets/105927039/8a981327-c1c6-4796-8a85-c86154cb5472)\nThis is the main page of VDBBench, which displays the standard benchmark results we provide. Additionally, results of all tests performed by users themselves will also be shown here. We also offer the ability to select and compare results from multiple tests simultaneously.\n\nThe standard benchmark results displayed here include all 15 cases that we curr"
+    },
+    {
+      "language": "unknown",
+      "code": "2. Open config.py and implement the DBConfig and optional DBCaseConfig classes.\n  1. The DBConfig class should be an abstract class that provides information necessary to establish connections with the database. It is recommended to use the pydantic.SecretStr data type to handle sensitive data such as tokens, URIs, or passwords.\n  2. The DBCaseConfig class is optional and allows for providing case-specific configurations for the database. If not provided, it defaults to EmptyDBCaseConfig.\nExampl"
+    },
+    {
+      "language": "unknown",
+      "code": "**Step 3: Importing the DB Client and Updating Initialization**\n\nIn this final step, you will import your DB client into clients/__init__.py and update the initialization process.\n1. Open clients/__init__.py and import your NewClient from new_client.py.\n2. Add your NewClient to the DB enum.\n3. Update the db2client dictionary by adding an entry for your NewClient.\nExample implementation in clients/__init__.py:"
+    },
+    {
+      "language": "unknown",
+      "code": "**Step 4: Implement new_client/cli.py and vectordb_bench/cli/vectordbbench.py**\n\nIn this (optional, but encouraged) step you will enable the test to be run from the command line.\n1. Navigate to the vectordb_bench/backend/clients/\"client\" directory.\n2. Inside the \"client\" folder, create a cli.py file.\nUsing zilliz as an example cli.py:"
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:29:44.554411",
+  "keywords": [],
+  "search_text": "    to facilitate the presentation of test results and provide a comprehensive performance analysis report, we offer a [leaderboard page](https://zilliz.com/benchmark). it allows us to choose from qps, qp$, and latency metrics, and provides a comprehensive assessment of a system's performance based on the test results of various cases and a set of scoring mechanisms (to be introduced later). on this leaderboard, we can select the systems and models to be compared, and filter out cases we do not want to consider. comprehensive scores are always ranked from best to worst, and the specific test results of each query will be presented in the list below."
+}

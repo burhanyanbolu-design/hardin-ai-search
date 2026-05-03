@@ -1,0 +1,126 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "Semantic search over video footage. Type what you're looking for, get a trimmed clip back.  **New:** [Search by image](#search-by-image)  [<video src=\"https://github.com/ssrajadh/sentrysearch/raw/main/docs/demo.mp4\" controls width=\"100%\"></video>](https://github.com/user-attachments/assets/baf98fad-080b-48e1-97f5-a2db2cbd53f5)",
+  "features": [],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [],
+  "requirements": {
+    "python_version": "3.11",
+    "node_version": null,
+    "system_requirements": [
+      "Python 3.11+",
+      "`ffmpeg` on PATH, or use bundled ffmpeg via `imageio-ffmpeg` (installed by default)",
+      "**Gemini backend:** Gemini API key ([get one free](https://aistudio.google.com/apikey))",
+      "**Local backend:**",
+      "GPU with CUDA or Apple Metal (see [hardware table](#local-backend-no-api-key-needed) for VRAM/RAM requirements)",
+      "**macOS:** `brew install ffmpeg` (required by the video decoder)",
+      "**Linux/Windows:** no extra system dependencies"
+    ],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [
+    "https://github.com/user-attachments/assets/baf98fad-080b-48e1-97f5-a2db2cbd53f5"
+  ],
+  "demo_links": [],
+  "usage_examples": [
+    "curl -LsSf https://astral.sh/uv/install.sh | sh",
+    "2. Clone and install:",
+    "3. Set up your API key (or [use a local model instead](#local-backend-no-api-key-needed)):",
+    "This prompts for your Gemini API key, writes it to `.env`, and validates it with a test embedding.\n\n4. Index your footage:",
+    "5. Search:"
+  ],
+  "code_examples": [
+    {
+      "language": "bash",
+      "code": "curl -LsSf https://astral.sh/uv/install.sh | sh"
+    },
+    {
+      "language": "powershell",
+      "code": "powershell -c \"irm https://astral.sh/uv/install.ps1 | iex\""
+    },
+    {
+      "language": "bash",
+      "code": "git clone https://github.com/ssrajadh/sentrysearch.git\ncd sentrysearch\nuv tool install ."
+    },
+    {
+      "language": "bash",
+      "code": "sentrysearch init"
+    },
+    {
+      "language": "bash",
+      "code": "sentrysearch index /path/to/footage"
+    },
+    {
+      "language": "bash",
+      "code": "sentrysearch search \"red truck running a stop sign\""
+    },
+    {
+      "language": "bash",
+      "code": "$ sentrysearch init\nEnter your Gemini API key (get one at https://aistudio.google.com/apikey): ****\nValidating API key...\nSetup complete. You're ready to go — run `sentrysearch index <directory>` to get started."
+    },
+    {
+      "language": "bash",
+      "code": "$ sentrysearch index /path/to/video/footage\nIndexing file 1/3: front_2024-01-15_14-30.mp4 [chunk 1/4]\nIndexing file 1/3: front_2024-01-15_14-30.mp4 [chunk 2/4]\n...\nIndexed 12 new chunks from 3 files. Total: 12 chunks from 3 files."
+    },
+    {
+      "language": "bash",
+      "code": "$ sentrysearch search \"red truck running a stop sign\"\n  #1 [0.87] front_2024-01-15_14-30.mp4 @ 02:15-02:45\n  #2 [0.74] left_2024-01-15_14-30.mp4 @ 02:10-02:40\n  #3 [0.61] front_2024-01-20_09-15.mp4 @ 00:30-01:00\n\nSaved clip: ./match_front_2024-01-15_14-30_02m15s-02m45s.mp4"
+    },
+    {
+      "language": "unknown",
+      "code": "No confident match found (best score: 0.28). Show results anyway? [y/N]:"
+    },
+    {
+      "language": "bash",
+      "code": "$ sentrysearch img ~/Downloads/image.jpg\n  #1 [0.72] 2026-03-12_10-44-17-left_repeater.mp4 @ 00:00-00:30\n  #2 [0.69] 2026-03-12_10-44-17-left_repeater.mp4 @ 00:25-00:55\n  #3 [0.67] 2026-02-12_20-02-15-front.mp4 @ 00:00-00:18\n\nSaved clip: ./match_2026-03-12_10-44-17-left_repeater_00m00s-00m30s.mp4"
+    },
+    {
+      "language": "bash",
+      "code": "brew install ffmpeg"
+    },
+    {
+      "language": "bash",
+      "code": "sentrysearch index /path/to/footage --backend local\nsentrysearch search \"car running a red light\""
+    },
+    {
+      "language": "bash",
+      "code": "sentrysearch index /path/to/footage --model qwen2b   # same as --backend local --model qwen2b\nsentrysearch search \"car running a red light\"          # auto-detects local/qwen2b from index"
+    },
+    {
+      "language": "bash",
+      "code": "sentrysearch search \"car cutting me off\" --overlay"
+    },
+    {
+      "language": "bash",
+      "code": "uv tool install \".[tesla]\""
+    },
+    {
+      "language": "bash",
+      "code": "# Show index info (files marked [missing] no longer exist on disk)\nsentrysearch stats\n\n# Remove specific files by path substring\nsentrysearch remove path/to/footage\n\n# Wipe the entire index\nsentrysearch reset"
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:30:29.753893",
+  "keywords": [],
+  "search_text": "    "
+}

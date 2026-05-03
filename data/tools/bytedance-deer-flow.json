@@ -1,0 +1,146 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "English | [中文](./README_zh.md) | [日本語](./README_ja.md) | [Français](./README_fr.md) | [Русский](./README_ru.md)  [![Python](https://img.shields.io/badge/Python-3.12%2B-3776AB?logo=python&logoColor=white)](./backend/pyproject.toml) [![Node.js](https://img.shields.io/badge/Node.js-22%2B-339933?logo=node.js&logoColor=white)](./Makefile) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)  <a href=\"https://trendshift.io/repositories/14699\" target=\"_blank\"><img src=\"h...",
+  "features": [],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [],
+  "requirements": {
+    "python_version": "3",
+    "node_version": "22",
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [
+    "#option-1-docker-recommended",
+    "#documentation",
+    "backend/docs/MEMORY_SETTINGS_REVIEW.md",
+    "backend/docs/CONFIGURATION.md#sandbox",
+    "backend/docs/MCP_SERVER.md",
+    "CONTRIBUTING.md",
+    "backend/docs/CONFIGURATION.md"
+  ],
+  "demo_links": [],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "text",
+      "code": "Help me clone DeerFlow if needed, then bootstrap it for local development by following https://raw.githubusercontent.com/bytedance/deer-flow/main/Install.md"
+    },
+    {
+      "language": "bash",
+      "code": "git clone https://github.com/bytedance/deer-flow.git\n   cd deer-flow"
+    },
+    {
+      "language": "bash",
+      "code": "make setup"
+    },
+    {
+      "language": "yaml",
+      "code": "models:\n     - name: gpt-4o\n       display_name: GPT-4o\n       use: langchain_openai:ChatOpenAI\n       model: gpt-4o\n       api_key: $OPENAI_API_KEY\n\n     - name: openrouter-gemini-2.5-flash\n       display_name: Gemini 2.5 Flash (OpenRouter)\n       use: langchain_openai:ChatOpenAI\n       model: google/gemini-2.5-flash-preview\n       api_key: $OPENROUTER_API_KEY\n       base_url: https://openrouter.ai/api/v1\n\n     - name: gpt-5-responses\n       display_name: GPT-5 (Responses API)\n       use: langc"
+    },
+    {
+      "language": "yaml",
+      "code": "models:\n     - name: gpt-5.4\n       display_name: GPT-5.4 (Codex CLI)\n       use: deerflow.models.openai_codex_provider:CodexChatModel\n       model: gpt-5.4\n       supports_thinking: true\n       supports_reasoning_effort: true\n\n     - name: claude-sonnet-4.6\n       display_name: Claude Sonnet 4.6 (Claude Code OAuth)\n       use: deerflow.models.claude_provider:ClaudeChatModel\n       model: claude-sonnet-4-6\n       max_tokens: 4096\n       supports_thinking: true"
+    },
+    {
+      "language": "bash",
+      "code": "eval \"$(python3 scripts/export_claude_code_oauth.py --print-export)\""
+    },
+    {
+      "language": "bash",
+      "code": "OPENAI_API_KEY=your-openai-api-key\n   TAVILY_API_KEY=your-tavily-api-key"
+    },
+    {
+      "language": "bash",
+      "code": "make docker-init    # Pull sandbox image (only once or when image updates)\nmake docker-start   # Start services (auto-detects sandbox mode from config.yaml)"
+    },
+    {
+      "language": "bash",
+      "code": "make up     # Build images and start all production services\nmake down   # Stop and remove containers"
+    },
+    {
+      "language": "bash",
+      "code": "make check  # Verifies Node.js 22+, pnpm, uv, nginx"
+    },
+    {
+      "language": "bash",
+      "code": "make install  # Install backend + frontend dependencies + pre-commit hooks"
+    },
+    {
+      "language": "bash",
+      "code": "# Recommended if using Docker/Container-based sandbox\n   make setup-sandbox"
+    },
+    {
+      "language": "bash",
+      "code": "python scripts/load_memory_sample.py"
+    },
+    {
+      "language": "bash",
+      "code": "make dev"
+    },
+    {
+      "language": "bash",
+      "code": "# One-step (build + start)\ndeploy.sh\n\n# Two-step (build once, start later)\ndeploy.sh build              # build all images\ndeploy.sh start              # start pre-built images\n\n# Stop\ndeploy.sh down"
+    },
+    {
+      "language": "yaml",
+      "code": "channels:\n  # LangGraph-compatible Gateway API base URL (default: http://localhost:8001/api)\n  langgraph_url: http://localhost:8001/api\n  # Gateway API URL (default: http://localhost:8001)\n  gateway_url: http://localhost:8001\n\n  # Optional: global session defaults for all mobile channels\n  session:\n    assistant_id: lead_agent  # or a custom agent name; custom agents are routed via lead_agent + agent_name\n    config:\n      recursion_limit: 100\n    context:\n      thinking_enabled: true\n      is_p"
+    },
+    {
+      "language": "bash",
+      "code": "# Telegram\nTELEGRAM_BOT_TOKEN=123456789:ABCdefGHIjklMNOpqrSTUvwxYZ\n\n# Slack\nSLACK_BOT_TOKEN=xoxb-...\nSLACK_APP_TOKEN=xapp-...\n\n# Feishu / Lark\nFEISHU_APP_ID=cli_xxxx\nFEISHU_APP_SECRET=your_app_secret\n\n# WeChat iLink\nWECHAT_BOT_TOKEN=your_ilink_bot_token\nWECHAT_ILINK_BOT_ID=your_ilink_bot_id\n\n# WeCom\nWECOM_BOT_ID=your_bot_id\nWECOM_BOT_SECRET=your_bot_secret\n\n# DingTalk\nDINGTALK_CLIENT_ID=your_client_id\nDINGTALK_CLIENT_SECRET=your_client_secret"
+    },
+    {
+      "language": "bash",
+      "code": "LANGSMITH_TRACING=true\nLANGSMITH_ENDPOINT=https://api.smith.langchain.com\nLANGSMITH_API_KEY=lsv2_pt_xxxxxxxxxxxxxxxx\nLANGSMITH_PROJECT=xxx"
+    },
+    {
+      "language": "bash",
+      "code": "LANGFUSE_TRACING=true\nLANGFUSE_PUBLIC_KEY=pk-lf-xxxxxxxxxxxxxxxx\nLANGFUSE_SECRET_KEY=sk-lf-xxxxxxxxxxxxxxxx\nLANGFUSE_BASE_URL=https://cloud.langfuse.com"
+    },
+    {
+      "language": "unknown",
+      "code": "# Paths inside the sandbox container\n/mnt/skills/public\n├── research/SKILL.md\n├── report-generation/SKILL.md\n├── slide-creation/SKILL.md\n├── web-page/SKILL.md\n└── image-generation/SKILL.md\n\n/mnt/skills/custom\n└── your-custom-skill/SKILL.md      ← yours"
+    },
+    {
+      "language": "bash",
+      "code": "npx skills add https://github.com/bytedance/deer-flow --skill claude-to-deerflow"
+    },
+    {
+      "language": "bash",
+      "code": "DEERFLOW_URL=http://localhost:2026            # Unified proxy base URL\nDEERFLOW_GATEWAY_URL=http://localhost:2026    # Gateway API\nDEERFLOW_LANGGRAPH_URL=http://localhost:2026/api/langgraph  # LangGraph API"
+    },
+    {
+      "language": "unknown",
+      "code": "# Paths inside the sandbox container\n/mnt/user-data/\n├── uploads/          ← your files\n├── workspace/        ← agents' working directory\n└── outputs/          ← final deliverables"
+    },
+    {
+      "language": "python",
+      "code": "from deerflow.client import DeerFlowClient\n\nclient = DeerFlowClient()\n\n# Chat\nresponse = client.chat(\"Analyze this paper for me\", thread_id=\"my-thread\")\n\n# Streaming (LangGraph SSE protocol: values, messages-tuple, end)\nfor event in client.stream(\"hello\"):\n    if event.type == \"messages-tuple\" and event.data.get(\"type\") == \"ai\":\n        print(event.data[\"content\"])\n\n# Configuration & management — returns Gateway-aligned dicts\nmodels = client.list_models()        # {\"models\": [...]}\nskills = clie"
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:30:55.697026",
+  "keywords": [],
+  "search_text": "    "
+}

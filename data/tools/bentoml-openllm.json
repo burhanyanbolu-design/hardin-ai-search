@@ -1,0 +1,93 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "<div align=\"center\">  <h1>🦾 OpenLLM: Self-Hosting LLMs Made Easy</h1>  [![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202-green.svg)](https://github.com/bentoml/OpenLLM/blob/main/LICENSE) [![Releases](https://img.shields.io/pypi/v/openllm.svg?logo=pypi&label=PyPI&logoColor=gold)](https://pypi.org/project/openllm) [![CI](https://results.pre-commit.ci/badge/github/bentoml/OpenLLM/main.svg)](https://results.pre-commit.ci/latest/github/bentoml/OpenLLM/main) [![X](https://badg...",
+  "features": [],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [
+    "openllm"
+  ],
+  "requirements": {
+    "python_version": null,
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [
+    "https://github.com/bentoml/OpenLLM/blob/main/DEVELOPMENT.md",
+    "https://github.com/bentoml/OpenLLM/blob/main/DEVELOPMENT.md"
+  ],
+  "demo_links": [
+    "https://github.com/bentoml/openllm-models/pull/1"
+  ],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "bash",
+      "code": "pip install openllm  # or pip3 install openllm\nopenllm hello"
+    },
+    {
+      "language": "bash",
+      "code": ">    export HF_TOKEN=<your token>\n>"
+    },
+    {
+      "language": "bash",
+      "code": "openllm serve llama3.2:1b"
+    },
+    {
+      "language": "python",
+      "code": "from openai import OpenAI\n\nclient = OpenAI(base_url='http://localhost:3000/v1', api_key='na')\n\n# Use the following func to get the available models\n# model_list = client.models.list()\n# print(model_list)\n\nchat_completion = client.chat.completions.create(\n    model=\"meta-llama/Llama-3.2-1B-Instruct\",\n    messages=[\n        {\n            \"role\": \"user\",\n            \"content\": \"Explain superconductors like I'm five years old\"\n        }\n    ],\n    stream=True,\n)\nfor chunk in chat_completion:\n    pri"
+    },
+    {
+      "language": "python",
+      "code": "from llama_index.llms.openai import OpenAI\n\nllm = OpenAI(api_bese=\"http://localhost:3000/v1\", model=\"meta-llama/Llama-3.2-1B-Instruct\", api_key=\"dummy\")\n..."
+    },
+    {
+      "language": "bash",
+      "code": "openllm run llama3:8b"
+    },
+    {
+      "language": "bash",
+      "code": "openllm model list"
+    },
+    {
+      "language": "bash",
+      "code": "openllm repo update"
+    },
+    {
+      "language": "bash",
+      "code": "openllm model get llama3.2:1b"
+    },
+    {
+      "language": "bash",
+      "code": "openllm repo add <repo-name> <repo-url>"
+    },
+    {
+      "language": "bash",
+      "code": "openllm deploy llama3.2:1b --env HF_TOKEN"
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:27:01.313597",
+  "keywords": [],
+  "search_text": "    <div align=\"center\">\n\n<h1>🦾 openllm: self-hosting llms made easy</h1>\n\n[![license: apache-2.0](https://img.shields.io/badge/license-apache%202-green.svg)](https://github.com/bentoml/openllm/blob/main/license)\n[![releases](https://img.shields.io/pypi/v/openllm.svg?logo=pypi&label=pypi&logocolor=gold)](https://pypi.org/project/openllm)\n[![ci](https://results.pre-commit.ci/badge/github/bentoml/openllm/main.svg)](https://results.pre-commit.ci/latest/github/bentoml/openllm/main)\n[![x](https://badgen.net/badge/icon/@bentomlai/000000?icon=twitter&label=follow)](https://twitter.com/bentomlai)\n[![community](https://badgen.net/badge/icon/community/562f5d?icon=slack&label=join)](https://l.bentoml.com/join-slack)\n\n</div>\n\nopenllm allows developers to run **any open-source llms** (llama 3.3, qwen2.5, phi3 and [more](#supported-models)) or **custom models** as **openai-compatible apis** with a single command. it features a [built-in chat ui](#chat-ui), state-of-the-art inference backends, and a simplified workflow for creating enterprise-grade cloud deployment with docker, kubernetes, and [bentocloud](#deploy-to-bentocloud).\n\nunderstand the [design philosophy of openllm](https://www.bentoml.com/blog/from-ollama-to-openllm-running-llms-in-the-cloud)."
+}

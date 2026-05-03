@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hardin - Simple Test</title>
+    <style>
+        body { font-family: Arial; padding: 20px; max-width: 1000px; margin: 0 auto; }
+        input { padding: 10px; width: 300px; font-size: 16px; }
+        button { padding: 10px 20px; font-size: 16px; background: #667eea; color: white; border: none; cursor: pointer; }
+        .tool { border: 1px solid #ddd; padding: 15px; margin: 10px 0; border-radius: 5px; }
+        .tool h3 { margin: 0 0 10px 0; color: #333; }
+        .stars { color: #ffa500; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>🤖 Hardin - AI Tool Search</h1>
+    <p>Server must be running on http://localhost:5000</p>
+    
+    <div>
+        <input type="text" id="q" value="chatbot" placeholder="Search...">
+        <button onclick="doSearch()">Search</button>
+    </div>
+    
+    <div id="output"></div>
+    
+    <script>
+        function doSearch() {
+            const query = document.getElementById('q').value;
+            const output = document.getElementById('output');
+            output.innerHTML = '<p>Searching for: ' + query + '...</p>';
+            
+            fetch('http://localhost:5000/api/search?q=' + encodeURIComponent(query))
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Results:', data);
+                    
+                    if (!data.results || data.results.length === 0) {
+                        output.innerHTML = '<p>No results found for "' + query + '"</p>';
+                        return;
+                    }
+                    
+                    let html = '<h2>Found ' + data.total_results + ' tools:</h2>';
+                    
+                    data.results.slice(0, 10).forEach(tool => {
+                        html += '<div class="tool">';
+                        html += '<h3>' + (tool.name || 'Unknown') + ' <span class="stars">⭐ ' + ((tool.stars || 0).toLocaleString()) + '</span></h3>';
+                        html += '<p>' + (tool.tagline || tool.description || 'No description').substring(0, 200) + '</p>';
+                        html += '<p><strong>Language:</strong> ' + (tool.language || 'N/A') + '</p>';
+                        html += '<a href="' + tool.github_url + '" target="_blank">View on GitHub →</a>';
+                        html += '</div>';
+                    });
+                    
+                    output.innerHTML = html;
+                })
+                .catch(error => {
+                    output.innerHTML = '<p style="color: red;">Error: ' + error.message + '</p><p>Make sure the server is running!</p>';
+                    console.error('Error:', error);
+                });
+        }
+        
+        // Auto search on load
+        doSearch();
+    </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "![](docs/img/logo-long-chatchat-trans-v2.png) <a href=\"https://trendshift.io/repositories/329\" target=\"_blank\"><img src=\"https://trendshift.io/api/badge/repositories/329\" alt=\"chatchat-space%2FLangchain-Chatchat | Trendshift\" style=\"width: 250px; height: 55px;\" width=\"250\" height=\"55\"/></a>  [![pypi badge](https://img.shields.io/pypi/v/langchain-chatchat.svg)](https://shields.io/) [![Generic badge](https://img.shields.io/badge/python-3.8%7C3.9%7C3.10%7C3.11-blue.svg)](https://pypi.org/project...",
+  "features": [],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [
+    "'python-magic-bin=={version}'",
+    "\"langchain-chatchat[xinference]\"",
+    "langchain-chatchat"
+  ],
+  "requirements": {
+    "python_version": "3.8",
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [
+    "README.md#docker-部署",
+    "https://github.com/GanymedeNil/document.ai",
+    "docs/install/README_docker.md"
+  ],
+  "demo_links": [],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "shell",
+      "code": "pip install langchain-chatchat -U"
+    },
+    {
+      "language": "shell",
+      "code": "> pip install \"langchain-chatchat[xinference]\" -U\n>"
+    },
+    {
+      "language": "shell",
+      "code": "# on linux or macos\nexport CHATCHAT_ROOT=/path/to/chatchat_data\n\n# on windows\nset CHATCHAT_ROOT=/path/to/chatchat_data"
+    },
+    {
+      "language": "shell",
+      "code": "chatchat init"
+    },
+    {
+      "language": "yaml",
+      "code": "# 默认选用的 LLM 名称\n   DEFAULT_LLM_MODEL: qwen1.5-chat\n\n   # 默认选用的 Embedding 名称\n   DEFAULT_EMBEDDING_MODEL: bge-large-zh-v1.5\n\n  # 将 `LLM_MODEL_CONFIG` 中 `llm_model, action_model` 的键改成对应的 LLM 模型\n  # 在 `MODEL_PLATFORMS` 中修改对应模型平台信息"
+    },
+    {
+      "language": "yaml",
+      "code": "# 知识库默认存储路径\n   KB_ROOT_PATH: D:\\chatchat-test\\data\\knowledge_base\n\n   # 数据库默认存储路径。如果使用sqlite，可以直接修改DB_ROOT_PATH；如果使用其它数据库，请直接修改SQLALCHEMY_DATABASE_URI。\n   DB_ROOT_PATH: D:\\chatchat-test\\data\\knowledge_base\\info.db\n\n   # 知识库信息数据库连接URI\n   SQLALCHEMY_DATABASE_URI: sqlite:///D:\\chatchat-test\\data\\knowledge_base\\info.db"
+    },
+    {
+      "language": "shell",
+      "code": "chatchat kb -r"
+    },
+    {
+      "language": "unknown",
+      "code": "> [!Note]\n> 知识库初始化的常见问题\n>\n> <details>\n>\n> ##### 1. Windows 下重建知识库或添加知识文件时卡住不动\n> 此问题常出现于新建虚拟环境中，可以通过以下方式确认：\n>\n> `from unstructured.partition.auto import partition`\n>\n> 如果该语句卡住无法执行，可以执行以下命令：\n>"
+    },
+    {
+      "language": "unknown",
+      "code": "> 然后按照本节指引重新创建知识库即可。\n>\n> </details>\n\n#### 5. 启动项目"
+    },
+    {
+      "language": "unknown",
+      "code": "出现以下界面即为启动成功:\n\n![WebUI界面](docs/img/langchain_chatchat_webui.png)\n\n> [!WARNING]  \n> 由于 chatchat 配置默认监听地址 `DEFAULT_BIND_HOST` 为 127.0.0.1, 所以无法通过其他 ip 进行访问。\n>\n> 如需通过机器ip 进行访问(如 Linux 系统), 需要到 `basic_settings.yaml` 中将监听地址修改为 0.0.0.0。\n> </details>\n\n### 其它配置\n\n1. 数据库对话配置请移步这里 [数据库对话配置说明](docs/install/README_text2sql.md)\n\n\n### 源码安装部署/开发部署\n\n源码安装部署请参考 [开发指南](docs/contributing/README_dev.md)\n\n### Docker 部署"
+    },
+    {
+      "language": "unknown",
+      "code": "> [!important]\n> 强烈建议: 使用 docker-compose 部署, 具体参考 [README_docker](docs/install/README_docker.md)\n\n### 旧版本迁移\n\n* 0.3.x 结构改变很大,强烈建议您按照文档重新部署. 以下指南不保证100%兼容和成功. 记得提前备份重要数据!\n\n- 首先按照 `安装部署` 中的步骤配置运行环境，修改配置文件\n- 将 0.2.x 项目的 knowledge_base 目录拷贝到配置的 `DATA` 目录下\n\n---\n\n## 项目里程碑\n\n+ `2023年4月`: `Langchain-ChatGLM 0.1.0` 发布，支持基于 ChatGLM-6B 模型的本地知识库问答。\n+ `2023年8月`: `Langchain-ChatGLM` 改名为 `Langchain-Chatchat`，发布 `0.2.0` 版本，使用 `fastchat` 作为模型加载方案，支持更多的模型和数据库。\n+ `2023年10月`: `Langchain-Chatchat 0.2.5` 发布，推出 Agent 内容"
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:31:05.196105",
+  "keywords": [],
+  "search_text": "    ![](docs/img/logo-long-chatchat-trans-v2.png)\n<a href=\"https://trendshift.io/repositories/329\" target=\"_blank\"><img src=\"https://trendshift.io/api/badge/repositories/329\" alt=\"chatchat-space%2flangchain-chatchat | trendshift\" style=\"width: 250px; height: 55px;\" width=\"250\" height=\"55\"/></a>\n\n[![pypi badge](https://img.shields.io/pypi/v/langchain-chatchat.svg)](https://shields.io/)\n[![generic badge](https://img.shields.io/badge/python-3.8%7c3.9%7c3.10%7c3.11-blue.svg)](https://pypi.org/project/pypiserver/)\n[![zread](https://img.shields.io/badge/ask_zread-_.svg?style=flat&color=00b0aa&labelcolor=000000&logo=data%3aimage%2fsvg%2bxml%3bbase64%2cphn2zyb3awr0ad0imtyiighlawdodd0imtyiihzpzxdcb3g9ijagmcaxniaxniigzmlsbd0ibm9uzsigeg1sbnm9imh0dha6ly93d3cudzmub3jnlziwmdavc3znij4kphbhdgggzd0ittquotyxntygms42mdaxsdiumjqxntzdms44odgxideunjawmsaxljywmtu2ideuodg2njqgms42mde1niaylji0mdfwnc45njaxqzeunjaxntygns4zmtm1niaxljg4odegns42mdaxidiumjqxntygns42mdaxsdquotyxntzdns4zmtuwmia1ljywmdegns42mde1nia1ljmxmzu2iduunjaxntygnc45njaxvjiumjqwmum1ljywmtu2ideuodg2njqgns4zmtuwmiaxljywmdegnc45nje1niaxljywmdfaiibmawxspsijzmzmii8%2bcjxwyxroigq9ik00ljk2mtu2idewljm5otlimi4ynde1nkmxljg4odegmtaumzk5osaxljywmtu2idewljy4njqgms42mde1niaxms4wmzk5vjezljc1otldms42mde1niaxnc4xmtm0ideuodg4msaxnc4zotk5idiumjqxntygmtqumzk5oug0ljk2mtu2qzuumze1mdigmtqumzk5osa1ljywmtu2ide0ljexmzqgns42mde1niaxmy43ntk5vjexljazotldns42mde1niaxmc42ody0iduumze1mdigmtaumzk5osa0ljk2mtu2idewljm5otlaiibmawxspsijzmzmii8%2bcjxwyxroigq9ik0xmy43ntg0ideunjawmugxms4wmzg0qzewljy4nsaxljywmdegmtaumzk4ncaxljg4njy0idewljm5odqgmi4yndaxvjquotywmumxmc4zotg0iduumzezntygmtaunjg1iduunjawmsaxms4wmzg0iduunjawmugxmy43ntg0qze0ljexmtkgns42mdaxide0ljm5odqgns4zmtm1niaxnc4zotg0idquotywmvyylji0mdfdmtqumzk4ncaxljg4njy0ide0ljexmtkgms42mdaxidezljc1odqgms42mdaxwiigzmlsbd0ii2zmziivpgo8cgf0acbkpsjnncaxmkwxmia0tdqgmtjaiibmawxspsijzmzmii8%2bcjxwyxroigq9ik00ideytdeyidqiihn0cm9rzt0ii2zmziigc3ryb2tllxdpzhropsixljuiihn0cm9rzs1saw5ly2fwpsjyb3vuzcivpgo8l3n2zz4k&logocolor=ffffff)](https://zread.ai/chatchat-space/langchain-chatchat)\n\n🌍 [read this in english](readme_en.md)\n\n📃 **langchain-chatchat** (原 langchain-chatglm)\n\n基于 chatglm 等大语言模型与 langchain 等应用框架实现，开源、可离线部署的 rag 与 agent 应用项目。\n\n---"
+}

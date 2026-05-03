@@ -1,0 +1,45 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "<p align=\"center\">   <a href=\"https://librechat.ai\">     <img src=\"client/public/assets/logo.svg\" height=\"256\">   </a>   <h1 align=\"center\">     <a href=\"https://librechat.ai\">LibreChat</a>   </h1> </p>  <p align=\"center\">   <strong>English</strong> ·   <a href=\"README.zh.md\">中文</a> </p>  <p align=\"center\">   <a href=\"https://discord.librechat.ai\">      <img       src=\"https://img.shields.io/discord/1086345563026489514?label=&logo=discord&style=for-the-badge&logoWidth=20&logoColor=white&label...",
+  "features": [],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [],
+  "requirements": {
+    "python_version": null,
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [
+    "https://docs.librechat.ai/",
+    "https://librechat.ai/docs",
+    "https://www.librechat.ai/docs/translation"
+  ],
+  "demo_links": [],
+  "usage_examples": [],
+  "code_examples": [],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:31:08.512054",
+  "keywords": [],
+  "search_text": "    <p align=\"center\">\n  <a href=\"https://librechat.ai\">\n    <img src=\"client/public/assets/logo.svg\" height=\"256\">\n  </a>\n  <h1 align=\"center\">\n    <a href=\"https://librechat.ai\">librechat</a>\n  </h1>\n</p>\n\n<p align=\"center\">\n  <strong>english</strong> ·\n  <a href=\"readme.zh.md\">中文</a>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://discord.librechat.ai\"> \n    <img\n      src=\"https://img.shields.io/discord/1086345563026489514?label=&logo=discord&style=for-the-badge&logowidth=20&logocolor=white&labelcolor=000000&color=blueviolet\">\n  </a>\n  <a href=\"https://www.youtube.com/@librechat\"> \n    <img\n      src=\"https://img.shields.io/badge/youtube-red.svg?style=for-the-badge&logo=youtube&logocolor=white&labelcolor=000000&logowidth=20\">\n  </a>\n  <a href=\"https://docs.librechat.ai\"> \n    <img\n      src=\"https://img.shields.io/badge/docs-blue.svg?style=for-the-badge&logo=read-the-docs&logocolor=white&labelcolor=000000&logowidth=20\">\n  </a>\n  <a aria-label=\"sponsors\" href=\"https://github.com/sponsors/danny-avila\">\n    <img\n      src=\"https://img.shields.io/badge/sponsors-brightgreen.svg?style=for-the-badge&logo=github-sponsors&logocolor=white&labelcolor=000000&logowidth=20\">\n  </a>\n</p>\n\n<p align=\"center\">\n<a href=\"https://railway.com/deploy/librechat-official?referralcode=hi9hwz&utm_medium=integration&utm_source=readme&utm_campaign=librechat\">\n  <img src=\"https://railway.com/button.svg\" alt=\"deploy on railway\" height=\"30\">\n</a>\n<a href=\"https://zeabur.com/templates/0x2zy8\">\n  <img src=\"https://zeabur.com/button.svg\" alt=\"deploy on zeabur\" height=\"30\"/>\n</a>\n<a href=\"https://template.cloud.sealos.io/deploy?templatename=librechat\">\n  <img src=\"https://raw.githubusercontent.com/labring-actions/templates/main/deploy-on-sealos.svg\" alt=\"deploy on sealos\" height=\"30\">\n</a>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://www.librechat.ai/docs/translation\">\n    <img \n      src=\"https://img.shields.io/badge/dynamic/json.svg?style=for-the-badge&color=2096f3&label=locize&query=%24.translatedpercentage&url=https://api.locize.app/badgedata/4cb2598b-ed4d-469c-9b04-2ed531a8cb45&suffix=%+translated\" \n      alt=\"translation progress\">\n  </a>\n</p>"
+}

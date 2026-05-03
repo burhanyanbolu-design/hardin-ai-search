@@ -1,0 +1,150 @@
+{
+  "name": "pathway",
+  "full_name": "pathwaycom/pathway",
+  "tagline": "Python ETL framework for stream processing, real-time analytics, LLM pipelines, and RAG.",
+  "category": "llm_framework",
+  "description": "<div align=\"center\">   <a href=\"https://pathway.com/\">     <picture>       <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://pathway.com/logo-light.svg\">       <img src=\"https://pathway.com/logo-dark.svg\">     </picture>   </a>   <br /><br />   <a href=\"https://trendshift.io/repositories/10388\" target=\"_blank\"><img src=\"https://trendshift.io/api/badge/repositories/10388\" alt=\"pathwaycom%2Fpathway | Trendshift\" style=\"width: 250px; height: 55px;\" width=\"250\" height=\"55\"/></a>   <br ...",
+  "features": [
+    "**A wide range of connectors**: Pathway comes with connectors that connect to external data sources such as Kafka, GDrive, PostgreSQL, or SharePoint. Its Airbyte connector allows you to connect to more than 300 different data sources. If the connector you want is not available, you can build your own custom connector using Pathway Python connector.",
+    "**Stateless and stateful transformations**: Pathway supports stateful transformations such as joins, windowing, and sorting. It provides many transformations directly implemented in Rust. In addition to the provided transformation, you can use any Python function. You can implement your own or you can use any Python library to process your data.",
+    "**Persistence**: Pathway provides persistence to save the state of the computation. This allows you to restart your pipeline after an update or a crash. Your pipelines are in good hands with Pathway!",
+    "**Consistency**: Pathway handles the time for you, making sure all your computations are consistent. In particular, Pathway manages late and out-of-order points by updating its results whenever new (or late, in this case) data points come into the system. The free version of Pathway gives the \"at least once\" consistency while the enterprise version provides the \"exactly once\" consistency.",
+    "**Scalable Rust engine**: with Pathway Rust engine, you are free from the usual limits imposed by Python. You can easily do multithreading, multiprocessing, and distributed computations.",
+    "**LLM helpers**: Pathway provides an LLM extension with all the utilities to integrate LLMs with your data pipelines (LLM wrappers, parsers, embedders, splitters), including an in-memory real-time Vector Index, and integrations with LLamaIndex and LangChain. You can quickly build and deploy RAG applications with your live documents."
+  ],
+  "use_cases": [
+    "document_qa",
+    "data_analysis"
+  ],
+  "language": "Python",
+  "license": "Other",
+  "installation": [
+    "$ pip install -U pathway",
+    "--no-cache-dir",
+    "-U"
+  ],
+  "requirements": {
+    "python_version": ".",
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [],
+    "other": []
+  },
+  "stars": 63361,
+  "forks": 1632,
+  "contributors": 30,
+  "last_updated": "2026-05-02T18:42:09Z",
+  "has_tests": true,
+  "has_docs": true,
+  "has_ci": true,
+  "github_url": "https://github.com/pathwaycom/pathway",
+  "homepage": "https://pathway.com",
+  "documentation_links": [
+    "https://pathway.com/developers/user-guide/connecting-to-data/switch-from-batch-to-streaming",
+    "https://pathway.com/developers/user-guide/llm-xpack/overview",
+    "https://hub.docker.com/r/pathwaycom/pathway",
+    "https://pathway.com/developers/api-docs/pathway"
+  ],
+  "demo_links": [
+    "https://pathway.com/developers/templates"
+  ],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "unknown",
+      "code": "pip install -U pathway"
+    },
+    {
+      "language": "unknown",
+      "code": "$ pip install -U pathway"
+    },
+    {
+      "language": "python",
+      "code": "import pathway as pw\n\n# Define the schema of your data (Optional)\nclass InputSchema(pw.Schema):\n  value: int\n\n# Connect to your data using connectors\ninput_table = pw.io.csv.read(\n  \"./input/\",\n  schema=InputSchema\n)\n\n#Define your operations on the data\nfiltered_table = input_table.filter(input_table.value>=0)\nresult_table = filtered_table.reduce(\n  sum_value = pw.reducers.sum(filtered_table.value)\n)\n\n# Load your results to external systems\npw.io.jsonlines.write(result_table, \"output.jsonl\")\n\n# "
+    },
+    {
+      "language": "python",
+      "code": "import pathway as pw"
+    },
+    {
+      "language": "python",
+      "code": "pw.run()"
+    },
+    {
+      "language": "unknown",
+      "code": "$ pathway spawn python main.py"
+    },
+    {
+      "language": "unknown",
+      "code": "$ pathway spawn --threads 3 python main.py"
+    },
+    {
+      "language": "dockerfile",
+      "code": "FROM pathwaycom/pathway:latest\n\nWORKDIR /app\n\nCOPY requirements.txt ./\nRUN pip install --no-cache-dir -r requirements.txt\n\nCOPY . .\n\nCMD [ \"python\", \"./your-script.py\" ]"
+    },
+    {
+      "language": "console",
+      "code": "docker build -t my-pathway-app .\ndocker run -it --rm --name my-pathway-app my-pathway-app"
+    },
+    {
+      "language": "console",
+      "code": "docker run -it --rm --name my-pathway-app -v \"$PWD\":/app pathwaycom/pathway:latest python my-pathway-app.py"
+    },
+    {
+      "language": "dockerfile",
+      "code": "FROM --platform=linux/x86_64 python:3.10\n\nRUN pip install -U pathway\nCOPY ./pathway-script.py pathway-script.py\n\nCMD [\"python\", \"-u\", \"pathway-script.py\"]"
+    }
+  ],
+  "topics": [
+    "batch-processing",
+    "data-analytics",
+    "data-pipelines",
+    "data-processing",
+    "dataflow",
+    "etl",
+    "etl-framework",
+    "iot-analytics",
+    "kafka",
+    "machine-learning-algorithms",
+    "pathway",
+    "python",
+    "real-time",
+    "rust",
+    "stream-processing",
+    "streaming",
+    "time-series-analysis"
+  ],
+  "created_at": "2022-11-27T13:01:14Z",
+  "extracted_at": "2026-05-02T20:25:53.607504",
+  "keywords": [
+    "framework",
+    "data-analytics",
+    "data-pipelines",
+    "rust",
+    "streaming",
+    "kafka",
+    "python",
+    "stream-processing",
+    "pipelines",
+    "machine-learning-algorithms",
+    "pathway",
+    "time",
+    "stream",
+    "etl-framework",
+    "dataflow",
+    "analytics",
+    "etl",
+    "data-processing",
+    "real-time",
+    "time-series-analysis",
+    "processing",
+    "iot-analytics",
+    "batch-processing",
+    "real"
+  ],
+  "search_text": "pathway python etl framework for stream processing, real-time analytics, llm pipelines, and rag. batch-processing data-analytics data-pipelines data-processing dataflow etl etl-framework iot-analytics kafka machine-learning-algorithms pathway python real-time rust stream-processing streaming time-series-analysis **a wide range of connectors**: pathway comes with connectors that connect to external data sources such as kafka, gdrive, postgresql, or sharepoint. its airbyte connector allows you to connect to more than 300 different data sources. if the connector you want is not available, you can build your own custom connector using pathway python connector. **stateless and stateful transformations**: pathway supports stateful transformations such as joins, windowing, and sorting. it provides many transformations directly implemented in rust. in addition to the provided transformation, you can use any python function. you can implement your own or you can use any python library to process your data. **persistence**: pathway provides persistence to save the state of the computation. this allows you to restart your pipeline after an update or a crash. your pipelines are in good hands with pathway! **consistency**: pathway handles the time for you, making sure all your computations are consistent. in particular, pathway manages late and out-of-order points by updating its results whenever new (or late, in this case) data points come into the system. the free version of pathway gives the \"at least once\" consistency while the enterprise version provides the \"exactly once\" consistency. **scalable rust engine**: with pathway rust engine, you are free from the usual limits imposed by python. you can easily do multithreading, multiprocessing, and distributed computations. **llm helpers**: pathway provides an llm extension with all the utilities to integrate llms with your data pipelines (llm wrappers, parsers, embedders, splitters), including an in-memory real-time vector index, and integrations with llamaindex and langchain. you can quickly build and deploy rag applications with your live documents. <div align=\"center\">\n  <a href=\"https://pathway.com/\">\n    <picture>\n      <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://pathway.com/logo-light.svg\">\n      <img src=\"https://pathway.com/logo-dark.svg\">\n    </picture>\n  </a>\n  <br /><br />\n  <a href=\"https://trendshift.io/repositories/10388\" target=\"_blank\"><img src=\"https://trendshift.io/api/badge/repositories/10388\" alt=\"pathwaycom%2fpathway | trendshift\" style=\"width: 250px; height: 55px;\" width=\"250\" height=\"55\"/></a>\n  <br /><br />\n</div>\n<p align=\"center\">\n        <a href=\"https://github.com/pathwaycom/pathway/actions/workflows/ubuntu_test.yml\">\n        <img src=\"https://github.com/pathwaycom/pathway/actions/workflows/ubuntu_test.yml/badge.svg\" alt=\"ubuntu\"/>\n        <br>\n        <a href=\"https://github.com/pathwaycom/pathway/actions/workflows/release.yml\">\n        <img src=\"https://github.com/pathwaycom/pathway/actions/workflows/release.yml/badge.svg\" alt=\"last release\"/></a>\n        <a href=\"https://badge.fury.io/py/pathway\"><img src=\"https://badge.fury.io/py/pathway.svg\" alt=\"pypi version\" height=\"18\"></a>\n        <a href=\"https://badge.fury.io/py/pathway\"><img src=\"https://static.pepy.tech/badge/pathway\" alt=\"pypi downloads\" height=\"18\"></a>\n        <a href=\"https://github.com/pathwaycom/pathway/blob/main/license.txt\">\n        <img src=\"https://img.shields.io/badge/license-bsl-green\" alt=\"license: bsl\"/></a>\n      <br>\n        <a href=\"https://discord.gg/pathway\">\n        <img src=\"https://img.shields.io/discord/1042405378304004156?logo=discord\"\n            alt=\"chat on discord\"></a>\n        <a href=\"https://twitter.com/intent/follow?screen_name=pathway_com\">\n        <img src=\"https://img.shields.io/twitter/follow/pathwaycom\"\n            alt=\"follow on twitter\"></a>\n        <a href=\"https://linkedin.com/company/pathway\">\n        <img src=\"https://img.shields.io/badge/pathway-0077b5?style=social&logo=linkedin\" alt=\"follow on linkedin\"></a>\n      <a href=\"https://github.com/dylanhogg/awesome-python/blob/main/readme.md\">\n      <img src=\"https://awesome.re/badge.svg\" alt=\"awesome python\"></a>\n      <a href=\"https://gurubase.io/g/pathway\">\n      <img src=\"https://img.shields.io/badge/gurubase-ask%20pathway%20guru-006bff\" alt=\"pathway guru\"></a>\n    <br>\n    <a href=\"#getting-started\">getting started</a> |\n    <a href=\"#deployment\">deployment</a> |\n    <a href=\"#resources\">documentation and support</a> |\n    <a href=\"https://pathway.com/blog/\">blog</a> |\n    <a href=\"#license\">license</a>\n\n  \n</p>"
+}

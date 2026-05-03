@@ -1,0 +1,246 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "<div align=\"center\">  <a href=\"https://evolink.ai/gpt-image-2-prompts?utm_source=github&utm_medium=banner&utm_campaign=awesome-gpt-image-2-API-and-Prompts\"><img src=\"https://raw.githubusercontent.com/EvoLinkAI/awesome-gpt-image-2-API-and-Prompts/main/images/logo.png\" alt=\"Project logo\"></a>  [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](LICENSE) [![312 Curated Prompts](https://img.shields.io...",
+  "features": [],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [],
+  "requirements": {
+    "python_version": null,
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [
+    "https://docs.evolink.ai/en/api-manual/image-series/gpt-image-2/gpt-image-2-image-generation?utm_source=github&utm_medium=readme&utm_campaign=awesome-gpt-image-2-API-and-Prompts"
+  ],
+  "demo_links": [
+    "cases/comparison.md"
+  ],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "bash",
+      "code": "npx evolink-gpt-image -y"
+    },
+    {
+      "language": "bash",
+      "code": "curl --request POST \\\n  --url https://api.evolink.ai/v1/images/generations \\\n  --header 'Authorization: Bearer YOUR_API_KEY' \\\n  --header 'Content-Type: application/json' \\\n  --data '{\n  \"model\": \"gpt-image-2\",\n  \"prompt\": \"A beautiful colorful sunset over the ocean\"\n}'"
+    },
+    {
+      "language": "unknown",
+      "code": "A hyper-realistic miniature diorama product advertisement featuring an oversized luxury skincare pump bottle labeled \"LUXEVEIL Skin Science – Radiance Nourishing Body Lotion\" in cream/beige with a polished gold pump top, placed on a circular platform. Tiny figurine construction workers dressed in yellow coveralls and white hard hats swarm around the bottle climbing scaffolding, painting the bottle with rollers, operating a tower crane, working near industrial tanks and pipework, and unloading a "
+    },
+    {
+      "language": "unknown",
+      "code": "Using the provided reference image, transform the single casual product photo into a polished e-commerce TVC storyboard board for a {argument name=\"video duration\" default=\"15-second\"} ad in a {argument name=\"aspect ratio\" default=\"9:16\"} vertical format, presented as a 9-panel grid. Keep the same blue-and-white ceramic ashtray as the product base, but restage it across cinematic advertising shots with warm premium lighting, shallow depth of field, and a refined lifestyle desktop environment. Ad"
+    },
+    {
+      "language": "unknown",
+      "code": "Prompt 1: Create a cinematic hero image of a gourmet cheeseburger on a dark stone surface with glossy brioche bun, melted cheese, crisp lettuce, tomato, grilled patty, sauce, realistic texture, appetizing steam, warm side light, shallow depth of field, premium food commercial style, no text/logos/watermark.\n\nPrompt 2: Create a 9-cell hybrid keyframe-to-transition storyboard sheet for a 15-second gourmet burger ad, moving from empty surface to ingredient assembly to final macro hero shot. Use lar"
+    },
+    {
+      "language": "unknown",
+      "code": "A dramatic luxury product advertising image for a motorsport-inspired chronograph wristwatch in a dark studio. Center-left foreground, show a single stainless steel chronograph watch standing upright at a slight three-quarter angle, with a black dial, two red-accent subdials, slim silver hour markers, a tachymeter bezel, and visible crown and pushers on the right side. The watch has a black leather strap with bold red stitching along both edges and a sporty premium finish. To the right of the wa"
+    },
+    {
+      "language": "unknown",
+      "code": "A hyper-detailed cinematic isometric miniature city model of {argument name=\"landmark tower\" default=\"Burj Khalifa\"} rising dramatically from the center of a square architectural master-plan board, presented like a luxury urban planning maquette on a black background. The composition shows one dominant ultra-tall silver skyscraper in the exact center, surrounded by a dense ring of modern high-rise towers, illuminated roads, bridges, and glowing warm city lights. Curving turquoise-blue water feat"
+    },
+    {
+      "language": "unknown",
+      "code": "Create a premium, square (1:1) product advertisement for a fictional luxury chocolate brand called Noirvelle Chocolat, inspired by high-end chocolate brands. The ad should feel like a high-end editorial campaign, combining luxury food photography, refined packaging design, and cinematic lighting. Use matte black wrapper, subtle gold foil, elegant serif typography, and realistic product rendering. Generate flavor variants such as Blood Orange Noir, Salted Pistachio Muse, and Raspberry Ember with "
+    },
+    {
+      "language": "unknown",
+      "code": "35mm film photography with harsh convenience store fluorescent lighting mixed with colorful neon signs from outside, authentic film grain, high contrast, slight color cast, cinematic street editorial style, intimate medium shot, early 20s sexy Chinese female idol with ultra-realistic delicate refined Chinese features, seductive almond-shaped fox eyes with natural double eyelids, high nose bridge, small sharp V-shaped jawline, flawless porcelain skin with cool ivory undertone and visible specular"
+    },
+    {
+      "language": "unknown",
+      "code": "A black-and-white hand-drawn family portrait in the style of detailed pen-and-ink crosshatching on textured white paper, showing 4 people seated closely together in a casual candid composition. On the left, an adult man in a dark baseball cap worn backward and a dark T-shirt leans into the frame, with a crossbody sling bag worn across his chest and visible zipper details. On the right, an adult woman with curly hair tied up in a loose high bun wears a light T-shirt with large collegiate block le"
+    },
+    {
+      "language": "unknown",
+      "code": "A dreamy surreal portrait of a {argument name=\"subject\" default=\"young woman\"} standing underwater or in a liquid-like ethereal space, shown from about mid-thigh up, wearing a flowing sleeveless white dress that appears to dissolve into translucent water and shimmering fragments. Her long {argument name=\"hair color\" default=\"dark brown\"} hair streams dramatically sideways as if suspended in water, and her face is intentionally obscured by a soft vertical blur block for anonymity. Surround her wi"
+    },
+    {
+      "language": "unknown",
+      "code": "Subject: A sharp, high-contrast side-profile portrait of a handsome man with a defined jawline, short stubble, and voluminous, textured dark hair styled upwards.\n\nStyle & Composition: A fusion of realistic photography and abstract digital glitch art. The subject is rendered in stark black and white, set against a clean, minimalist white background.\n\nColor Palette: Strictly monochromatic (deep blacks and bright whites) with aggressive, vibrant splashes of crimson red.\n\nGraphic Elements: > * Glitc"
+    },
+    {
+      "language": "unknown",
+      "code": "A photorealistic video sequence captures a young boy with messy orange hair and thick-framed glasses, as seen in image_0.png, image_1.png, and other source frames. He is dressed in a black basketball jersey and matching shorts with purple and blue trim, featuring the text \"WIZZGEN 23\" on the front and \"CHICAGO 23\" on the back (image_4.png). The setting is an outdoor asphalt city basketball court with green trees and a visible basketball hoop. The action begins with the boy in a low stance, dribb"
+    },
+    {
+      "language": "unknown",
+      "code": "- Cinematic golden hour street portrait of a young woman in side profile, walking through a busy city crowd, soft wind blowing through her long light-brown hair, individual strands glowing in backlight, warm sunlight flaring through her hair creating a natural halo effect, dreamy atmosphere, shallow depth of field, strong subject separation, background filled with softly blurred pedestrians and urban motion bokeh.\n\nShe has delicate facial features, natural skin texture, subtle makeup, calm intro"
+    },
+    {
+      "language": "unknown",
+      "code": "GPT Image 2 on @SocialSight Prompt: Futuristic portrait of a young woman facing camera, wearing a transparent neon jacket with glowing green and orange edges, large illuminated logo on chest, black inner outfit, sleek sunglasses, soft smoke light trails behind, dark teal background, cyberpunk fashion campaign, ultra-realistic textures, cinematic lighting, sharp focus, luxury sportswear branding style, 8k Style keywords: neon edges, glowing logo, fashion campaign, high-end branding, moody lightin"
+    },
+    {
+      "language": "unknown",
+      "code": "Today's Portrait by gpt image 2 ---prompt--- Japanese negative film aesthetic, rooftop summer scene, soft natural sunlight, slight overexposure highlights, low contrast, muted faded colors, subtle grain a stunning beautiful young woman with subtle sensual presence, natural body line, effortless charm wearing a slightly oversized white shirt loosely unbuttoned at the collar, paired with high-waisted shorts; shirt softly moving in the wind, occasionally slipping off one shoulder holding a cold gla"
+    },
+    {
+      "language": "unknown",
+      "code": "GPT IMAGE 2 on Chat Gpt Prompt : Ultra-realistic portrait of a young woman sitting at a Parisian café, soft golden hour sunlight hitting her face, natural glowing skin, light blush, minimal makeup, green eyes, dark hair tied back with sunglasses on head, wearing a cozy grey knit sweater, resting her face on her hand, relaxed expression, shallow depth of field, cinematic lighting, reflections of classic Paris buildings in the window behind her, table with glassware and subtle foreground blur, 50m"
+    },
+    {
+      "language": "unknown",
+      "code": "GPT IMAGE 2 ON CHATGPT Prompt: Editorial portrait photography arranged in a 2x2 grid layout featuring the same man with round tortoiseshell glasses, natural look, light beard, soft neutral background. Top-left: front-facing portrait with direct eye contact, calm expression. Top-right: extreme macro close-up of eye behind glasses, ultra-detailed iris and skin texture. Bottom-left: slightly lower angle portrait, subtle expression, soft shadows. Bottom-right: side profile portrait, natural pose, lo"
+    },
+    {
+      "language": "unknown",
+      "code": "一张手绘风格的城市美食地图，以成都为主题。画面以鸟瞰视角的手绘简化城市地图为底，标注主要道路和地标但不追求精确比例而是追求可爱的手绘感。地图上分布着 12 个美食地点的精致手绘小插画：春熙路的串串香（一把竹签插着各种食材冒着热气）、宽窄巷子的三大炮（三个糯米团子飞向铜盘）、建设路的蛋烘糕（金黄酥脆正在翻面）、玉林路的火锅（九宫格锅翻滚冒泡）等，每个插画约占地图的 5% 面积，旁边用手写体标注店名和一句推荐语\"凌晨两点还在排队的那家\"。地图边缘用手绘藤蔓和辣椒装饰形成边框。右下角有一个手绘指南针和图例说明。左上角标题\"成都·吃货暴走地图\"使用胖圆的手绘美术字配辣椒装饰。整体画风为水彩+彩铅混合的手绘质感，颜色以暖色系（辣椒红、姜黄、翠绿）为主，图片比例 1:1。"
+    },
+    {
+      "language": "unknown",
+      "code": "symmetrical design featuring two elegant blue peacocks with detailed feather patterns, surrounded by blue floral elements, intricate vintage botanical ornament, soft beige background, classical floral decor style with rich navy and sky blue details, decorative art illustration --ar 3:2"
+    },
+    {
+      "language": "unknown",
+      "code": "Create a cinematic 3:4 vertical poster of New York City that feels truly epic and unconventional, showing the passage from the 20th century to the 21st century in one seamless image. Place a lone figure at the center of the composition, standing in the middle of the street and looking forward as if witnessing New York across time. The left side should depict 20th-century New York with warm sepia atmosphere, vintage taxis, old newsstands, retro lamps, and landmarks like the Chrysler Building and "
+    },
+    {
+      "language": "unknown",
+      "code": "Create a high-end fitness boxing poster in a 3-panel collage layout.\nTop panel:\nA strong athletic woman boxer wearing a red boxing outfit (sports bra, shorts, boxing gloves, high socks, boxing shoes) leaning confidently against a worn heavy punching bag. Studio background with large bold red typography behind her (word like “FOCUS” or “IMPACT” in oversized distressed font). Clean minimal lighting, editorial fitness campaign style.\nBottom left panel:\nClose-up portrait of the same woman (shoulders"
+    },
+    {
+      "language": "unknown",
+      "code": "Redmi 17 pro new launch 🔥 Made with Gpt image 2 on Chatgpt Prompt : Ultra-realistic premium smartphone advertisement, featuring a confident young woman in her early 20s with fair skin and sharp facial features, wearing sleek black cat-eye sunglasses. She has long, thick braided hair styled into an extended oversized braid, colored in soft lavender/purple tones matching the product theme. She is captured in a dynamic low-angle cinematic pose, slightly twisting her torso while holding a Xiaomi 17 "
+    },
+    {
+      "language": "unknown",
+      "code": "GPT Image 2 on ChatGPT App Create a hyper-realistic vertical commercial food photography poster for a premium [PRODUCT TYPE], designed in a refined luxury advertisement style, 2:3 aspect ratio. Place [MAIN PRODUCT] as the central hero subject, positioned [COMPOSITION / ANGLE], with premium realistic details such as [TEXTURE DETAILS], [SURFACE FINISH], and [FOOD-SPECIFIC FEATURES]. Surround the product with [FLOATING INGREDIENTS / MOTION ELEMENTS], arranged dynamically but cleanly to create movem"
+    },
+    {
+      "language": "unknown",
+      "code": "Perfect for the summers GPT Image 2 on ChatGPT Prompt: Design a '4:5' product poster for an 'orange' juice 3d bottle using playful inflatable-plastic packaging surrealism where the bottle behaves like a squeezed toy object mid-pressure. The poster should communicate juiciness, tension, and tactile freshness through a bottle that visibly bulges, stretches, and compresses like a soft object being squeezed from the inside out. SUBJECT: A single bottle dominates the center-left, illustrated in a sem"
+    },
+    {
+      "language": "unknown",
+      "code": "GPT Image 2 on ChatGPT Prompt: Create a bold street-fashion poster featuring a handsome man with short black hair, and a fearless expression. Dress him in a glossy emerald satin bomber jacket and black pants. Place him in front of a distressed concrete wall with emerald, black, and white layered textures. Use dramatic editorial lighting, crisp contrast, and a premium urban mood. Add bold uppercase typography with a clean modern poster style."
+    },
+    {
+      "language": "unknown",
+      "code": "PixPretty @PixPrettyAI with GPT Image 2 has been quietly setting a new standard over the past few days Prompt : A premium sports fashion campaign featuring a confident athletic woman wearing a red and white retro roller skating outfit, styled in a minimal studio environment with bold red and beige tones. Top frame: full-body shot of the model sitting casually on a concrete ledge, wearing white roller skates with red wheels, one leg extended and the other bent, looking sideways with a strong edit"
+    },
+    {
+      "language": "unknown",
+      "code": "GPT image 2 on @SocialSight Prompt: High-fashion futuristic sportswear editorial poster, full-body female model in dynamic wide-leg stance, oversized white minimalist sweatshirt with voluminous sleeves, glossy translucent parachute pants, chunky white-orange athletic sneakers, sleek messy updo hairstyle, gold statement earrings, soft natural makeup, confident editorial expression, studio fashion photography, centered composition, smooth neutral beige gradient background with large abstract gloss"
+    },
+    {
+      "language": "unknown",
+      "code": "GPT image 2 on ChatGPT 📱 Prompt: A streetwear advertisement poster. A cool teenage girl in oversized hoodie and baggy jeans leans against a giant pair of floating wireless headphones 2x her height with \"BASS\" logo on earcups, colorful sound wave visualizer glowing behind. Dark urban brick wall background with purple and pink gradient neon lighting. Bold graffiti-style typography \"BASS\" in background. Tagline bottom: \"Feel every frequency.\" Small text top-right corner reads \"Designed with GPT Ima"
+    },
+    {
+      "language": "unknown",
+      "code": "基于此角色和背景，请制作一份类似官方设定资料的角色资料卡。\n・包含三视图：正面、侧面和背面\n・添加角色面部表情的变化・分解并展示服装和装备的详细部分\n・添加色板・包含世界观设定的简要说明\n・总体上，使用有组织的布局（白色背景，插画风格）高分辨率、专业概念艺术风格"
+    },
+    {
+      "language": "unknown",
+      "code": "A mecha girl mid-teens, pale skin smudged with soot and salt spray, sharp amber eyes with glowing HUD reticles, waist-length ash-white hair tied in a high ponytail whipping in the sea wind, matte gunmetal exoskeleton armor plating her shoulders, forearms and shins, exposed hydraulic pistons at the joints, chest rig with glowing cyan coolant lines, oversized oil-stained hangar jacket half slipping off one shoulder, a massive rail cannon resting on her right shoulder, dog tags and frayed red ribbo"
+    },
+    {
+      "language": "unknown",
+      "code": "{argument name=\"game\" default=\"gta 6\"} in {argument name=\"location\" default=\"Bangalore’s market flower\"} in India"
+    },
+    {
+      "language": "unknown",
+      "code": "用这种风格帮我生成一套UI设计系统，包含网页、移动端、卡片、控件、按钮 以及其它"
+    },
+    {
+      "language": "unknown",
+      "code": "用未来都市风格生成UI设计系统,灵感来自赛博朋克城市夜景,包含霓虹灯、玻璃建筑反射、高对比光影,配色以紫色、蓝色、粉色霓虹为主,设计网页Dashboard、移动端界面、卡片、按钮、控件等,视觉炫酷、层次丰富、科技感极强"
+    },
+    {
+      "language": "unknown",
+      "code": "Create a {argument name=\"grid layout\" default=\"4x3\"} borderless grid where each panel is an independent image of the {argument name=\"subject\" default=\"a young woman\"}. Maintain strong subject consistency across all panels, with consistent color and lighting. Depict {argument name=\"theme\" default=\"childhood memories\"} with a {argument name=\"mood\" default=\"warm, nostalgic\"} mood in {argument name=\"style\" default=\"nostalgic cinematic realism\"} style. No text. No gap."
+    },
+    {
+      "language": "unknown",
+      "code": "Create a personal color analysis graphic using this portrait. Point out which season colour suits the subject best. Show side-by-side clothing color comparisons to highlight which colors suit the subject best. List out what texture/accessories/hairstyle suit the subject best. Make it visual-first, with short labels only and no paragraphs."
+    },
+    {
+      "language": "unknown",
+      "code": "Frame 1 (Top-Down Establishing)\nExtreme top-down shot in futuristic white curved hall, subject centered but compressed against smooth reflective floor, body aligned straight but slightly angled, arms close to body with subtle tension, head tilted upward toward camera, gaze directed straight up, strong circular architectural lines framing composition, soft studio lighting creating gentle gradients, shallow depth of field at f/1.2, smartphone-like proximity despite height, clean minimal atmosphere"
+    },
+    {
+      "language": "unknown",
+      "code": "Create a high-fashion editorial beverage campaign set on a minimalist rooftop at golden hour. Ultra-clean composition with strong negative space, warm sun flare, and soft shadows.\n\nA stylish male model with sharp features and effortless confidence is posed like a fashion editorial—slightly turned away, sipping from the can. He wears elevated linen tailoring in monochrome cream tones, partially unbuttoned, with subtle jewelry.\n\nForeground: a sculptural stone pedestal holding a large hero can of A"
+    },
+    {
+      "language": "unknown",
+      "code": "This Storyboard sheet use for this video created with GPT image 2 Storyboard sheet prompt: A professional hand drawn sketch storyboard sheet, pencil and ink illustration style, rough artistic linework, cross-hatching for shadows, loose expressive strokes, monochrome black and white on aged cream/off-white paper texture background, 2x2 grid layout with four equal storyboard panels bordered by thick hand-drawn black ink frames. Top-left panel sketch: abandoned rusted cargo ship at dock, heavy hatc"
+    },
+    {
+      "language": "unknown",
+      "code": "gpt image 2生图能力真的恐怖啊，这是我的提示词： 01 前端（用户看到的部分） 是什么：前端就是界面，是用户能看见、能点、能操作的部分。 在哪里：网页、小程序、App 的界面。 用什么做：HTML（结构）、CSS（样式）、JavaScript（交互）。 02 后端（背后处理的部分） 是什么：后端就是幕后大脑，负责逻辑和运算。 在哪里：服务器上，用户看不见。 作用： 处理登录注册 计算价格、推荐商品 接收前端请求、返回数据 常用的编程语言：Java、Python、Go、JavaScript（Node.js） 03 数据库（记忆的部分） 是什么：数据库就是用来存储和管理数据的。 存什么：账号、密码、订单、库存… 常见的数据库： MySQL、PostgreSQL（关系型，像表格一样） MongoDB（文档型，像文件夹一样） 04 SaaS（软件即服务） 是什么：SaaS = Software as a Service（软件即服务）。 核心特点： 打开网页/小程序/APP就能用 按月或按年订阅 常见形式：网站、移动 App、小程序都可以是 SaaS。 05 总结 前端：用户看到和操作"
+    },
+    {
+      "language": "unknown",
+      "code": "GPT-Image-2的一个妙用形象 这个提示词是一个老哥发我的 我试了下，效果也太强了 如果放在一年前 你可能三天三夜的ComfyUI工作流 才能做出来 提示词： 请根据我上传的人像照片，做一套个人形象分析图卡，包含发型、妆容、色彩和珠宝。要求：保留五官脸型肤色，不要过度修图，所有变化在同一张脸真实展示，风格干净高级。发型：长短、卷直、刘海，对比最适合/ 普通/不建议（显脸小、显老）妆容：眉眼鼻唇分析，标签（自然、提气色、柔和）色彩：不同颜色上身，对比推荐/普通/不适合（显白、显老）珠宝：珍珠、翡翠、红蓝宝、钻石、黄金，对比推荐/普通/不建议 整体：视觉为主，文字简短，4:5比例"
+    },
+    {
+      "language": "unknown",
+      "code": "A super simple workflow: 2 character images → GPT Image 2.0 storyboard → Seedance 2.0 animation. Just upload two character images and use the prompt below in GPT Image 2.0 to generate a full storyboard on a single page. Prompt: Create a clean, colorful storyboard poster in a 3x4 grid layout with 12 panels on a single page. Title at the top: \"[MAIN TITLE]\" Each panel must include: a scene number in a small circle, a short scene title, a colorful illustrated image, a 1–2 line description under the"
+    },
+    {
+      "language": "unknown",
+      "code": "generate image: Selfie of Sam Altman riding a bear\n\nEdit prompt: Remove the background make it transparent"
+    },
+    {
+      "language": "unknown",
+      "code": "Generate an image of the most significant event of 2020"
+    },
+    {
+      "language": "unknown",
+      "code": "一颗/一块/一枚【食物名称】，以博物学大师发现野外标本的方式解剖。\n剖开、展开、固定——如同博物馆的珍贵藏品，\n却以卡拉瓦乔为《国家地理》掌镜时的光线照亮。\n每一个内部结构都以自身的材质真相发光。\n截面锋利得近乎暴力。内部美丽得近乎神圣。\n画面中呈现完整标本：\n一半保持原状，展示【外表面描述：质感/颜色/纹理】；\n另一半剖开至核心，【内部核心结构描述：最重要的1—2个内部视觉特征】清晰可见。\n【补充1—2句该食物最具视觉张力的横截面细节描述】\n背景：纯粹的黑丝绒。\n【食物名称】悬浮其中，如同某件珍贵而危险的事物。\n标注文字紧贴结构边缘，手写感衬线字体，绝不悬空飘浮。\n画面包含以下标注，每处标注三行：第一行结构名称，第二行成分数据，第三行一句人话：\n【结构01名称】\n【成分／数据说明】\n【这个结构在做什么，为什么重要】\n\n【结构02名称】\n【成分／数据说明】\n【这个结构在做什么，为什么重要】\n【结构03名称】\n【成分／数据说明】\n【这个结构在做什么，为什么重要】\n【结构04名称】\n【成分／数据说明】\n【这个结构在做什么，为什么重要】\n【结构05名称】\n【成分／数据说明】\n【这个结构在做什"
+    },
+    {
+      "language": "unknown",
+      "code": "请帮我生成一张视觉品牌拆解图，稍后我需要用来生成讲解的视频。"
+    },
+    {
+      "language": "unknown",
+      "code": "Create a new animation sheet, but this time it's a storyboard between an Indian man and an Indian woman in a dramatic scene inside an apartment. Ensure the elements of the apartment are in the scene, and include dialogue boxes, this is for 15 seconds so be careful of the cadence (sentences not too long), when a character speaks they should be the only one in frame."
+    },
+    {
+      "language": "unknown",
+      "code": "🎨 This GPT Image 2 prompt turns any image into a printable paint-by-numbers page. For best results, use ChatGPT in Thinking mode. I think we should call it numberfying. The intellectuals can call it Colorbookification. 😂 I tried it with a few TurboToadToken images and the results are wild. 🐸💛 Create it. Print it. Paint it. For kids, adults, and anyone who wants an easy creative activity. Try it and post your results in the comments. Prompt below 👇 Create a professional high-resolution paint-by-n"
+    },
+    {
+      "language": "unknown",
+      "code": "GPT Image 2.0 on ChatGPT vs Google Nano Banana 2 on Gemini. PROMPT: Create a hyper-realistic, cinematic portrait of me (use uploaded face) as a modern mafia boss. I’m sitting in a luxury black car, wearing a black suit and tinted aviator sunglasses, smoking a thick cigar. Cold, fearless expression. Background: moody sky + blurred city/street for noir feel. Cool tones, high contrast. Sharp details on face & smoke. Style: 8K, movie-poster quality, shallow depth of field 1:1"
+    },
+    {
+      "language": "unknown",
+      "code": "GPT IMAGE 2 on ChatGpt Prompt: Transform the provided reference image into a cozy aesthetic scrapbook-style composition while strictly preserving the original subject, identity, pose, lighting, and background. Add multiple small “mini version” characters of the same person (chibi / doll-like style), placed naturally around the scene (on objects, table, shoulder, etc.). These mini figures must match the subject’s face, hairstyle, outfit, and vibe consistently, styled as cute 3D collectible figuri"
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:27:04.959280",
+  "keywords": [],
+  "search_text": "    "
+}

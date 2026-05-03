@@ -1,0 +1,122 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "![GitHub stars](https://img.shields.io/github/stars/open-webui/open-webui?style=social) ![GitHub forks](https://img.shields.io/github/forks/open-webui/open-webui?style=social) ![GitHub watchers](https://img.shields.io/github/watchers/open-webui/open-webui?style=social) ![GitHub repo size](https://img.shields.io/github/repo-size/open-webui/open-webui) ![GitHub language count](https://img.shields.io/github/languages/count/open-webui/open-webui) ![GitHub top language](https://img.shields.io/gith...",
+  "features": [],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [
+    "open-webui",
+    "open-webui serve",
+    "pip install open-webui"
+  ],
+  "requirements": {
+    "python_version": "3.11",
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [
+      "@azure/msal-browser",
+      "@codemirror/lang-javascript",
+      "@codemirror/lang-python",
+      "@codemirror/language-data",
+      "@codemirror/theme-one-dark",
+      "@floating-ui/dom",
+      "@huggingface/transformers",
+      "@joplin/turndown-plugin-gfm",
+      "@mediapipe/tasks-vision",
+      "@pyscript/core",
+      "@sveltejs/adapter-node",
+      "@sveltejs/svelte-virtual-list",
+      "@tiptap/core",
+      "@tiptap/extension-bubble-menu",
+      "@tiptap/extension-code",
+      "@tiptap/extension-code-block-lowlight",
+      "@tiptap/extension-drag-handle",
+      "@tiptap/extension-file-handler",
+      "@tiptap/extension-floating-menu",
+      "@tiptap/extension-highlight"
+    ],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [
+    "https://docs.openwebui.com/",
+    "https://docs.openwebui.com/features",
+    "https://docs.openwebui.com/",
+    "https://docs.openwebui.com/getting-started/",
+    "https://docs.openwebui.com/troubleshooting/",
+    "https://docs.openwebui.com/getting-started/updating",
+    "https://docs.openwebui.com/roadmap/"
+  ],
+  "demo_links": [
+    "./demo.png",
+    "https://github.com/open-webui/pipelines/tree/main/examples"
+  ],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "bash",
+      "code": "pip install open-webui"
+    },
+    {
+      "language": "bash",
+      "code": "open-webui serve"
+    },
+    {
+      "language": "bash",
+      "code": "docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main"
+    },
+    {
+      "language": "bash",
+      "code": "docker run -d -p 3000:8080 -e OLLAMA_BASE_URL=https://example.com -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main"
+    },
+    {
+      "language": "bash",
+      "code": "docker run -d -p 3000:8080 --gpus all --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:cuda"
+    },
+    {
+      "language": "bash",
+      "code": "docker run -d -p 3000:8080 -e OPENAI_API_KEY=your_secret_key -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main"
+    },
+    {
+      "language": "bash",
+      "code": "docker run -d -p 3000:8080 --gpus=all -v ollama:/root/.ollama -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:ollama"
+    },
+    {
+      "language": "bash",
+      "code": "docker run -d -p 3000:8080 -v ollama:/root/.ollama -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:ollama"
+    },
+    {
+      "language": "bash",
+      "code": "docker run -d --network=host -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=http://127.0.0.1:11434 --name open-webui --restart always ghcr.io/open-webui/open-webui:main"
+    },
+    {
+      "language": "bash",
+      "code": "docker run -d -p 3000:8080 -v open-webui:/app/backend/data --name open-webui --add-host=host.docker.internal:host-gateway --restart always ghcr.io/open-webui/open-webui:dev"
+    },
+    {
+      "language": "bash",
+      "code": "export HF_HUB_OFFLINE=1"
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:26:38.461274",
+  "keywords": [],
+  "search_text": "    "
+}

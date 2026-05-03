@@ -1,0 +1,358 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "💡 *Use ARIS in Claude Code / Cursor / Trae as a skill-based workflow, or get the full experience with the standalone CLI — enjoy any way you like!*  🤖 **AI agents:** Read [`AGENT_GUIDE.md`](AGENT_GUIDE.md) instead — structured for LLM consumption, not human browsing.  🔥 [**ARIS-Code CLI — 独立安装版**](docs/ARIS-Code-README_CN.md) · [English](docs/ARIS-Code-README_EN.md) | [⬇️ Download](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/releases/latest)  > 📰 **ARIS-Code v0.4.4** (202...",
+  "features": [],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [
+    "vastai",
+    "mkdir -p ~/.claude/skills\ncp -r ~/aris_repo/skills/* ~/.claude/skills/\n# Update with: bash tools/smart_update.sh --apply",
+    "modal",
+    "# 1. Clone ARIS once to a stable location\ngit clone https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep.git ~/aris_repo\n\n# 2. For each project that uses ARIS, attach via symlinks:\ncd ~/your-paper-project\nbash ~/aris_repo/tools/install_aris.sh\n# → creates one symlink per skill: .claude/skills/<skill> → ~/aris_repo/skills/<skill>\n# → writes manifest .aris/installed-skills.txt (tracks every entry ARIS installed)\n# → updates managed CLAUDE.md ARIS block (best-effort, compare-and-swap)\n# → re-runnable: rerun anytime to reconcile new/removed upstream skills\n\n# 3. To update existing skills' content for ALL attached projects:\ncd ~/aris_repo && git pull   # symlinks resolve to live upstream — content updates automatically\n\n# 3a. To pick up newly added or removed upstream skills, rerun the installer:\nbash ~/aris_repo/tools/install_aris.sh ~/your-paper-project   # adds new symlinks, removes broken ones\n\n# Other useful flags:\nbash ~/aris_repo/tools/install_aris.sh --dry-run        # show plan, no changes\nbash ~/aris_repo/tools/install_aris.sh --uninstall      # remove only managed symlinks (per manifest)\nbash ~/aris_repo/tools/install_aris.sh --from-old       # migrate from old nested .claude/skills/aris/\n\n# Windows (PowerShell, requires admin or developer mode for junctions):\n.\\tools\\install_aris.ps1 C:\\path\\to\\your-paper-project",
+    "mkdir -p ~/your-project/.claude/skills\nbash ~/aris_repo/tools/smart_update.sh --project ~/your-project --apply\n# Default --target-subdir is .claude/skills (flat), which is what Claude Code expects.\n# (The old --target-subdir .claude/skills/aris is now deprecated — see migration block above.)",
+    "exa-py",
+    "exa-py`)",
+    "# In Claude Code:\n/plugin marketplace add openai/codex-plugin-cc\n/plugin install codex@openai-codex\n/reload-plugins\n/codex:setup",
+    "-g",
+    "# Symlink-style legacy install:\nbash ~/aris_repo/tools/install_aris.sh ~/your-project --from-old\n\n# Copy-style legacy install (with possible local edits — chose strategy explicitly):\nbash ~/aris_repo/tools/install_aris.sh ~/your-project --from-old --migrate-copy keep-user\n#   → keeps your nested .claude/skills/aris/ copy intact alongside the new flat install\nbash ~/aris_repo/tools/install_aris.sh ~/your-project --from-old --migrate-copy prefer-upstream\n#   → archives nested copy to .aris/legacy-copy-backup-<timestamp>/, then flattens",
+    "deepxiv-sdk`)",
+    "-r",
+    "zotero-mcp-server",
+    "deepxiv-sdk",
+    "deepxiv-sdk`"
+  ],
+  "requirements": {
+    "python_version": "3",
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [
+    "AGENT_GUIDE.md",
+    "docs/CODEX_GEMINI_REVIEW_GUIDE.md",
+    "docs/ANTIGRAVITY_ADAPTATION.md",
+    "docs/TRAE_ARIS_RUNBOOK_EN.md",
+    "docs/ALI_CODING_PLAN_GUIDE.md",
+    "docs/OPENCLAW_ADAPTATION.md",
+    "docs/CODEX_CLAUDE_REVIEW_GUIDE.md",
+    "docs/CODEX_GEMINI_REVIEW_GUIDE.md",
+    "#%EF%B8%8F-setup",
+    "#%EF%B8%8F-gpu-server-setup-for-auto-experiments",
+    "docs/ANTIGRAVITY_ADAPTATION.md",
+    "docs/OPENCLAW_ADAPTATION.md",
+    "docs/CURSOR_ADAPTATION.md",
+    "docs/TRAE_ARIS_RUNBOOK_EN.md",
+    "docs/ANTIGRAVITY_ADAPTATION.md",
+    "docs/OPENCLAW_ADAPTATION.md",
+    "docs/CURSOR_ADAPTATION.md",
+    "docs/TRAE_ARIS_RUNBOOK_EN.md",
+    "docs/MINIMAX_MCP_GUIDE.md",
+    "docs/LLM_API_MIX_MATCH_GUIDE.md",
+    "docs/ALI_CODING_PLAN_GUIDE.md",
+    "docs/MODELSCOPE_GUIDE.md",
+    "docs/CODEX_CLAUDE_REVIEW_GUIDE.md",
+    "docs/CODEX_GEMINI_REVIEW_GUIDE.md",
+    "docs/MINIMAX_MCP_GUIDE.md",
+    "docs/LLM_API_MIX_MATCH_GUIDE.md",
+    "#-feishulark-integration-optional",
+    "#-zotero-integration-optional",
+    "#-obsidian-integration-optional",
+    "#-zotero-integration-optional",
+    "#-obsidian-integration-optional",
+    "#-feishulark-integration-optional",
+    "docs/CURSOR_ADAPTATION.md"
+  ],
+  "demo_links": [],
+  "usage_examples": [
+    "# Workflow 1: Idea Discovery\n> /idea-discovery \"your research direction\"          # full pipeline\n> /research-lit \"topic\"                              # just literature survey (all sources)\n> /research-lit \"topic\" — sources: zotero, web        # mix and match sources\n> /research-lit \"topic\" — sources: deepxiv            # DeepXiv-only progressive retrieval\n> /research-lit \"topic\" — sources: exa                # Exa AI-powered web search with content extraction\n> /research-lit \"topic\" — arxiv download: true         # also download top arXiv PDFs\n> /arxiv \"discrete diffusion\" — download               # standalone arXiv search + download\n> /idea-creator \"topic\"                              # just brainstorm\n\n# Workflow 2: Auto Research Loop\n> /auto-review-loop \"your paper topic\"               # review → fix → repeat\n> /research-review \"your paper\"                      # single deep review\n\n# Workflow 3: Paper Writing\n> /paper-writing \"NARRATIVE_REPORT.md\"               # full pipeline\n> /paper-plan \"NARRATIVE_REPORT.md\"                  # just outline\n> /paper-compile \"paper/\"                            # just compile\n\n# Full Pipeline\n> /research-pipeline \"your research direction\"       # Workflow 1 → 2 → 3 end-to-end\n\n# Supporting Skills\n> /run-experiment train.py --lr 1e-4 --epochs 100\n> /analyze-results figures/*.json\n> /monitor-experiment server5"
+  ],
+  "code_examples": [
+    {
+      "language": "unknown",
+      "code": "/research-pipeline \"factorized gap in discrete diffusion LMs\""
+    },
+    {
+      "language": "unknown",
+      "code": "/research-pipeline \"improve method X\" — ref paper: https://arxiv.org/abs/2406.04329, base repo: https://github.com/org/project"
+    },
+    {
+      "language": "unknown",
+      "code": "/rebuttal \"paper/ + reviews\" — venue: ICML, character limit: 5000"
+    },
+    {
+      "language": "unknown",
+      "code": "/paper-slides \"paper/\"     # → Beamer PDF + PPTX + speaker notes + Q&A prep\n/paper-poster \"paper/\"     # → A0/A1 poster PDF + editable PPTX + SVG"
+    },
+    {
+      "language": "bash",
+      "code": "# 1. Install skills\ngit clone https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep.git\nmkdir -p ~/.claude/skills/    # create if it doesn't exist (new Claude Code versions)\ncp -r Auto-claude-code-research-in-sleep/skills/* ~/.claude/skills/\n\n# 1b. Update skills (when upstream has new versions)\ncd Auto-claude-code-research-in-sleep && git pull\nbash tools/smart_update.sh          # dry-run: shows what's new/changed/safe\nbash tools/smart_update.sh --apply  # apply: adds new + updates sa"
+    },
+    {
+      "language": "bash",
+      "code": "> # In Claude Code:\n> > /research-wiki init                         # creates research-wiki/ in your project\n> # That's it. From now on, /research-lit auto-ingests papers, /idea-creator reads\n> # the wiki before brainstorming (and writes ideas back), /result-to-claim updates\n> # claim status. Failed ideas become anti-repetition memory for future ideation.\n>"
+    },
+    {
+      "language": "bash",
+      "code": "> # One-time setup in your project directory\n> mkdir -p .claude .aris/meta tools/meta_opt\n> cp Auto-claude-code-research-in-sleep/templates/claude-hooks/meta_logging.json .claude/settings.json\n> cp Auto-claude-code-research-in-sleep/tools/meta_opt/*.sh tools/meta_opt/\n> chmod +x tools/meta_opt/*.sh\n> # Then start Claude Code — hooks are active immediately\n> claude\n>"
+    },
+    {
+      "language": "bash",
+      "code": "> pip install deepxiv-sdk\n>"
+    },
+    {
+      "language": "bash",
+      "code": "> pip install exa-py\n> export EXA_API_KEY=your-key-here\n>"
+    },
+    {
+      "language": "bash",
+      "code": "> cd Auto-claude-code-research-in-sleep && ls skills/ | xargs -I{} rm -rf ~/.claude/skills/{}\n>"
+    },
+    {
+      "language": "unknown",
+      "code": "> /research-pipeline \"your topic\" — AUTO_PROCEED: false                          # pause at idea selection gate\n> /research-pipeline \"your topic\" — human checkpoint: true                       # pause after each review round to give feedback\n> /research-pipeline \"your topic\" — sources: zotero, web                         # only search Zotero + web (skip local PDFs)\n> /research-pipeline \"your topic\" — sources: all, deepxiv                        # default sources plus DeepXiv progressive retrieva"
+    },
+    {
+      "language": "bash",
+      "code": "> cd Auto-claude-code-research-in-sleep\n> git pull\n> bash tools/smart_update.sh          # dry-run: shows what's new/changed/safe\n> bash tools/smart_update.sh --apply  # apply: adds new + updates safe ones\n>"
+    },
+    {
+      "language": "unknown",
+      "code": "/research-lit → /idea-creator → /novelty-check → /research-refine → /experiment-bridge → /auto-review-loop → /paper-writing → submit → /rebuttal → accept! 🎉\n  (survey)      (brainstorm)    (verify novel)   (refine method)   (implement+deploy)  (review & fix)      (write paper)   (send)   (reply to reviewers)\n  ├────────────── Workflow 1: Idea Discovery ──────────────┤ ├ Workflow 1.5 ─┤ ├── Workflow 2 ──┤ ├── Workflow 3 ──┤         ├── Workflow 4 ──┤\n\n                                     📚 resear"
+    },
+    {
+      "language": "unknown",
+      "code": "┌─────────────────────────────────────────────────────────────────┐\n│              Idea Discovery & Method Refinement                  │\n│                                                                  │\n│   /research-lit    /idea-creator    /novelty-check               │\n│   (find papers)    (brainstorm)     (verify novelty)             │\n│         │               │                │                       │\n│         ▼               ▼                ▼                       │\n│   ┌──────────┐  "
+    },
+    {
+      "language": "unknown",
+      "code": "┌─────────────────────────────────────────────────────────────────┐\n│                Workflow 1.5: Experiment Bridge                    │\n│                                                                  │\n│   EXPERIMENT_PLAN.md                                             │\n│         │                                                        │\n│         ▼                                                        │\n│   ┌──────────┐     ┌──────────┐     ┌──────────┐               │\n│   │ Claude   │───"
+    },
+    {
+      "language": "unknown",
+      "code": "┌─────────────────────────────────────────────────────────────┐\n│                    Auto Review Loop                          │\n│                                                              │\n│   /research-review          /auto-review-loop                │\n│   (single deep review)      (autonomous loop)                │\n│         │                         │                          │\n│         ▼                         ▼                          │\n│   ┌──────────┐   ┌──────────┐   ┌──────────┐"
+    },
+    {
+      "language": "bash",
+      "code": "/auto-review-loop \"topic\" — difficulty: nightmare    # GPT reads your code and verifies claims itself"
+    },
+    {
+      "language": "unknown",
+      "code": "┌─────────────────────────────────────────────────────────────┐\n│                   Paper Writing Pipeline                      │\n│                                                               │\n│   /paper-plan      /paper-figure     /paper-write             │\n│   (outline)        (plots & tables)  (LaTeX draft)            │\n│        │                │                 │                   │\n│        ▼                ▼                 ▼                   │\n│   ┌──────────┐    ┌──────────┐     ┌──"
+    },
+    {
+      "language": "unknown",
+      "code": "┌─────────────────────────────────────────────────────────────────┐\n│                   Workflow 4: Rebuttal                            │\n│                                                                  │\n│   Reviews arrive                                                 │\n│         │                                                        │\n│         ▼                                                        │\n│   ┌──────────┐     ┌──────────┐     ┌──────────┐               │\n│   │ Parse &  │───"
+    },
+    {
+      "language": "unknown",
+      "code": "> /research-wiki init     # one-time, creates research-wiki/ in your project"
+    },
+    {
+      "language": "unknown",
+      "code": "paper --extends--> paper              idea --inspired_by--> paper\npaper --contradicts--> paper          idea --tested_by--> experiment\npaper --addresses_gap--> gap          experiment --supports--> claim\npaper --supersedes--> paper           experiment --invalidates--> claim"
+    },
+    {
+      "language": "unknown",
+      "code": "Round 1: read 15 papers → wiki remembers → idea A → experiment → FAIL\n         wiki records: \"A fails because OOM at batch>32, loss diverges\"\n\nRound 2: /idea-creator reads wiki → sees A failed → generates idea D (avoids A's trap)\n         → experiment → PARTIAL SUCCESS\n         wiki records: \"D works on small models, fails on large\"\n\nRound 3: /idea-creator reads wiki → knows A failed + D partial → generates idea F\n         (combines D's success with new approach) → experiment → SUCCESS 🎉"
+    },
+    {
+      "language": "unknown",
+      "code": "/research-wiki init                              # initialize wiki\n/research-wiki ingest \"paper title\" — arxiv: xxx  # manually add a paper\n/research-wiki query \"topic\"                      # rebuild query_pack.md\n/research-wiki update idea:001 — outcome: negative # update entity\n/research-wiki lint                               # health check (orphans, contradictions, stale claims)\n/research-wiki stats                              # overview (paper/idea/experiment/claim counts)"
+    },
+    {
+      "language": "bash",
+      "code": "mkdir -p .claude .aris/meta tools/meta_opt\ncp Auto-claude-code-research-in-sleep/templates/claude-hooks/meta_logging.json .claude/settings.json\ncp Auto-claude-code-research-in-sleep/tools/meta_opt/*.sh tools/meta_opt/\nchmod +x tools/meta_opt/*.sh\nclaude   # hooks active immediately"
+    },
+    {
+      "language": "unknown",
+      "code": "> /meta-optimize                        # analyze current project\n> /meta-optimize \"auto-review-loop\"     # focus on one skill\n> /meta-optimize --global               # analyze trends across ALL projects\n> /meta-optimize apply 1                # apply recommended change #1"
+    },
+    {
+      "language": "unknown",
+      "code": "┌─────────────────────────────────────────────────────────────────┐\n│                  Workflow M: Meta-Optimize                        │\n│                                                                  │\n│   Normal ARIS usage (W1-W4)                                      │\n│         │ (hooks log events passively)                           │\n│         ▼                                                        │\n│   .aris/meta/events.jsonl                                        │\n│         │      "
+    },
+    {
+      "language": "bash",
+      "code": "# Every skill accepts effort independently\n/research-lit \"topic\" — effort: beast              # 40-50 papers, 15+ queries\n/idea-creator \"direction\" — effort: lite           # 4-6 ideas, quick filter\n/auto-review-loop — effort: max                    # 6 rounds, 4-6 fixes/round\n\n# Mix with specific overrides\n/auto-review-loop — effort: beast, review_rounds: 3  # beast everything, but cap at 3 rounds\n\n# Full pipeline\n/research-pipeline \"your topic\" — effort: beast    # top-venue sprint mode"
+    },
+    {
+      "language": "json",
+      "code": "{\n  \"hooks\": {\n    \"Stop\": [\n      {\"command\": \"bash <ARIS_REPO>/tools/verify_paper_audits.sh paper/ --assurance submission\"}\n    ]\n  }\n}"
+    },
+    {
+      "language": "bash",
+      "code": "# 1. Install Oracle\nnpm install -g @steipete/oracle\n\n# 2. Add Oracle MCP to Claude Code\nclaude mcp add oracle -s user -- oracle-mcp\n\n# 3. Restart Claude Code\n\n# 4a. API mode (fast, recommended):\nexport OPENAI_API_KEY=\"your-key\"\n\n# 4b. Browser mode (free, no API key — log in to ChatGPT in Chrome):\n# Just open Chrome → chatgpt.com → log in"
+    },
+    {
+      "language": "bash",
+      "code": "/research-review \"my draft\" — reviewer: oracle-pro          # Pro-level paper critique\n/proof-checker \"paper/\" — reviewer: oracle-pro              # deepest mathematical verification\n/experiment-audit — reviewer: oracle-pro                    # Pro audits your eval code\n/auto-review-loop \"scope\" — reviewer: oracle-pro            # Pro stress test each round\n/idea-creator \"direction\" — reviewer: oracle-pro            # Pro evaluates your ideas\n/rebuttal \"paper/ + reviews\" — reviewer: oracle-pro  "
+    },
+    {
+      "language": "bash",
+      "code": "npm install -g @openai/codex\n   claude mcp add codex -s user -- codex mcp-server"
+    },
+    {
+      "language": "bash",
+      "code": "# macOS\n   brew install --cask mactex    # or: brew install basictex\n   brew install poppler          # provides pdfinfo\n\n   # Ubuntu/Debian\n   sudo apt install texlive-full latexmk poppler-utils\n\n   # Verify\n   latexmk --version && pdfinfo -v"
+    },
+    {
+      "language": "bash",
+      "code": "# 1. Clone ARIS once to a stable location\ngit clone https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep.git ~/aris_repo\n\n# 2. For each project that uses ARIS, attach via symlinks:\ncd ~/your-paper-project\nbash ~/aris_repo/tools/install_aris.sh\n# → creates one symlink per skill: .claude/skills/<skill> → ~/aris_repo/skills/<skill>\n# → writes manifest .aris/installed-skills.txt (tracks every entry ARIS installed)\n# → updates managed CLAUDE.md ARIS block (best-effort, compare-and-swap)\n#"
+    },
+    {
+      "language": "bash",
+      "code": "# Symlink-style legacy install:\nbash ~/aris_repo/tools/install_aris.sh ~/your-project --from-old\n\n# Copy-style legacy install (with possible local edits — chose strategy explicitly):\nbash ~/aris_repo/tools/install_aris.sh ~/your-project --from-old --migrate-copy keep-user\n#   → keeps your nested .claude/skills/aris/ copy intact alongside the new flat install\nbash ~/aris_repo/tools/install_aris.sh ~/your-project --from-old --migrate-copy prefer-upstream\n#   → archives nested copy to .aris/legacy-"
+    },
+    {
+      "language": "bash",
+      "code": "mkdir -p ~/your-project/.claude/skills\nbash ~/aris_repo/tools/smart_update.sh --project ~/your-project --apply\n# Default --target-subdir is .claude/skills (flat), which is what Claude Code expects.\n# (The old --target-subdir .claude/skills/aris is now deprecated — see migration block above.)"
+    },
+    {
+      "language": "bash",
+      "code": "mkdir -p ~/.claude/skills\ncp -r ~/aris_repo/skills/* ~/.claude/skills/\n# Update with: bash tools/smart_update.sh --apply"
+    },
+    {
+      "language": "bash",
+      "code": "# In Claude Code:\n/plugin marketplace add openai/codex-plugin-cc\n/plugin install codex@openai-codex\n/reload-plugins\n/codex:setup"
+    },
+    {
+      "language": "bash",
+      "code": "cd Auto-claude-code-research-in-sleep\ngit pull\n\n# 🧠 Smart update (recommended) — analyzes what's safe to update\nbash tools/smart_update.sh          # dry-run: shows what would change\nbash tools/smart_update.sh --apply  # apply: adds new + updates safe ones\n\n# Manual options (if you prefer):\n# cp -r skills/* ~/.claude/skills/       # Option A: overwrite all\n# cp -rn skills/* ~/.claude/skills/      # Option B: only add new, keep yours\n# cp -r skills/experiment-bridge ~/.claude/skills/  # Option C:"
+    },
+    {
+      "language": "unknown",
+      "code": "# Workflow 1: Idea Discovery\n> /idea-discovery \"your research direction\"          # full pipeline\n> /research-lit \"topic\"                              # just literature survey (all sources)\n> /research-lit \"topic\" — sources: zotero, web        # mix and match sources\n> /research-lit \"topic\" — sources: deepxiv            # DeepXiv-only progressive retrieval\n> /research-lit \"topic\" — sources: exa                # Exa AI-powered web search with content extraction\n> /research-lit \"topic\" — arxiv dow"
+    },
+    {
+      "language": "json",
+      "code": "{\n  \"permissions\": {\n    \"allow\": [\n      \"mcp__codex__codex\",\n      \"mcp__codex__codex-reply\",\n      \"Write\",\n      \"Edit\",\n      \"Skill(auto-review-loop)\"\n    ]\n  }\n}"
+    },
+    {
+      "language": "markdown",
+      "code": "## Remote Server\n- gpu: remote\n- SSH: `ssh my-gpu-server` (key-based auth, no password)\n- GPU: 4x A100\n- Conda env: `research` (Python 3.10 + PyTorch)\n- Activate: `eval \"$(/opt/conda/bin/conda shell.bash hook)\" && conda activate research`\n- Code directory: `/home/user/experiments/`\n- Use `screen` for background jobs: `screen -dmS exp0 bash -c '...'`"
+    },
+    {
+      "language": "markdown",
+      "code": "## GPU Environment\n- gpu: local\n- This machine has direct GPU access (no SSH needed)\n- GPU: 4x A100 80GB\n- Experiment environment: `YOUR_CONDA_ENV` (Python 3.x + PyTorch)\n- Activate before any Python command: `The command to activate your experiment environment` (uv, conda, etc.)\n- Code directory: `/home/YOUR_USERNAME/YOUR_CODE_DIRECTORY/`"
+    },
+    {
+      "language": "bash",
+      "code": "pip install vastai"
+    },
+    {
+      "language": "bash",
+      "code": "vastai set api-key YOUR_API_KEY"
+    },
+    {
+      "language": "bash",
+      "code": "ssh-keygen -t ed25519 -C \"your_email@example.com\"\n   cat ~/.ssh/id_ed25519.pub   # copy this to Vast.ai"
+    },
+    {
+      "language": "bash",
+      "code": "vastai search offers 'gpu_ram>=24 reliability>0.95' -o 'dph+' --limit 3"
+    },
+    {
+      "language": "markdown",
+      "code": "## Vast.ai\n- gpu: vast                  # rent on-demand GPU from vast.ai\n- auto_destroy: true         # auto-destroy after experiment completes (default)\n- max_budget: 5.00           # optional: warn if estimated cost exceeds this"
+    },
+    {
+      "language": "unknown",
+      "code": "| # | GPU       | VRAM  | $/hr  | Est. Hours | Est. Total | Offer ID |\n|---|-----------|-------|-------|------------|------------|----------|\n| 1 | RTX 4090  | 24 GB | $0.28 | ~4h        | ~$1.12     | 6995713  |  ← best value\n| 2 | A100 SXM  | 80 GB | $0.95 | ~2h        | ~$1.90     | 7023456  |  ← fastest"
+    },
+    {
+      "language": "bash",
+      "code": "# Install\nuv tool install zotero-mcp-server   # or: pip install zotero-mcp-server\n\n# Add to Claude Code (Local API — requires Zotero desktop running)\nclaude mcp add zotero -s user -- zotero-mcp -e ZOTERO_LOCAL=true\n\n# Or use Web API (works without Zotero running)\nclaude mcp add zotero -s user -- zotero-mcp \\\n  -e ZOTERO_API_KEY=your_key -e ZOTERO_USER_ID=your_id"
+    },
+    {
+      "language": "bash",
+      "code": "# Add to Claude Code (point to your vault path)\nclaude mcp add obsidian-vault -s user -- npx @bitbonsai/mcpvault@latest /path/to/your/vault"
+    },
+    {
+      "language": "bash",
+      "code": "git clone https://github.com/kepano/obsidian-skills.git\ncp -r obsidian-skills/.claude /path/to/your/vault/"
+    },
+    {
+      "language": "unknown",
+      "code": "/research-lit \"topic\" — arxiv download: true              # download top 5 PDFs\n/research-lit \"topic\" — arxiv download: true, max download: 10  # download up to 10"
+    },
+    {
+      "language": "unknown",
+      "code": "/arxiv \"attention mechanism\"           # search\n/arxiv \"2301.07041\" — download         # download specific paper"
+    },
+    {
+      "language": "bash",
+      "code": "cat > ~/.claude/feishu.json << 'EOF'\n{\n  \"mode\": \"push\",\n  \"webhook_url\": \"https://open.feishu.cn/open-apis/bot/v2/hook/YOUR_WEBHOOK_ID\"\n}\nEOF"
+    },
+    {
+      "language": "bash",
+      "code": "curl -s -X POST \"YOUR_WEBHOOK_URL\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"msg_type\": \"interactive\",\n    \"card\": {\n      \"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"🧪 ARIS Test\"}, \"template\": \"blue\"},\n      \"elements\": [{\"tag\": \"markdown\", \"content\": \"Push mode working! 🎉\"}]\n    }\n  }'"
+    },
+    {
+      "language": "bash",
+      "code": "git clone https://github.com/joewongjc/feishu-claude-code.git\ncd feishu-claude-code\npython3 -m venv .venv && source .venv/bin/activate\npip install -r requirements.txt\n\n# Configure\ncp .env.example .env"
+    },
+    {
+      "language": "bash",
+      "code": "FEISHU_APP_ID=cli_your_app_id          # From app credentials page\nFEISHU_APP_SECRET=your_app_secret      # From app credentials page\nDEFAULT_MODEL=claude-opus-4-6          # ⚠️ Default is sonnet — change to opus for best results\nDEFAULT_CWD=/path/to/your/project      # Working directory for Claude Code\nPERMISSION_MODE=bypassPermissions      # Or \"default\" for safer mode"
+    },
+    {
+      "language": "bash",
+      "code": "python main.py\n# Expected output:\n# ✅ 连接飞书 WebSocket 长连接（自动重连）...\n# [Lark] connected to wss://msg-frontier.feishu.cn/ws/v2?..."
+    },
+    {
+      "language": "bash",
+      "code": "screen -dmS feishu-bridge bash -c 'cd /path/to/feishu-claude-code && source .venv/bin/activate && python main.py'"
+    },
+    {
+      "language": "bash",
+      "code": "cat > ~/.claude/feishu.json << 'EOF'\n{\n  \"mode\": \"interactive\",\n  \"webhook_url\": \"https://open.feishu.cn/open-apis/bot/v2/hook/YOUR_WEBHOOK_ID\",\n  \"interactive\": {\n    \"bridge_url\": \"http://localhost:5000\",\n    \"timeout_seconds\": 300\n  }\n}\nEOF"
+    },
+    {
+      "language": "unknown",
+      "code": "> research-pipeline  ──→  idea-discovery      ──→  research-lit\n>                    ──→  experiment-bridge    ──→  run-experiment\n>                    ──→  auto-review-loop\n>                                             ──→  idea-creator\n>                                             ──→  novelty-check\n>                                             ──→  research-review\n>"
+    },
+    {
+      "language": "bash",
+      "code": "npm install -g @anthropic-ai/claude-code\nnpm install -g @openai/codex\ncodex setup   # set model to gpt-5.4"
+    },
+    {
+      "language": "json",
+      "code": "{\n    \"env\": {\n        \"ANTHROPIC_AUTH_TOKEN\": \"your_zai_api_key\",\n        \"ANTHROPIC_BASE_URL\": \"https://api.z.ai/api/anthropic\",\n        \"API_TIMEOUT_MS\": \"3000000\",\n        \"ANTHROPIC_DEFAULT_HAIKU_MODEL\": \"glm-4.5-air\",\n        \"ANTHROPIC_DEFAULT_SONNET_MODEL\": \"glm-4.7\",\n        \"ANTHROPIC_DEFAULT_OPUS_MODEL\": \"glm-5\"\n    },\n    \"mcpServers\": {\n        \"codex\": {\n            \"command\": \"/opt/homebrew/bin/codex\",\n            \"args\": [\"mcp-server\"]\n        }\n    }\n}"
+    },
+    {
+      "language": "bash",
+      "code": "git clone https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep.git\ncd Auto-claude-code-research-in-sleep\ncp -r skills/* ~/.claude/skills/\nclaude"
+    },
+    {
+      "language": "unknown",
+      "code": "> Read through this project and verify all skills are working:\n> /idea-creator, /research-review, /auto-review-loop, /novelty-check,\n> /idea-discovery, /research-pipeline, /research-lit, /run-experiment,\n> /analyze-results, /monitor-experiment, /pixel-art\n>"
+    },
+    {
+      "language": "bibtex",
+      "code": "@misc{yang2026aris,\n    author       = {Yang, Ruofeng and Li, Yongcan and Li, Shuai},\n    title        = {ARIS: Fully Autonomous Research via Adversarial Multi-Agent Collaboration},\n    year         = {2026},\n    url          = {https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep},\n}"
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:27:50.935991",
+  "keywords": [],
+  "search_text": "    "
+}

@@ -1,0 +1,81 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "<h1 align=\"center\">  <a href=\"https://hegel-ai.com\">  <picture>   <source media=\"(prefers-color-scheme: dark)\" srcset=\"img/hegel_ai_logo_dark.svg\">   <img height=\"70\" src=\"img/hegel_ai_logo.svg\">  </picture>  </a>  <br>  PromptTools </h1> <p align=\"center\"> :wrench: Test and experiment with prompts, LLMs, and vector databases. :hammer: <p align=\"center\">   <a href=\"http://prompttools.readthedocs.io/\"><img src=\"https://img.shields.io/badge/View%20Documentation-Docs-yellow\"></a>   <a href=\"http...",
+  "features": [],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [
+    "notebook",
+    "prompttools"
+  ],
+  "requirements": {
+    "python_version": null,
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [
+      "openai",
+      "tenacity",
+      "tabulate",
+      "pandas",
+      "jinja2",
+      "jupyterlab",
+      "ipywidgets",
+      "pylint",
+      "sentry-sdk"
+    ],
+    "javascript": [],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [
+    "https://prompttools.readthedocs.io/en/latest/index.html",
+    "CONTRIBUTING.md"
+  ],
+  "demo_links": [],
+  "usage_examples": [
+    "pip install prompttools",
+    "git clone https://github.com/hegelai/prompttools.git\ncd prompttools && jupyter notebook examples/notebooks/OpenAIChatExperiment.ipynb"
+  ],
+  "code_examples": [
+    {
+      "language": "python",
+      "code": "from prompttools.experiment import OpenAIChatExperiment\n\nmessages = [\n    [{\"role\": \"user\", \"content\": \"Tell me a joke.\"},],\n    [{\"role\": \"user\", \"content\": \"Is 17077 a prime number?\"},],\n]\n\nmodels = [\"gpt-3.5-turbo\", \"gpt-4\"]\ntemperatures = [0.0]\nopenai_experiment = OpenAIChatExperiment(models, messages, temperature=temperatures)\nopenai_experiment.run()\nopenai_experiment.visualize()"
+    },
+    {
+      "language": "unknown",
+      "code": "pip install prompttools"
+    },
+    {
+      "language": "unknown",
+      "code": "git clone https://github.com/hegelai/prompttools.git\ncd prompttools && jupyter notebook examples/notebooks/OpenAIChatExperiment.ipynb"
+    },
+    {
+      "language": "unknown",
+      "code": "pip install notebook  # If jupyter notebook has not been installed\npip install prompttools"
+    },
+    {
+      "language": "unknown",
+      "code": "git clone https://github.com/hegelai/prompttools.git\ncd prompttools && streamlit run prompttools/playground/playground.py"
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:29:33.949379",
+  "keywords": [],
+  "search_text": "    <h1 align=\"center\">\n <a href=\"https://hegel-ai.com\">\n <picture>\n  <source media=\"(prefers-color-scheme: dark)\" srcset=\"img/hegel_ai_logo_dark.svg\">\n  <img height=\"70\" src=\"img/hegel_ai_logo.svg\">\n </picture>\n </a>\n <br>\n prompttools\n</h1>\n<p align=\"center\">\n:wrench: test and experiment with prompts, llms, and vector databases. :hammer:\n<p align=\"center\">\n  <a href=\"http://prompttools.readthedocs.io/\"><img src=\"https://img.shields.io/badge/view%20documentation-docs-yellow\"></a>\n  <a href=\"https://discord.gg/7kerpnhgdj\"><img src=\"https://img.shields.io/badge/join%20our%20community-discord-blue\"></a>\n  <a href=\"https://pepy.tech/project/prompttools\" target=\"_blank\"><img src=\"https://static.pepy.tech/badge/prompttools\" alt=\"total downloads\"/></a>\n  <a href=\"https://github.com/hegelai/prompttools\"><img src=\"https://img.shields.io/github/stars/hegelai/prompttools\" /></a>\n  <a href=\"https://twitter.com/hegel_ai\"><img src=\"https://img.shields.io/twitter/follow/hegel_ai?style=social\"></a>\n</p>\n\n\nwelcome to `prompttools` created by [hegel ai](https://hegel-ai.com/)! this repo offers a set of open-source, self-hostable tools for experimenting with, testing, and evaluating llms, vector databases, and prompts. the core idea is to enable developers to evaluate using familiar interfaces like _code_, _notebooks_, and a local _playground_.\n\nin just a few lines of code, you can test your prompts and parameters across different models (whether you are using\nopenai, anthropic, or llama models). you can even evaluate the retrieval accuracy of vector databases.\n\n```python\nfrom prompttools.experiment import openaichatexperiment\n\nmessages = [\n    [{\"role\": \"user\", \"content\": \"tell me a joke.\"},],\n    [{\"role\": \"user\", \"content\": \"is 17077 a prime number?\"},],\n]\n\nmodels = [\"gpt-3.5-turbo\", \"gpt-4\"]\ntemperatures = [0.0]\nopenai_experiment = openaichatexperiment(models, messages, temperature=temperatures)\nopenai_experiment.run()\nopenai_experiment.visualize()\n```\n\n\n![image](img/demo.gif)\n\nto stay in touch with us about issues and future updates, join the [discord](https://discord.gg/7kerpnhgdj)."
+}

@@ -1,0 +1,132 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "[![PyPI](https://img.shields.io/pypi/v/markitdown.svg)](https://pypi.org/project/markitdown/) ![PyPI - Downloads](https://img.shields.io/pypi/dd/markitdown) [![Built by AutoGen Team](https://img.shields.io/badge/Built%20by-AutoGen%20Team-blue)](https://github.com/microsoft/autogen)  > [!IMPORTANT] > MarkItDown performs I/O with the privileges of the current process. Like open() or requests.get(), it will access resources that the process itself can access. Sanitize your inputs in untrusted en...",
+  "features": [],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [
+    "git clone git@github.com:microsoft/markitdown.git\ncd markitdown\npip install -e 'packages/markitdown[all]'",
+    "'markitdown[all]'`.",
+    "'markitdown[pdf,",
+    "markitdown-ocr",
+    "openai",
+    "hatch",
+    "-e"
+  ],
+  "requirements": {
+    "python_version": "3.10",
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [
+    "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general"
+  ],
+  "demo_links": [],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "bash",
+      "code": "python -m venv .venv\nsource .venv/bin/activate"
+    },
+    {
+      "language": "bash",
+      "code": "uv venv --python=3.12 .venv\nsource .venv/bin/activate\n# NOTE: Be sure to use 'uv pip install' rather than just 'pip install' to install packages in this virtual environment"
+    },
+    {
+      "language": "bash",
+      "code": "conda create -n markitdown python=3.12\nconda activate markitdown"
+    },
+    {
+      "language": "bash",
+      "code": "git clone git@github.com:microsoft/markitdown.git\ncd markitdown\npip install -e 'packages/markitdown[all]'"
+    },
+    {
+      "language": "bash",
+      "code": "markitdown path-to-file.pdf > document.md"
+    },
+    {
+      "language": "bash",
+      "code": "markitdown path-to-file.pdf -o document.md"
+    },
+    {
+      "language": "bash",
+      "code": "cat path-to-file.pdf | markitdown"
+    },
+    {
+      "language": "bash",
+      "code": "pip install 'markitdown[pdf, docx, pptx]'"
+    },
+    {
+      "language": "bash",
+      "code": "markitdown --list-plugins"
+    },
+    {
+      "language": "bash",
+      "code": "markitdown --use-plugins path-to-file.pdf"
+    },
+    {
+      "language": "bash",
+      "code": "pip install markitdown-ocr\npip install openai  # or any OpenAI-compatible client"
+    },
+    {
+      "language": "python",
+      "code": "from markitdown import MarkItDown\nfrom openai import OpenAI\n\nmd = MarkItDown(\n    enable_plugins=True,\n    llm_client=OpenAI(),\n    llm_model=\"gpt-4o\",\n)\nresult = md.convert(\"document_with_images.pdf\")\nprint(result.text_content)"
+    },
+    {
+      "language": "bash",
+      "code": "markitdown path-to-file.pdf -o document.md -d -e \"<document_intelligence_endpoint>\""
+    },
+    {
+      "language": "python",
+      "code": "from markitdown import MarkItDown\n\nmd = MarkItDown(enable_plugins=False) # Set to True to enable plugins\nresult = md.convert(\"test.xlsx\")\nprint(result.text_content)"
+    },
+    {
+      "language": "python",
+      "code": "from markitdown import MarkItDown\n\nmd = MarkItDown(docintel_endpoint=\"<document_intelligence_endpoint>\")\nresult = md.convert(\"test.pdf\")\nprint(result.text_content)"
+    },
+    {
+      "language": "python",
+      "code": "from markitdown import MarkItDown\nfrom openai import OpenAI\n\nclient = OpenAI()\nmd = MarkItDown(llm_client=client, llm_model=\"gpt-4o\", llm_prompt=\"optional custom prompt\")\nresult = md.convert(\"example.jpg\")\nprint(result.text_content)"
+    },
+    {
+      "language": "sh",
+      "code": "docker build -t markitdown:latest .\ndocker run --rm -i markitdown:latest < ~/your-file.pdf > output.md"
+    },
+    {
+      "language": "sh",
+      "code": "cd packages/markitdown"
+    },
+    {
+      "language": "sh",
+      "code": "pip install hatch  # Other ways of installing hatch: https://hatch.pypa.io/dev/install/\n  hatch shell\n  hatch test"
+    },
+    {
+      "language": "sh",
+      "code": "# Reopen the project in Devcontainer and run:\n  hatch test"
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:30:52.176877",
+  "keywords": [],
+  "search_text": "    "
+}

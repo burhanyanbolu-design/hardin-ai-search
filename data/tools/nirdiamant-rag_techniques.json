@@ -1,0 +1,56 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "Retrieval-Augmented Generation (RAG) is revolutionizing the way we combine information retrieval with generative AI. This repository showcases a curated collection of advanced techniques designed to supercharge your RAG systems, enabling them to deliver more accurate, contextually relevant, and comprehensive responses.  Our goal is to provide a valuable resource for researchers and practitioners looking to push the boundaries of what's possible with RAG. By fostering a collaborative environme...",
+  "features": [],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [],
+  "requirements": {
+    "python_version": null,
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [
+    "https://github.com/NirDiamant/Prompt_Engineering",
+    "https://open.substack.com/pub/diamantai/p/hyde-exploring-hypothetical-document?r=336pe4&utm_campaign=post&utm_medium=web"
+  ],
+  "demo_links": [],
+  "usage_examples": [
+    "git clone https://github.com/NirDiamant/RAG_Techniques.git",
+    "cd all_rag_techniques/technique-name"
+  ],
+  "code_examples": [
+    {
+      "language": "unknown",
+      "code": "git clone https://github.com/NirDiamant/RAG_Techniques.git"
+    },
+    {
+      "language": "unknown",
+      "code": "cd all_rag_techniques/technique-name"
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:28:56.776542",
+  "keywords": [],
+  "search_text": "    retrieval-augmented generation (rag) is revolutionizing the way we combine information retrieval with generative ai. this repository showcases a curated collection of advanced techniques designed to supercharge your rag systems, enabling them to deliver more accurate, contextually relevant, and comprehensive responses.\n\nour goal is to provide a valuable resource for researchers and practitioners looking to push the boundaries of what's possible with rag. by fostering a collaborative environment, we aim to accelerate innovation in this exciting field."
+}

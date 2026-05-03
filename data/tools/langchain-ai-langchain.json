@@ -1,0 +1,101 @@
+{
+  "name": "langchain",
+  "full_name": "langchain-ai/langchain",
+  "tagline": "The agent engineering platform",
+  "category": "chatbot",
+  "description": "<div align=\"center\">   <a href=\"https://docs.langchain.com/oss/python/langchain/overview\">     <picture>       <source media=\"(prefers-color-scheme: dark)\" srcset=\".github/images/logo-dark.svg\">       <source media=\"(prefers-color-scheme: light)\" srcset=\".github/images/logo-light.svg\">       <img alt=\"LangChain Logo\" src=\".github/images/logo-dark.svg\" width=\"50%\">     </picture>   </a> </div>  <div align=\"center\">   <h3>The agent engineering platform.</h3> </div>  <div align=\"center\">   <a hr...",
+  "features": [],
+  "use_cases": [],
+  "language": "Python",
+  "license": "MIT License",
+  "installation": [
+    "langchain"
+  ],
+  "requirements": {
+    "python_version": null,
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [],
+    "other": []
+  },
+  "stars": 135634,
+  "forks": 22413,
+  "contributors": 30,
+  "last_updated": "2026-05-02T19:05:35Z",
+  "has_tests": false,
+  "has_docs": false,
+  "has_ci": true,
+  "github_url": "https://github.com/langchain-ai/langchain",
+  "homepage": "https://docs.langchain.com/langchain/",
+  "documentation_links": [
+    "https://docs.langchain.com/oss/python/langchain/overview",
+    "https://docs.langchain.com/oss/python/contributing/overview"
+  ],
+  "demo_links": [],
+  "usage_examples": [
+    "pip install langchain\n# or\nuv add langchain",
+    "from langchain.chat_models import init_chat_model\n\nmodel = init_chat_model(\"openai:gpt-5.4\")\nresult = model.invoke(\"Hello, world!\")"
+  ],
+  "code_examples": [
+    {
+      "language": "bash",
+      "code": "pip install langchain\n# or\nuv add langchain"
+    },
+    {
+      "language": "python",
+      "code": "from langchain.chat_models import init_chat_model\n\nmodel = init_chat_model(\"openai:gpt-5.4\")\nresult = model.invoke(\"Hello, world!\")"
+    }
+  ],
+  "topics": [
+    "agents",
+    "ai",
+    "ai-agents",
+    "anthropic",
+    "chatgpt",
+    "deepagents",
+    "enterprise",
+    "framework",
+    "gemini",
+    "generative-ai",
+    "langchain",
+    "langgraph",
+    "llm",
+    "multiagent",
+    "open-source",
+    "openai",
+    "pydantic",
+    "python",
+    "rag"
+  ],
+  "created_at": "2022-10-17T02:58:36Z",
+  "extracted_at": "2026-05-02T20:25:42.866634",
+  "keywords": [
+    "enterprise",
+    "framework",
+    "llm",
+    "ai-agents",
+    "ai",
+    "chatgpt",
+    "python",
+    "anthropic",
+    "gemini",
+    "pydantic",
+    "openai",
+    "langgraph",
+    "multiagent",
+    "agents",
+    "generative-ai",
+    "platform",
+    "rag",
+    "open-source",
+    "engineering",
+    "langchain",
+    "agent",
+    "deepagents"
+  ],
+  "search_text": "langchain the agent engineering platform agents ai ai-agents anthropic chatgpt deepagents enterprise framework gemini generative-ai langchain langgraph llm multiagent open-source openai pydantic python rag  <div align=\"center\">\n  <a href=\"https://docs.langchain.com/oss/python/langchain/overview\">\n    <picture>\n      <source media=\"(prefers-color-scheme: dark)\" srcset=\".github/images/logo-dark.svg\">\n      <source media=\"(prefers-color-scheme: light)\" srcset=\".github/images/logo-light.svg\">\n      <img alt=\"langchain logo\" src=\".github/images/logo-dark.svg\" width=\"50%\">\n    </picture>\n  </a>\n</div>\n\n<div align=\"center\">\n  <h3>the agent engineering platform.</h3>\n</div>\n\n<div align=\"center\">\n  <a href=\"https://opensource.org/licenses/mit\" target=\"_blank\"><img src=\"https://img.shields.io/pypi/l/langchain\" alt=\"pypi - license\"></a>\n  <a href=\"https://pypistats.org/packages/langchain\" target=\"_blank\"><img src=\"https://img.shields.io/pepy/dt/langchain\" alt=\"pypi - downloads\"></a>\n  <a href=\"https://pypi.org/project/langchain/#history\" target=\"_blank\"><img src=\"https://img.shields.io/pypi/v/langchain?label=%20\" alt=\"version\"></a>\n  <a href=\"https://x.com/langchain_oss\" target=\"_blank\"><img src=\"https://img.shields.io/twitter/url/https/twitter.com/langchain_oss.svg?style=social&label=follow%20%40langchain\" alt=\"twitter / x\"></a>\n</div>\n\n<br>\n\nlangchain is a framework for building agents and llm-powered applications. it helps you chain together interoperable components and third-party integrations to simplify ai application development — all while future-proofing decisions as the underlying technology evolves.\n\n> [!note]\n> looking for the js/ts library? check out [langchain.js](https://github.com/langchain-ai/langchainjs)."
+}

@@ -1,0 +1,46 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "If you like the course, **don't hesitate to ⭐ star this repository**. This helps us to **make the course more visible 🤗**.  <img src=\"https://huggingface.co/datasets/agents-course/course-images/resolve/main/en/communication/please_star.gif\" alt=\"Star the repo\" />",
+  "features": [],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [],
+  "requirements": {
+    "python_version": null,
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [],
+  "demo_links": [],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "bibtex",
+      "code": "@misc{agents-course,\n  author = {Burtenshaw, Ben and Thomas, Joffrey and Simonini, Thomas and Paniego, Sergio},\n  title = {The Hugging Face Agents Course},\n  year = {2025},\n  howpublished = {\\url{https://github.com/huggingface/agents-course}},\n  note = {GitHub repository},\n}"
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:31:17.927610",
+  "keywords": [],
+  "search_text": "    "
+}

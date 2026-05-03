@@ -1,0 +1,144 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "",
+  "features": [],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [
+    "`.[huggingface]`",
+    "goldenverba[huggingface]",
+    "-e",
+    "goldenverba"
+  ],
+  "requirements": {
+    "python_version": "3",
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [
+    "https://img.shields.io/badge/Docker_support-%E2%9C%93-4c1?style=flat-square&logo=docker&logoColor=white",
+    "#how-to-install-verba-with-docker",
+    "https://upstage.ai/",
+    "./PYTHON_TUTORIAL.md",
+    "https://weaviate.io/developers/wcs/guides/create-instance",
+    "#how-to-install-verba-with-docker",
+    "https://docker-curriculum.com/",
+    "https://weaviate.io/developers/weaviate/installation/docker-compose",
+    "./CONTRIBUTING.md",
+    "./TECHNICAL.md",
+    "./FRONTEND.md"
+  ],
+  "demo_links": [
+    "https://img.shields.io/badge/Check%20out%20the%20demo!-yellow?&style=flat-square&logo=react&logoColor=white",
+    "https://github.com/weaviate/Verba/blob/2.0.0/img/verba.gif",
+    "https://github.com/weaviate/Verba/blob/2.0.0/img/verba_data.png",
+    "https://github.com/weaviate/Verba/blob/2.0.0/img/verba_rag.png"
+  ],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "unknown",
+      "code": "pip install goldenverba"
+    },
+    {
+      "language": "unknown",
+      "code": "pip install goldenverba"
+    },
+    {
+      "language": "unknown",
+      "code": "git clone https://github.com/weaviate/Verba\n\npip install -e ."
+    },
+    {
+      "language": "unknown",
+      "code": "git clone https://github.com/weaviate/Verba\n\ndocker compose --env-file <your-env-file> up -d --build"
+    },
+    {
+      "language": "unknown",
+      "code": "ollama run llama3"
+    },
+    {
+      "language": "unknown",
+      "code": "OPENAI_BASE_URL=YOUR-OPENAI_BASE_URL"
+    },
+    {
+      "language": "bash",
+      "code": "pip install goldenverba[huggingface]\n\nor\n\npip install `.[huggingface]`"
+    },
+    {
+      "language": "unknown",
+      "code": "python3 -m virtualenv venv\nsource venv/bin/activate"
+    },
+    {
+      "language": "unknown",
+      "code": "pip install goldenverba"
+    },
+    {
+      "language": "unknown",
+      "code": "verba start"
+    },
+    {
+      "language": "unknown",
+      "code": "Visit localhost:8000"
+    },
+    {
+      "language": "unknown",
+      "code": "git clone https://github.com/weaviate/Verba.git"
+    },
+    {
+      "language": "unknown",
+      "code": "python3 -m virtualenv venv\nsource venv/bin/activate"
+    },
+    {
+      "language": "unknown",
+      "code": "pip install -e ."
+    },
+    {
+      "language": "unknown",
+      "code": "verba start"
+    },
+    {
+      "language": "unknown",
+      "code": "Visit localhost:8000"
+    },
+    {
+      "language": "unknown",
+      "code": "git clone https://github.com/weaviate/Verba.git"
+    },
+    {
+      "language": "bash",
+      "code": "docker compose up -d"
+    },
+    {
+      "language": "bash",
+      "code": "docker compose --env-file goldenverba/.env up -d --build"
+    },
+    {
+      "language": "unknown",
+      "code": "RUN pip install -e '.'"
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:29:04.163778",
+  "keywords": [],
+  "search_text": "    "
+}

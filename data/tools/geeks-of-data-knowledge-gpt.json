@@ -1,0 +1,88 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "<!-- Use the context of other files to complete here --> ![knowledgegpt](static_files/logo.png)",
+  "features": [
+    "[x] Extract knowledge from the internet (i.e. Wikipedia)",
+    "[x] Extract knowledge from local data sources - PDF",
+    "[x] Extract knowledge from local data sources - DOCX",
+    "[x] Extract knowledge from local data sources - PPTX",
+    "[x] Extract knowledge from youtube audio (when caption is not available)",
+    "[x] Extract knowledge from youtube transcripts",
+    "[x] Extract knowledge from whole youtube playlist"
+  ],
+  "use_cases": [
+    "document_qa",
+    "research"
+  ],
+  "language": null,
+  "license": null,
+  "installation": [
+    "-r",
+    ".`",
+    "knowledgegpt`"
+  ],
+  "requirements": {
+    "python_version": "3",
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [],
+  "demo_links": [
+    "./examples/example_config.py",
+    "./examples"
+  ],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "unknown",
+      "code": "#### Set Your API Key\n\n1. Go to [OpenAI > Account > Api Keys](https://platform.openai.com/account/api-keys)\n2. Create new screet key and copy\n3. Enter the key to [example_config.py](./examples/example_config.py)\n\n#### How to use the library"
+    },
+    {
+      "language": "unknown",
+      "code": "Other examples can be found in the [examples](./examples) folder.\nBut to give a better idea of how to use the library, here is a simple example:"
+    },
+    {
+      "language": "unknown",
+      "code": ""
+    },
+    {
+      "language": "unknown",
+      "code": ""
+    },
+    {
+      "language": "unknown",
+      "code": ""
+    },
+    {
+      "language": "unknown",
+      "code": ""
+    },
+    {
+      "language": "unknown",
+      "code": "## Docker Usage"
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:31:49.930717",
+  "keywords": [],
+  "search_text": "   [x] extract knowledge from the internet (i.e. wikipedia) [x] extract knowledge from local data sources - pdf [x] extract knowledge from local data sources - docx [x] extract knowledge from local data sources - pptx [x] extract knowledge from youtube audio (when caption is not available) [x] extract knowledge from youtube transcripts [x] extract knowledge from whole youtube playlist <!-- use the context of other files to complete here -->\n![knowledgegpt](static_files/logo.png)"
+}

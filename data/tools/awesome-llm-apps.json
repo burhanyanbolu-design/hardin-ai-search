@@ -1,0 +1,64 @@
+{
+  "name": "awesome-llm-apps",
+  "full_name": "Shubhamsaboo/awesome-llm-apps",
+  "tagline": "100+ AI Agent & RAG apps you can actually run — clone, customize, ship.",
+  "category": "llm_framework",
+  "description": "<p align=\"center\">   <a href=\"http://www.theunwindai.com\">     <img src=\"docs/banner/unwind_black.png\" width=\"900px\" alt=\"Unwind AI\">   </a> </p>  <p align=\"center\">   <a href=\"https://www.linkedin.com/in/shubhamsaboo/\">     <img src=\"https://img.shields.io/badge/Follow%20on%20LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white\" alt=\"LinkedIn\">   </a>   <a href=\"https://twitter.com/Saboo_Shubham_\">     <img src=\"https://img.shields.io/badge/Follow%20on%20𝕏-000000?style=for-the-b...",
+  "features": [],
+  "use_cases": [],
+  "language": "Python",
+  "license": "Apache License 2.0",
+  "installation": [
+    "-r"
+  ],
+  "requirements": {
+    "python_version": null,
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [],
+    "other": []
+  },
+  "stars": 108409,
+  "forks": 15986,
+  "contributors": 30,
+  "last_updated": "2026-05-02T20:27:36Z",
+  "has_tests": false,
+  "has_docs": true,
+  "has_ci": true,
+  "github_url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+  "homepage": "https://www.theunwindai.com",
+  "documentation_links": [],
+  "demo_links": [],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "bash",
+      "code": "git clone https://github.com/Shubhamsaboo/awesome-llm-apps.git\ncd awesome-llm-apps/starter_ai_agents/ai_travel_agent\npip install -r requirements.txt\nstreamlit run travel_agent.py"
+    }
+  ],
+  "topics": [
+    "agents",
+    "llms",
+    "python",
+    "rag"
+  ],
+  "created_at": "2024-04-29T05:30:25Z",
+  "extracted_at": "2026-05-02T21:36:12.610694",
+  "keywords": [
+    "python",
+    "agent",
+    "ship",
+    "agents",
+    "rag",
+    "apps",
+    "customize",
+    "llms",
+    "actually",
+    "clone"
+  ],
+  "search_text": "awesome-llm-apps 100+ ai agent & rag apps you can actually run — clone, customize, ship. agents llms python rag  <p align=\"center\">\n  <a href=\"http://www.theunwindai.com\">\n    <img src=\"docs/banner/unwind_black.png\" width=\"900px\" alt=\"unwind ai\">\n  </a>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://www.linkedin.com/in/shubhamsaboo/\">\n    <img src=\"https://img.shields.io/badge/follow%20on%20linkedin-0a66c2?style=for-the-badge&logo=linkedin&logocolor=white\" alt=\"linkedin\">\n  </a>\n  <a href=\"https://twitter.com/saboo_shubham_\">\n    <img src=\"https://img.shields.io/badge/follow%20on%20𝕏-000000?style=for-the-badge&logo=x&logocolor=white\" alt=\"x / twitter\">\n  </a>\n</p>\n\n<p align=\"center\">\n  <!-- keep these links. translations will automatically update with the readme. -->\n  <a href=\"https://www.readme-i18n.com/shubhamsaboo/awesome-llm-apps?lang=de\">deutsch</a> | \n  <a href=\"https://www.readme-i18n.com/shubhamsaboo/awesome-llm-apps?lang=es\">español</a> | \n  <a href=\"https://www.readme-i18n.com/shubhamsaboo/awesome-llm-apps?lang=fr\">français</a> | \n  <a href=\"https://www.readme-i18n.com/shubhamsaboo/awesome-llm-apps?lang=ja\">日本語</a> | \n  <a href=\"https://www.readme-i18n.com/shubhamsaboo/awesome-llm-apps?lang=ko\">한국어</a> | \n  <a href=\"https://www.readme-i18n.com/shubhamsaboo/awesome-llm-apps?lang=pt\">português</a> | \n  <a href=\"https://www.readme-i18n.com/shubhamsaboo/awesome-llm-apps?lang=ru\">русский</a> | \n  <a href=\"https://www.readme-i18n.com/shubhamsaboo/awesome-llm-apps?lang=zh\">中文</a>\n</p>\n\n<hr/>\n\n<div align=\"center\">"
+}

@@ -1,0 +1,81 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "<div align=\"center\">     <br>     <img src=\"readme/icon.png\" alt=\"Fay\">     <h1>FAY</h1> \t<h3>Fay数字人框架</h3> </div>  ！！重要通知：我们已经把Fay的三个版本合并成1个，并致力提供更稳定更全面的功能。  我们致力于思考面向终端的数字人落地应用，并通过完整代码把思考结果呈现给大家。Fay数字人框架，向上适配各种数字人模型技术，向下接入各式大语言模型，并且便于更换诸如TTS、ASR等模型，为单片机、app、网站提供全面的数字人应用接口。       更新日志：https://qqk9ntwbcit.feishu.cn/wiki/UlbZwfAXgiKSquk52AkcibhHngg 文档：https://qqk9ntwbcit.feishu.cn/wiki/JzMJw7AghiO8eHktMwlcxznenIg",
+  "features": [],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [
+    "-r"
+  ],
+  "requirements": {
+    "python_version": "3.12",
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [
+      "requests",
+      "numpy",
+      "pyaudio~=0.2.11",
+      "websockets~=10.4",
+      "ws4py~=0.5.1",
+      "flask~=3.0.0",
+      "openpyxl~=3.0.9",
+      "flask_cors~=3.0.10",
+      "websocket-client",
+      "azure-cognitiveservices-speech",
+      "aliyun-python-sdk-core",
+      "simhash",
+      "pytz",
+      "gevent",
+      "edge_tts",
+      "pydub",
+      "tenacity",
+      "pygame",
+      "scipy",
+      "flask-httpauth"
+    ],
+    "javascript": [],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [],
+  "demo_links": [],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "bash",
+      "code": "sudo apt update\n  sudo apt install build-essential\n  sudo apt install portaudio19-dev"
+    },
+    {
+      "language": "shell",
+      "code": "pip install -r requirements.txt"
+    },
+    {
+      "language": "shell",
+      "code": "python main.py start -config_center d19f7b0a-2b8a-4503-8c0d-1a587b90eb69  #使用公共资源，速度非常慢，建议更换成自己的key"
+    },
+    {
+      "language": "shell",
+      "code": "https://www.compshare.cn/images/compshareImage-1cft3sk9gvta?ytag=GPU_fay"
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:26:55.363543",
+  "keywords": [],
+  "search_text": "    <div align=\"center\">\n    <br>\n    <img src=\"readme/icon.png\" alt=\"fay\">\n    <h1>fay</h1>\n\t<h3>fay数字人框架</h3>\n</div>\n\n！！重要通知：我们已经把fay的三个版本合并成1个，并致力提供更稳定更全面的功能。\n\n我们致力于思考面向终端的数字人落地应用，并通过完整代码把思考结果呈现给大家。fay数字人框架，向上适配各种数字人模型技术，向下接入各式大语言模型，并且便于更换诸如tts、asr等模型，为单片机、app、网站提供全面的数字人应用接口。      \n更新日志：https://qqk9ntwbcit.feishu.cn/wiki/ulbzwfaxgiksquk52akcibhhngg\n文档：https://qqk9ntwbcit.feishu.cn/wiki/jzmjw7aghio8ehktmwlcxznenig"
+}

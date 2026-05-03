@@ -1,0 +1,57 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "<p align=\"center\">   <img src=\"https://raw.githubusercontent.com/reworkd/AgentGPT/main/next/public/banner.png\" height=\"300\" alt=\"AgentGPT Logo\"/> </p> <p align=\"center\">   <em>🤖 Assemble, configure, and deploy autonomous AI Agent(s) in your browser. 🤖   </em> </p> <p align=\"center\">     <img alt=\"Node version\" src=\"https://img.shields.io/static/v1?label=node&message=%20%3E=18&logo=node.js&color=2334D058\" />       <a href=\"https://github.com/reworkd/AgentGPT/blob/master/README.md\"><img src=\"ht...",
+  "features": [],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [],
+  "requirements": {
+    "python_version": null,
+    "node_version": ".",
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [
+    "https://www.docker.com/products/docker-desktop"
+  ],
+  "demo_links": [
+    "https://github.com/reworkd/AgentGPT/assets/50181239/5348e44a-29a5-4280-a06b-fe1429a8d99e"
+  ],
+  "usage_examples": [
+    "git clone https://github.com/reworkd/AgentGPT.git\n   cd AgentGPT\n   ./setup.sh",
+    "git clone https://github.com/reworkd/AgentGPT.git\n   cd AgentGPT\n   ./setup.bat"
+  ],
+  "code_examples": [
+    {
+      "language": "bash",
+      "code": "git clone https://github.com/reworkd/AgentGPT.git\n   cd AgentGPT\n   ./setup.sh"
+    },
+    {
+      "language": "bash",
+      "code": "git clone https://github.com/reworkd/AgentGPT.git\n   cd AgentGPT\n   ./setup.bat"
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:31:12.556659",
+  "keywords": [],
+  "search_text": "    <p align=\"center\">\n  <img src=\"https://raw.githubusercontent.com/reworkd/agentgpt/main/next/public/banner.png\" height=\"300\" alt=\"agentgpt logo\"/>\n</p>\n<p align=\"center\">\n  <em>🤖 assemble, configure, and deploy autonomous ai agent(s) in your browser. 🤖   </em>\n</p>\n<p align=\"center\">\n    <img alt=\"node version\" src=\"https://img.shields.io/static/v1?label=node&message=%20%3e=18&logo=node.js&color=2334d058\" />\n      <a href=\"https://github.com/reworkd/agentgpt/blob/master/readme.md\"><img src=\"https://img.shields.io/badge/lang-english-blue.svg\" alt=\"english\"></a>\n  <a href=\"https://github.com/reworkd/agentgpt/blob/master/docs/readme.zh-hans.md\"><img src=\"https://img.shields.io/badge/lang-简体中文-red.svg\" alt=\"简体中文\"></a>\n  <a href=\"https://github.com/reworkd/agentgpt/blob/master/docs/readme.hu-cs4k1sr4c.md\"><img src=\"https://img.shields.io/badge/lang-hungarian-red.svg\" alt=\"hungarian\"></a>\n</p>\n\n<p align=\"center\">\n<a href=\"https://agentgpt.reworkd.ai\">🔗 short link</a>\n<span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>\n<a href=\"https://reworkd.ai/docs\">📚 docs</a>\n<span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>\n<a href=\"https://twitter.com/reworkdai\">🐦 twitter</a>\n<span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>\n<a href=\"https://discord.gg/gcmnyaaffv\">📢 discord</a>\n</p>\n\nagentgpt allows you to configure and deploy autonomous ai agents.\nname your own custom ai and have it embark on any goal imaginable.\nit will attempt to reach the goal by thinking of tasks to do, executing them, and learning from the results 🚀.\n\n---"
+}

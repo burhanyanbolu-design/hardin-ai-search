@@ -1,0 +1,53 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "> [!NOTE] > Kuzu is working on something new! >  > We are archiving the KuzuDB project here: https://github.com/kuzudb/kuzu/ >  > For those using Kuzu currently, prior Kuzu releases will continue to be usable in the same way without modifications to your code. >  > If you are also using extensions, moving forward you have two options: >   1. we have a new release 0.11.3 that bundles many (but not all) of the extensions, so you can migrate to 0.11.3; or >   2. you can follow the [instructions ...",
+  "features": [],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [],
+  "requirements": {
+    "python_version": null,
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [
+    "https://kuzudb.github.io/docs",
+    "https://kuzudb.github.io/docs/developer-guide"
+  ],
+  "demo_links": [],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "bash",
+      "code": "docker pull ghcr.io/kuzudb/extension-repo:latest\ndocker run -d -p 8080:80 ghcr.io/kuzudb/extension-repo:latest"
+    },
+    {
+      "language": "cypher",
+      "code": "INSTALL <EXTENSION_NAME> FROM 'http://localhost:8080/';"
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:30:22.714530",
+  "keywords": [],
+  "search_text": "    > [!note]\n> kuzu is working on something new!\n> \n> we are archiving the kuzudb project here: https://github.com/kuzudb/kuzu/\n> \n> for those using kuzu currently, prior kuzu releases will continue to be usable in the same way without modifications to your code.\n> \n> if you are also using extensions, moving forward you have two options:\n>   1. we have a new release 0.11.3 that bundles many (but not all) of the extensions, so you can migrate to 0.11.3; or\n>   2. you can follow the [instructions here](http://kuzudb.github.io/docs/extensions/#host-your-own-extension-server) to run a local extension server.\n> \n> further, some of our resources are moving from our website to github:\n>   - docs: http://kuzudb.github.io/docs\n>   - blog: http://kuzudb.github.io/blog\n> \n> we thank you for being early users of kuzu and making kuzu better over the last few years!"
+}

@@ -1,0 +1,151 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "<div align=\"center\" id=\"top\">  <img src=\"https://github.com/assafelovic/gpt-researcher/assets/13554167/20af8286-b386-44a5-9a83-3be1365139c3\" alt=\"Logo\" width=\"80\">",
+  "features": [
+    "📝 Generate detailed research reports using web and local documents.",
+    "🖼️ Smart image scraping and filtering for reports.",
+    "🍌 **AI-generated inline images** using Google Gemini (Nano Banana) for visual illustrations.",
+    "📜 Generate detailed reports exceeding 2,000 words.",
+    "🌐 Aggregate over 20 sources for objective conclusions.",
+    "🖥️ Frontend available in lightweight (HTML/CSS/JS) and production-ready (NextJS + Tailwind) versions.",
+    "🔍 JavaScript-enabled web scraping.",
+    "📂 Maintains memory and context throughout research.",
+    "📄 Export reports to PDF, Word, and other formats."
+  ],
+  "use_cases": [
+    "document_qa",
+    "research"
+  ],
+  "language": null,
+  "license": null,
+  "installation": [
+    "gpt-researcher",
+    "npx skills add assafelovic/gpt-researcher",
+    "-r"
+  ],
+  "requirements": {
+    "python_version": "3.11",
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [
+      "fastapi",
+      "uvicorn",
+      "pydantic",
+      "python-dotenv",
+      "langchain",
+      "langchain-classic",
+      "langchain-community",
+      "langchain-core",
+      "langchain-ollama",
+      "langchain-openai",
+      "langchain-text-splitters",
+      "langgraph",
+      "openai",
+      "ollama",
+      "litellm",
+      "google-genai",
+      "tavily-python",
+      "ddgs",
+      "arxiv",
+      "beautifulsoup4"
+    ],
+    "javascript": [],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [
+    "https://img.shields.io/badge/Documentation-DOCS-f472b6?logo=googledocs&logoColor=white&style=for-the-badge",
+    "https://img.shields.io/docker/v/elestio/gpt-researcher/latest?arch=amd64&style=flat&logo=docker&logoColor=white&color=1D63ED",
+    "https://docs.gptr.dev/docs/gpt-researcher/getting-started",
+    "https://www.tutorialsteacher.com/python/install-python",
+    "https://docs.gptr.dev/docs/gpt-researcher/gptr/pip-package",
+    "https://docs.gptr.dev/docs/gpt-researcher/retrievers/mcp-configs",
+    "https://docs.gptr.dev/docs/gpt-researcher/getting-started/getting-started-with-docker",
+    "https://docs.gptr.dev/docs/gpt-researcher/frontend/introduction"
+  ],
+  "demo_links": [
+    "https://www.loom.com/share/6a3385db4e8747a1913dd85a7834846f?sid=a740fd5b-2aa3-457e-8fb7-86976f59f9b8"
+  ],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "bash",
+      "code": "npx skills add assafelovic/gpt-researcher"
+    },
+    {
+      "language": "bash",
+      "code": "git clone https://github.com/assafelovic/gpt-researcher.git\n    cd gpt-researcher"
+    },
+    {
+      "language": "bash",
+      "code": "export OPENAI_API_KEY={Your OpenAI API Key here}\n    export TAVILY_API_KEY={Your Tavily API Key here}"
+    },
+    {
+      "language": "bash",
+      "code": "# export LANGCHAIN_TRACING_V2=true\n    # export LANGCHAIN_API_KEY={Your LangChain API Key here}"
+    },
+    {
+      "language": "bash",
+      "code": "export OPENAI_BASE_URL={Your custom API base URL here}"
+    },
+    {
+      "language": "bash",
+      "code": "pip install -r requirements.txt\n    python -m uvicorn main:app --reload"
+    },
+    {
+      "language": "bash",
+      "code": "pip install gpt-researcher"
+    },
+    {
+      "language": "python",
+      "code": "...\nfrom gpt_researcher import GPTResearcher\n\nquery = \"why is Nvidia stock going up?\"\nresearcher = GPTResearcher(query=query)\n# Conduct research on the given query\nresearch_result = await researcher.conduct_research()\n# Write the report\nreport = await researcher.write_report()\n..."
+    },
+    {
+      "language": "bash",
+      "code": "export RETRIEVER=tavily,mcp  # Enable hybrid web + MCP research"
+    },
+    {
+      "language": "python",
+      "code": "from gpt_researcher import GPTResearcher\nimport asyncio\nimport os\n\nasync def mcp_research_example():\n    # Enable MCP with web search\n    os.environ[\"RETRIEVER\"] = \"tavily,mcp\"\n    \n    researcher = GPTResearcher(\n        query=\"What are the top open source web research agents?\",\n        mcp_configs=[\n            {\n                \"name\": \"github\",\n                \"command\": \"npx\",\n                \"args\": [\"-y\", \"@modelcontextprotocol/server-github\"],\n                \"env\": {\"GITHUB_TOKEN\": os.g"
+    },
+    {
+      "language": "bash",
+      "code": "# Enable in your .env file\nIMAGE_GENERATION_ENABLED=true\nGOOGLE_API_KEY=your_google_api_key\nIMAGE_GENERATION_MODEL=models/gemini-2.5-flash-image"
+    },
+    {
+      "language": "bash",
+      "code": "docker-compose up --build"
+    },
+    {
+      "language": "bash",
+      "code": "docker compose up --build"
+    },
+    {
+      "language": "bash",
+      "code": "export DOC_PATH=\"./my-docs\""
+    },
+    {
+      "language": "bash",
+      "code": "export LANGCHAIN_TRACING_V2=true\n   export LANGCHAIN_API_KEY=your_api_key\n   export LANGCHAIN_PROJECT=\"gpt-researcher\""
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:27:29.838935",
+  "keywords": [],
+  "search_text": "   📝 generate detailed research reports using web and local documents. 🖼️ smart image scraping and filtering for reports. 🍌 **ai-generated inline images** using google gemini (nano banana) for visual illustrations. 📜 generate detailed reports exceeding 2,000 words. 🌐 aggregate over 20 sources for objective conclusions. 🖥️ frontend available in lightweight (html/css/js) and production-ready (nextjs + tailwind) versions. 🔍 javascript-enabled web scraping. 📂 maintains memory and context throughout research. 📄 export reports to pdf, word, and other formats. <div align=\"center\" id=\"top\">\n\n<img src=\"https://github.com/assafelovic/gpt-researcher/assets/13554167/20af8286-b386-44a5-9a83-3be1365139c3\" alt=\"logo\" width=\"80\">"
+}

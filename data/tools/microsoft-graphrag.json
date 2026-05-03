@@ -1,0 +1,45 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "👉 [Microsoft Research Blog Post](https://www.microsoft.com/en-us/research/blog/graphrag-unlocking-llm-discovery-on-narrative-private-data/)<br/> 👉 [Read the docs](https://microsoft.github.io/graphrag)<br/> 👉 [GraphRAG Arxiv](https://arxiv.org/pdf/2404.16130)  <div align=\"left\">   <a href=\"https://pypi.org/project/graphrag/\">     <img alt=\"PyPI - Version\" src=\"https://img.shields.io/pypi/v/graphrag\">   </a>   <a href=\"https://pypi.org/project/graphrag/\">     <img alt=\"PyPI - Downloads\" src=\"ht...",
+  "features": [],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [],
+  "requirements": {
+    "python_version": null,
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [
+    "https://microsoft.github.io/graphrag",
+    "https://microsoft.github.io/graphrag/prompt_tuning/overview/",
+    "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general"
+  ],
+  "demo_links": [],
+  "usage_examples": [],
+  "code_examples": [],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:28:53.103276",
+  "keywords": [],
+  "search_text": "    "
+}

@@ -1,0 +1,54 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "<div align=\"center\">   <a href=\"https://www.langchain.com/langgraph\">     <picture>       <source media=\"(prefers-color-scheme: dark)\" srcset=\".github/images/logo-dark.svg\">       <source media=\"(prefers-color-scheme: light)\" srcset=\".github/images/logo-light.svg\">       <img alt=\"LangGraph Logo\" src=\".github/images/logo-dark.svg\" width=\"50%\">     </picture>   </a> </div>  <div align=\"center\">   <h3>Low-level orchestration framework for building stateful agents.</h3> </div>  <div align=\"cente...",
+  "features": [],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [
+    "-U"
+  ],
+  "requirements": {
+    "python_version": null,
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [
+    "https://docs.langchain.com/oss/python/langchain/agents",
+    "https://docs.langchain.com/oss/javascript/langgraph/overview",
+    "https://docs.langchain.com/oss/python/langgraph/overview",
+    "https://docs.langchain.com/oss/python/learn",
+    "https://docs.langchain.com/oss/python/contributing/overview"
+  ],
+  "demo_links": [],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "bash",
+      "code": "pip install -U langgraph"
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:26:14.718018",
+  "keywords": [],
+  "search_text": "    <div align=\"center\">\n  <a href=\"https://www.langchain.com/langgraph\">\n    <picture>\n      <source media=\"(prefers-color-scheme: dark)\" srcset=\".github/images/logo-dark.svg\">\n      <source media=\"(prefers-color-scheme: light)\" srcset=\".github/images/logo-light.svg\">\n      <img alt=\"langgraph logo\" src=\".github/images/logo-dark.svg\" width=\"50%\">\n    </picture>\n  </a>\n</div>\n\n<div align=\"center\">\n  <h3>low-level orchestration framework for building stateful agents.</h3>\n</div>\n\n<div align=\"center\">\n  <a href=\"https://opensource.org/licenses/mit\" target=\"_blank\"><img src=\"https://img.shields.io/pypi/l/langgraph\" alt=\"pypi - license\"></a>\n  <a href=\"https://pypistats.org/packages/langgraph\" target=\"_blank\"><img src=\"https://img.shields.io/pepy/dt/langgraph\" alt=\"pypi - downloads\"></a>\n  <a href=\"https://pypi.org/project/langgraph/\" target=\"_blank\"><img src=\"https://img.shields.io/pypi/v/langgraph.svg?label=%20\" alt=\"version\"></a>\n  <a href=\"https://x.com/langchain_oss\" target=\"_blank\"><img src=\"https://img.shields.io/twitter/url/https/twitter.com/langchain_oss.svg?style=social&label=follow%20%40langchain\" alt=\"twitter / x\"></a>\n</div>\n\n<br>\n\ntrusted by companies shaping the future of agents – including klarna, replit, elastic, and more – langgraph is a low-level orchestration framework for building, managing, and deploying long-running, stateful agents.\n\n```bash\npip install -u langgraph\n```\n\nif you're looking to quickly build agents with langchain's `create_agent` (built on langgraph), check out the [langchain agents documentation](https://docs.langchain.com/oss/python/langchain/agents).\n\n> [!note]\n> looking for the js/ts library? check out [langgraph.js](https://github.com/langchain-ai/langgraphjs) and the [js docs](https://docs.langchain.com/oss/javascript/langgraph/overview)."
+}

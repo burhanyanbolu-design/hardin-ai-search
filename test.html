@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hardin - Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        input {
+            width: 70%;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .result {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .result h3 {
+            margin: 0 0 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>🤖 Hardin - Test Search</h1>
+    
+    <div>
+        <input type="text" id="searchInput" placeholder="Search for AI tools..." value="chatbot">
+        <button onclick="search()">Search</button>
+    </div>
+    
+    <div id="results"></div>
+    
+    <script>
+        async function search() {
+            const query = document.getElementById('searchInput').value;
+            const resultsDiv = document.getElementById('results');
+            
+            resultsDiv.innerHTML = '<p>Searching...</p>';
+            
+            try {
+                const response = await fetch('/api/search?q=' + query);
+                const data = await response.json();
+                
+                if (data.results.length === 0) {
+                    resultsDiv.innerHTML = '<p>No results found</p>';
+                    return;
+                }
+                
+                let html = '<h2>Found ' + data.total_results + ' results:</h2>';
+                
+                data.results.forEach(tool => {
+                    html += '<div class="result">';
+                    html += '<h3>' + tool.name + ' ⭐ ' + (tool.stars || 0).toLocaleString() + '</h3>';
+                    html += '<p>' + (tool.tagline || tool.description || 'No description') + '</p>';
+                    html += '<a href="' + tool.github_url + '" target="_blank">View on GitHub</a>';
+                    html += '</div>';
+                });
+                
+                resultsDiv.innerHTML = html;
+                
+            } catch (error) {
+                resultsDiv.innerHTML = '<p style="color: red;">Error: ' + error.message + '</p>';
+                console.error('Error:', error);
+            }
+        }
+        
+        // Auto-search on load
+        window.onload = function() {
+            search();
+        };
+    </script>
+</body>
+</html>

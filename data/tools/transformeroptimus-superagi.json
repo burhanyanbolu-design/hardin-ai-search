@@ -1,0 +1,85 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "<p align=\"center\">   <a href=\"https://superagi.com//#gh-light-mode-only\">     <img src=\"https://superagi.com/wp-content/uploads/2023/05/Logo-dark.svg\" width=\"318px\" alt=\"SuperAGI logo\" />   </a>   <a href=\"https://superagi.com//#gh-dark-mode-only\">     <img src=\"https://superagi.com/wp-content/uploads/2023/05/Logo-light.svg\" width=\"318px\" alt=\"SuperAGI logo\" />   </a>  </p>  <p align=\"center\"><i>Open-source framework to build, manage and run useful Autonomous AI Agents</i></p>       <p align=...",
+  "features": [],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [],
+  "requirements": {
+    "python_version": null,
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [
+      "aiohttp",
+      "aiosignal",
+      "alembic",
+      "amqp",
+      "anyio",
+      "apiclient",
+      "appdirs",
+      "async-timeout",
+      "attrs",
+      "beautifulsoup4",
+      "billiard",
+      "boto3",
+      "botocore",
+      "bs4",
+      "celery",
+      "certifi",
+      "cffi",
+      "charset-normalizer",
+      "click",
+      "click-didyoumean"
+    ],
+    "javascript": [
+      "axios",
+      "react-toastify"
+    ],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [
+    "https://superagi.com/docs/",
+    "https://github.com/TransformerOptimus/SuperAGI/blob/main/CONTRIBUTING.md"
+  ],
+  "demo_links": [],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "unknown",
+      "code": "git clone https://github.com/TransformerOptimus/SuperAGI.git"
+    },
+    {
+      "language": "unknown",
+      "code": "cd SuperAGI"
+    },
+    {
+      "language": "unknown",
+      "code": "docker compose -f docker-compose.yaml up --build"
+    },
+    {
+      "language": "unknown",
+      "code": "docker compose -f docker-compose-gpu.yml up --build"
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:27:37.165808",
+  "keywords": [],
+  "search_text": "    <p align=\"center\">\n  <a href=\"https://superagi.com//#gh-light-mode-only\">\n    <img src=\"https://superagi.com/wp-content/uploads/2023/05/logo-dark.svg\" width=\"318px\" alt=\"superagi logo\" />\n  </a>\n  <a href=\"https://superagi.com//#gh-dark-mode-only\">\n    <img src=\"https://superagi.com/wp-content/uploads/2023/05/logo-light.svg\" width=\"318px\" alt=\"superagi logo\" />\n  </a>\n\n</p>\n\n<p align=\"center\"><i>open-source framework to build, manage and run useful autonomous ai agents</i></p>\n    \n\n<p align=\"center\">\n<a href=\"https://superagi.com\"> <img src=\"https://superagi.com/wp-content/uploads/2023/08/website.svg\"></a>\n<a href=\"https://app.superagi.com\"> <img src=\"https://superagi.com/wp-content/uploads/2023/07/cloud.svg\"></a>\n<a href=\"https://marketplace.superagi.com/\"> <img src=\"https://superagi.com/wp-content/uploads/2023/08/marketplace.svg\"></a>\n<a href=\"https://superagi.com/docs/\"> <img src=\"https://superagi.com/wp-content/uploads/2023/08/docs.svg\"></a>\n<a href=\"https://documenter.getpostman.com/view/28438662/2s9xy6rqp5\"> <img src=\"https://superagi.com/wp-content/uploads/2023/08/apis.svg\"></a>\n</p>\n\n<p align=\"center\">\n<a href=\"https://github.com/transformeroptimus/superagi/fork\" target=\"blank\">\n<img src=\"https://img.shields.io/github/forks/transformeroptimus/superagi?style=for-the-badge\" alt=\"superagi forks\"/>\n</a>\n\n<a href=\"https://github.com/transformeroptimus/superagi/stargazers\" target=\"blank\">\n<img src=\"https://img.shields.io/github/stars/transformeroptimus/superagi?style=for-the-badge\" alt=\"superagi stars\"/>\n</a>\n<a href='https://github.com/transformeroptimus/superagi/releases'>\n<img src='https://img.shields.io/github/release/transformeroptimus/superagi?&label=latest&style=for-the-badge'>\n</a>\n\n<a href=\"https://github.com/transformeroptimus/superagi/commits\" target=\"blank\">\n<img src=\"https://img.shields.io/github/commits-since/transformeroptimus/superagi/v0.0.11.svg?style=for-the-badge\" alt=\"superagi commits\"/>\n</a>\n</p>\n\n<p align=\"center\"><b>follow superagi </b></p>\n\n<p align=\"center\">\n<a href=\"https://twitter.com/_superagi\" target=\"blank\">\n<img src=\"https://img.shields.io/twitter/follow/_superagi?label=follow: _superagi&style=social\" alt=\"follow _superagi\"/>\n</a>\n<a href=\"https://www.reddit.com/r/super_agi\" target=\"_blank\"><img src=\"https://img.shields.io/twitter/url?label=/r/super_agi&logo=reddit&style=social&url=https://github.com/transformeroptimus/superagi\"/></a>\n\n<a href=\"https://discord.gg/dxbre5bhjc\" target=\"blank\">\n<img src=\"https://img.shields.io/discord/1107593006032355359?label=join%20superagi&logo=discord&style=social\" alt=\"join superagi discord community\"/>\n</a>\n<a href=\"https://www.youtube.com/@_superagi\" target=\"_blank\"><img src=\"https://img.shields.io/twitter/url?label=youtube&logo=youtube&style=social&url=https://github.com/transformeroptimus/superagi\"/></a>\n</p>\n\n<p align=\"center\"><b>connect with the creator </b></p>\n\n<p align=\"center\">\n<a href=\"https://twitter.com/ishaanbhola\" target=\"blank\">\n<img src=\"https://img.shields.io/twitter/follow/ishaanbhola?label=follow: ishaanbhola&style=social\" alt=\"follow ishaanbhola\"/>\n</a>\n</p>\n\n<p align=\"center\"><b>share superagi repository</b></p>\n\n<p align=\"center\">\n\n<a href=\"https://twitter.com/intent/tweet?text=check%20this%20github%20repository%20out.%20superagi%20-%20let%27s%20you%20easily%20build,%20manage%20and%20run%20useful%20autonomous%20ai%20agents.&url=https://github.com/transformeroptimus/superagi&hashtags=superagi,agi,autonomics,future\" target=\"blank\">\n<img src=\"https://img.shields.io/twitter/follow/_superagi?label=share repo on twitter&style=social\" alt=\"follow _superagi\"/></a> \n<a href=\"https://t.me/share/url?text=check%20this%20github%20repository%20out.%20superagi%20-%20let%27s%20you%20easily%20build,%20manage%20and%20run%20useful%20autonomous%20ai%20agents.&url=https://github.com/transformeroptimus/superagi\" target=\"_blank\"><img src=\"https://img.shields.io/twitter/url?label=telegram&logo=telegram&style=social&url=https://github.com/transformeroptimus/superagi\" alt=\"share on telegram\"/></a>\n<a href=\"https://api.whatsapp.com/send?text=check%20this%20github%20repository%20out.%20superagi%20-%20let's%20you%20easily%20build,%20manage%20and%20run%20useful%20autonomous%20ai%20agents.%20https://github.com/transformeroptimus/superagi\"><img src=\"https://img.shields.io/twitter/url?label=whatsapp&logo=whatsapp&style=social&url=https://github.com/transformeroptimus/superagi\" /></a> <a href=\"https://www.reddit.com/submit?url=https://github.com/transformeroptimus/superagi&title=check%20this%20github%20repository%20out.%20superagi%20-%20let's%20you%20easily%20build,%20manage%20and%20run%20useful%20autonomous%20ai%20agents.\n\" target=\"blank\">\n<img src=\"https://img.shields.io/twitter/url?label=reddit&logo=reddit&style=social&url=https://github.com/transformeroptimus/superagi\" alt=\"share on reddit\"/>\n</a> <a href=\"mailto:?subject=check%20this%20github%20repository%20out.&body=superagi%20-%20let%27s%20you%20easily%20build,%20manage%20and%20run%20useful%20autonomous%20ai%20agents.%3a%0ahttps://github.com/transformeroptimus/superagi\" target=\"_blank\"><img src=\"https://img.shields.io/twitter/url?label=gmail&logo=gmail&style=social&url=https://github.com/transformeroptimus/superagi\"/></a> <a href=\"https://www.buymeacoffee.com/superagi\" target=\"_blank\"><img src=\"https://cdn.buymeacoffee.com/buttons/default-orange.png\" alt=\"buy me a coffee\" height=\"23\" width=\"100\" style=\"border-radius:1px\"></a>\n\n</p>\n\n<hr>"
+}

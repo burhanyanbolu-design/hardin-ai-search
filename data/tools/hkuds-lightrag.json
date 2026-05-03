@@ -1,0 +1,89 @@
+{
+  "name": null,
+  "full_name": null,
+  "tagline": null,
+  "category": "other",
+  "description": "<div align=\"center\">  <div style=\"margin: 20px 0;\">   <img src=\"./assets/logo.png\" width=\"120\" height=\"120\" alt=\"LightRAG Logo\" style=\"border-radius: 20px; box-shadow: 0 8px 32px rgba(0, 217, 255, 0.3);\"> </div>",
+  "features": [],
+  "use_cases": [],
+  "language": null,
+  "license": null,
+  "installation": [
+    "-e",
+    "lightrag-hku",
+    "\"lightrag-hku[api]\""
+  ],
+  "requirements": {
+    "python_version": null,
+    "node_version": null,
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [],
+    "javascript": [],
+    "other": []
+  },
+  "stars": null,
+  "forks": null,
+  "contributors": 0,
+  "last_updated": null,
+  "has_tests": null,
+  "has_docs": false,
+  "has_ci": null,
+  "github_url": "https://github.com/None",
+  "homepage": null,
+  "documentation_links": [
+    "./docs/OfflineDeployment.md",
+    " https://github.com/HKUDS/LightRAG/pkgs/container/lightrag",
+    "./docs/DockerDeployment.md#verify-official-ghcr-images-with-cosign",
+    "./docs/InteractiveSetup.md",
+    "./docs/ProgramingWithCore.md",
+    "./docs/AdvancedFeatures.md",
+    "./docs/AdvancedFeatures.md",
+    "./docs/Reproduce.md"
+  ],
+  "demo_links": [
+    "https://www.youtube.com/watch?v=g21royNJ4fw"
+  ],
+  "usage_examples": [],
+  "code_examples": [
+    {
+      "language": "bash",
+      "code": "### Install LightRAG Server as tool using uv (recommended)\nuv tool install \"lightrag-hku[api]\"\n\n### Or using pip\n# python -m venv .venv\n# source .venv/bin/activate  # Windows: .venv\\Scripts\\activate\n# pip install \"lightrag-hku[api]\"\n\n### Build front-end artifacts\ncd lightrag_webui\nbun install --frozen-lockfile\nbun run build\ncd ..\n\n# Setup env file\n# Obtain the env.example file by downloading it from the GitHub repository root\n# or by copying it from a local source checkout.\ncp env.example .env  "
+    },
+    {
+      "language": "bash",
+      "code": "git clone https://github.com/HKUDS/LightRAG.git\ncd LightRAG\n\n# Bootstrap the development environment (recommended)\nmake dev\nsource .venv/bin/activate  # Activate the virtual environment (Linux/macOS)\n# Or on Windows: .venv\\Scripts\\activate\n\n# make dev installs the test toolchain plus the full offline stack\n# (API, storage backends, and provider integrations), then builds the frontend.\n# Run make env-base or copy env.example to .env before starting the server.\n\n# Equivalent manual steps with uv\n#"
+    },
+    {
+      "language": "bash",
+      "code": "git clone https://github.com/HKUDS/LightRAG.git\ncd LightRAG\ncp env.example .env  # Update the .env with your LLM and embedding configurations\n# modify LLM and Embedding settings in .env\ndocker compose up"
+    },
+    {
+      "language": "bash",
+      "code": "make env-base           # Required first step: LLM, embedding, reranker\nmake env-storage        # Optional: storage backends and database services\nmake env-server         # Optional: server port, auth, and SSL\nmake env-base-rewrite   # Optional: force-regenerate wizard-managed compose services\nmake env-storage-rewrite # Optional: force-regenerate wizard-managed compose services\nmake env-security-check # Optional: audit the current .env for security risks"
+    },
+    {
+      "language": "bash",
+      "code": "cd LightRAG\n# Note: uv sync automatically creates a virtual environment in .venv/\nuv sync\nsource .venv/bin/activate  # Activate the virtual environment (Linux/macOS)\n# Or on Windows: .venv\\Scripts\\activate\n\n# Or: pip install -e ."
+    },
+    {
+      "language": "bash",
+      "code": "uv pip install lightrag-hku\n# Or: pip install lightrag-hku"
+    },
+    {
+      "language": "bash",
+      "code": "### you should run the demo code with project folder\ncd LightRAG\n### provide your API-KEY for OpenAI\nexport OPENAI_API_KEY=\"sk-...your_opeai_key...\"\n### download the demo document of \"A Christmas Carol\" by Charles Dickens\ncurl https://raw.githubusercontent.com/gusye1234/nano-graphrag/main/tests/mock_data.txt > ./book.txt\n### run the demo code\npython examples/lightrag_openai_demo.py"
+    },
+    {
+      "language": "python",
+      "code": "@article{guo2024lightrag,\ntitle={LightRAG: Simple and Fast Retrieval-Augmented Generation},\nauthor={Zirui Guo and Lianghao Xia and Yanhua Yu and Tu Ao and Chao Huang},\nyear={2024},\neprint={2410.05779},\narchivePrefix={arXiv},\nprimaryClass={cs.IR}\n}"
+    }
+  ],
+  "topics": [],
+  "created_at": null,
+  "extracted_at": "2026-05-02T20:28:49.019268",
+  "keywords": [],
+  "search_text": "    <div align=\"center\">\n\n<div style=\"margin: 20px 0;\">\n  <img src=\"./assets/logo.png\" width=\"120\" height=\"120\" alt=\"lightrag logo\" style=\"border-radius: 20px; box-shadow: 0 8px 32px rgba(0, 217, 255, 0.3);\">\n</div>"
+}
