@@ -10,22 +10,40 @@ import json
 from typing import Dict, List, Optional
 from datetime import datetime
 import time
+import os
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 
 class GitHubKnowledgeExtractor:
     """
     Extracts structured knowledge from GitHub repositories
-    No API key needed - uses public endpoints
+    Uses GitHub token for higher rate limits (5000/hour vs 60/hour)
     """
     
     def __init__(self):
         self.base_url = "https://api.github.com"
         self.raw_url = "https://raw.githubusercontent.com"
         self.session = requests.Session()
-        self.session.headers.update({
+        
+        # Get GitHub token from environment
+        github_token = os.getenv('GITHUB_TOKEN')
+        
+        headers = {
             'User-Agent': 'AI-Tool-Search-Engine/1.0',
             'Accept': 'application/vnd.github.v3+json'
-        })
+        }
+        
+        # Add token if available
+        if github_token:
+            headers['Authorization'] = f'token {github_token}'
+            print("✅ Using GitHub token - 5000 requests/hour")
+        else:
+            print("⚠️  No GitHub token - limited to 60 requests/hour")
+        
+        self.session.headers.update(headers)
     
     def extract_repo_knowledge(self, github_url: str) -> Dict:
         """

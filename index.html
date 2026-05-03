@@ -796,26 +796,25 @@
             messageDiv.style.color = 'var(--accent-primary)';
             
             try {
-                const response = await fetch('/api/contribute/discover', {
+                // TODO: Replace with your AWS Ubuntu server IP
+                const AWS_SUBMISSION_API = 'http://YOUR_AWS_IP:5001/api/submit';
+                
+                const response = await fetch(AWS_SUBMISSION_API, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify({
-                        contributor: {
-                            name: 'Community User',
-                            type: 'human',
-                            version: '1.0'
-                        },
-                        github_url: url,
-                        reason: 'Community submission via web form'
+                        url: url,
+                        contributor_name: 'Community User',
+                        source: 'hardin_website'
                     })
                 });
                 
                 const data = await response.json();
                 
                 if (response.ok) {
-                    messageDiv.textContent = `✅ Success! "${data.profile?.name || 'Your tool'}" has been added to our database!`;
+                    messageDiv.textContent = `✅ ${data.message || 'Success! Your tool has been added!'}`;
                     messageDiv.className = 'submit-message success';
                     urlInput.value = '';
                     
@@ -823,6 +822,12 @@
                     setTimeout(() => {
                         searchTools();
                     }, 2000);
+                } else if (response.status === 409) {
+                    messageDiv.textContent = `ℹ️ ${data.message || 'This tool already exists in our database'}`;
+                    messageDiv.className = 'submit-message';
+                    messageDiv.style.background = 'rgba(59, 130, 246, 0.1)';
+                    messageDiv.style.borderColor = '#3b82f6';
+                    messageDiv.style.color = '#3b82f6';
                 } else {
                     messageDiv.textContent = `❌ Error: ${data.error || 'Failed to submit tool'}`;
                     messageDiv.className = 'submit-message error';

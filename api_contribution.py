@@ -153,7 +153,23 @@ def contribute_discover():
         # Save tool profile
         tool_name = profile.get('name', 'unknown').lower().replace(' ', '-')
         tool_file = f"{TOOLS_DIR}/{tool_name}.json"
-        save_json(tool_file, profile)
+        
+        # Check if running on Vercel (read-only filesystem)
+        is_vercel = os.environ.get('VERCEL') == '1'
+        
+        if is_vercel:
+            # On Vercel, we can't write to filesystem
+            # Return success but note that manual addition is needed
+            return jsonify({
+                "status": "pending",
+                "message": f"Thank you for submitting '{profile.get('name')}'! Your submission has been received and will be reviewed shortly.",
+                "tool_name": tool_name,
+                "profile": profile,
+                "note": "Submissions are manually reviewed before being added to the database."
+            }), 202  # 202 Accepted
+        else:
+            # Local development - save to file
+            save_json(tool_file, profile)
         
         # Record contribution
         contribution_record = {
@@ -166,11 +182,13 @@ def contribute_discover():
             "status": "approved"
         }
         
-        contribution_file = f"{CONTRIBUTIONS_DIR}/{datetime.now().strftime('%Y%m%d_%H%M%S')}_{agent_id}.json"
-        save_json(contribution_file, contribution_record)
-        
-        # Update agent stats
-        update_agent_stats(agent_id, agent_name, "discovery")
+        if not is_vercel:
+            # Only save contribution record locally
+            contribution_file = f"{CONTRIBUTIONS_DIR}/{datetime.now().strftime('%Y%m%d_%H%M%S')}_{agent_id}.json"
+            save_json(contribution_file, contribution_record)
+            
+            # Update agent stats
+            update_agent_stats(agent_id, agent_name, "discovery")
         
         return jsonify({
             "status": "success",
