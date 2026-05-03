@@ -79,7 +79,7 @@ def health_check():
 @app.route('/api/contribute/discover', methods=['POST'])
 def contribute_discover():
     """
-    AI agents submit newly discovered tools
+    AI agents and users submit newly discovered tools
     
     Request body:
     {
@@ -88,32 +88,59 @@ def contribute_discover():
             "type": "ai_agent",
             "version": "3.5"
         },
-        "github_url": "https://github.com/user/repo",
+        "github_url": "https://github.com/user/repo" OR any URL,
         "reason": "High activity, trending"
     }
     """
     data = request.json
     
-    # Validate request
-    if not data.get('github_url'):
-        return jsonify({"error": "github_url is required"}), 400
+    # Validate request - accept 'github_url' or 'url' parameter
+    submitted_url = data.get('github_url') or data.get('url')
+    if not submitted_url:
+        return jsonify({"error": "URL is required"}), 400
     
     contributor = data.get('contributor', {})
     agent_name = contributor.get('name', 'anonymous')
     agent_id = generate_agent_id(agent_name)
     
     print(f"🤖 Contribution from: {agent_name}")
-    print(f"🔗 GitHub URL: {data['github_url']}")
+    print(f"🔗 URL: {submitted_url}")
     
-    # Extract knowledge from GitHub
+    # Check if it's a GitHub URL
+    is_github = 'github.com' in submitted_url.lower()
+    
+    # Extract knowledge
     try:
-        if extractor is None:
-            return jsonify({"error": "GitHub extractor not available in serverless environment"}), 503
+        if is_github:
+            # Use GitHub extractor for GitHub URLs
+            if extractor is None:
+                return jsonify({"error": "GitHub extractor not available in serverless environment"}), 503
+                
+            profile = extractor.extract_repo_knowledge(submitted_url)
             
-        profile = extractor.extract_repo_knowledge(data['github_url'])
-        
-        if 'error' in profile:
-            return jsonify({"error": profile['error']}), 400
+            if 'error' in profile:
+                return jsonify({"error": profile['error']}), 400
+        else:
+            # For non-GitHub URLs, create a basic profile
+            # Extract domain name as tool name
+            from urllib.parse import urlparse
+            parsed = urlparse(submitted_url)
+            domain = parsed.netloc.replace('www.', '')
+            tool_name = domain.split('.')[0].title()
+            
+            profile = {
+                "name": tool_name,
+                "url": submitted_url,
+                "github_url": submitted_url,  # Use submitted URL as reference
+                "description": f"AI tool hosted at {domain}",
+                "tagline": f"AI tool submitted by community",
+                "category": "ai_tool",
+                "topics": ["ai", "community-submitted"],
+                "language": "Unknown",
+                "stars": 0,
+                "is_community_submission": True,
+                "submission_url": submitted_url
+            }
         
         # Add contribution metadata
         profile['contribution'] = {
