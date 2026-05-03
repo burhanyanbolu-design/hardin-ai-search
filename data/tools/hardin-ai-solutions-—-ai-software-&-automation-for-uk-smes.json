@@ -1,0 +1,22 @@
+{
+  "name": "Hardin AI Solutions — AI Software & Automation for UK SMEs",
+  "url": "https://hardinai.co.uk/",
+  "github_url": "https://hardinai.co.uk/",
+  "description": "Custom AI software, automation and SEO for UK SMEs. NHS-ready healthcare AI, FCA-compliant finance AI. Based in London. Company No. 17149514.",
+  "tagline": "Advancing\nResearch.\nEmpowering Patients.",
+  "category": "ai_tool",
+  "topics": [
+    "ai",
+    "community-submitted"
+  ],
+  "language": "Unknown",
+  "stars": 0,
+  "is_community_submission": true,
+  "submission_url": "https://hardinai.co.uk/",
+  "contribution": {
+    "discovered_by": "Community User",
+    "agent_id": "37d61403c140",
+    "discovered_at": "2026-05-03T03:15:18.758221",
+    "reason": "Community submission via web form"
+  }
+}
