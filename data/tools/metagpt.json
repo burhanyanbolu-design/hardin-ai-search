@@ -1,0 +1,131 @@
+{
+  "name": "MetaGPT",
+  "full_name": "FoundationAgents/MetaGPT",
+  "tagline": "🌟 The Multi-Agent Framework: First AI Software Company, Towards Natural Language Programming",
+  "category": "llm_framework",
+  "description": "",
+  "features": [],
+  "use_cases": [
+    "code_generation"
+  ],
+  "language": "Python",
+  "license": "MIT License",
+  "installation": [
+    "--upgrade",
+    "pip install --upgrade metagpt\n# or `pip install --upgrade git+https://github.com/geekan/MetaGPT.git`\n# or `git clone https://github.com/geekan/MetaGPT && cd MetaGPT && pip install --upgrade -e .`"
+  ],
+  "requirements": {
+    "python_version": "3.9",
+    "node_version": ".",
+    "system_requirements": [],
+    "dependencies": []
+  },
+  "dependencies": {
+    "python": [
+      "aiohttp",
+      "channels",
+      "faiss_cpu",
+      "fire",
+      "typer",
+      "lancedb",
+      "loguru",
+      "meilisearch",
+      "numpy~=1.26.4",
+      "openai~=1.64.0",
+      "openpyxl~=3.1.5",
+      "beautifulsoup4",
+      "pandas",
+      "pydantic",
+      "python_docx",
+      "PyYAML",
+      "setuptools",
+      "tenacity",
+      "tiktoken",
+      "tqdm"
+    ],
+    "javascript": [],
+    "other": []
+  },
+  "stars": 67638,
+  "forks": 8594,
+  "contributors": 30,
+  "last_updated": "2026-05-03T02:05:39Z",
+  "has_tests": true,
+  "has_docs": true,
+  "has_ci": true,
+  "github_url": "https://github.com/FoundationAgents/MetaGPT",
+  "homepage": "https://atoms.dev/",
+  "documentation_links": [
+    "https://docs.deepwisdom.ai/main/en/guide/get_started/installation.html#install-with-docker",
+    "https://docs.deepwisdom.ai/main/en/guide/get_started/configuration.html",
+    "https://docs.deepwisdom.ai/main/en/",
+    "https://docs.deepwisdom.ai/main/en/guide/tutorials/agent_101.html",
+    "https://docs.deepwisdom.ai/main/en/guide/tutorials/multi_agent_101.html"
+  ],
+  "demo_links": [
+    "https://github.com/geekan/MetaGPT/blob/main/config/config2.example.yaml",
+    "https://github.com/geekan/MetaGPT/assets/2707039/5e8c1062-8c35-440f-bb20-2b0320f8d27d"
+  ],
+  "usage_examples": [
+    "metagpt \"Create a 2048 game\"  # this will create a repo in ./workspace",
+    "from metagpt.software_company import generate_repo\nfrom metagpt.utils.project_repo import ProjectRepo\n\nrepo: ProjectRepo = generate_repo(\"Create a 2048 game\")  # or ProjectRepo(\"<path>\")\nprint(repo)  # it will print the repo structure with files",
+    "import asyncio\nfrom metagpt.roles.di.data_interpreter import DataInterpreter\n\nasync def main():\n    di = DataInterpreter()\n    await di.run(\"Run data analysis on sklearn Iris dataset, include a plot\")\n\nasyncio.run(main())  # or await main() in a jupyter notebook setting"
+  ],
+  "code_examples": [
+    {
+      "language": "bash",
+      "code": "pip install --upgrade metagpt\n# or `pip install --upgrade git+https://github.com/geekan/MetaGPT.git`\n# or `git clone https://github.com/geekan/MetaGPT && cd MetaGPT && pip install --upgrade -e .`"
+    },
+    {
+      "language": "bash",
+      "code": "# Check https://docs.deepwisdom.ai/main/en/guide/get_started/configuration.html for more details\nmetagpt --init-config  # it will create ~/.metagpt/config2.yaml, just modify it to your needs"
+    },
+    {
+      "language": "yaml",
+      "code": "llm:\n  api_type: \"openai\"  # or azure / ollama / groq etc. Check LLMType for more options\n  model: \"gpt-4-turbo\"  # or gpt-3.5-turbo\n  base_url: \"https://api.openai.com/v1\"  # or forward url / other llm url\n  api_key: \"YOUR_API_KEY\""
+    },
+    {
+      "language": "bash",
+      "code": "metagpt \"Create a 2048 game\"  # this will create a repo in ./workspace"
+    },
+    {
+      "language": "python",
+      "code": "from metagpt.software_company import generate_repo\nfrom metagpt.utils.project_repo import ProjectRepo\n\nrepo: ProjectRepo = generate_repo(\"Create a 2048 game\")  # or ProjectRepo(\"<path>\")\nprint(repo)  # it will print the repo structure with files"
+    },
+    {
+      "language": "python",
+      "code": "import asyncio\nfrom metagpt.roles.di.data_interpreter import DataInterpreter\n\nasync def main():\n    di = DataInterpreter()\n    await di.run(\"Run data analysis on sklearn Iris dataset, include a plot\")\n\nasyncio.run(main())  # or await main() in a jupyter notebook setting"
+    },
+    {
+      "language": "bibtex",
+      "code": "@inproceedings{hong2024metagpt,\n      title={Meta{GPT}: Meta Programming for A Multi-Agent Collaborative Framework},\n      author={Sirui Hong and Mingchen Zhuge and Jonathan Chen and Xiawu Zheng and Yuheng Cheng and Jinlin Wang and Ceyao Zhang and Zili Wang and Steven Ka Shing Yau and Zijuan Lin and Liyang Zhou and Chenyu Ran and Lingfeng Xiao and Chenglin Wu and J{\\\"u}rgen Schmidhuber},\n      booktitle={The Twelfth International Conference on Learning Representations},\n      year={2024},\n      "
+    }
+  ],
+  "topics": [
+    "agent",
+    "gpt",
+    "llm",
+    "metagpt",
+    "multi-agent"
+  ],
+  "created_at": "2023-06-30T09:04:55Z",
+  "extracted_at": "2026-05-03T03:08:44.716260",
+  "keywords": [
+    "gpt",
+    "llm",
+    "framework",
+    "natural",
+    "language",
+    "programming",
+    "company",
+    "towards",
+    "multi-agent",
+    "software",
+    "first",
+    "agent",
+    "metagpt",
+    "python",
+    "multi"
+  ],
+  "search_text": "metagpt 🌟 the multi-agent framework: first ai software company, towards natural language programming agent gpt llm metagpt multi-agent  "
+}
