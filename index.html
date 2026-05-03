@@ -796,8 +796,8 @@
             messageDiv.style.color = 'var(--accent-primary)';
             
             try {
-                // AWS Ubuntu submission handler (port 8086)
-                const AWS_SUBMISSION_API = 'http://3.11.229.68:8086/api/submit';
+                // Use Vercel proxy to forward to AWS (solves HTTPS/HTTP mixed content issue)
+                const AWS_SUBMISSION_API = '/api/submit';
                 
                 const response = await fetch(AWS_SUBMISSION_API, {
                     method: 'POST',
