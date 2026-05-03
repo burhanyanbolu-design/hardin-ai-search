@@ -796,8 +796,8 @@
             messageDiv.style.color = 'var(--accent-primary)';
             
             try {
-                // AWS Ubuntu submission handler
-                const AWS_SUBMISSION_API = 'http://3.11.229.68:5001/api/submit';
+                // AWS Ubuntu submission handler (port 5002)
+                const AWS_SUBMISSION_API = 'http://3.11.229.68:5002/api/submit';
                 
                 const response = await fetch(AWS_SUBMISSION_API, {
                     method: 'POST',
