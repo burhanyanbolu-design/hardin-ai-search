@@ -182,8 +182,8 @@ def get_stats():
 if __name__ == '__main__':
     print("🚀 Hardin Submission Handler")
     print("📡 Starting server on AWS Ubuntu...")
-    print("🔗 Endpoint: http://3.11.229.68:5002/api/submit")
+    print("🔗 Endpoint: http://3.11.229.68:8080/api/submit")
     print("💡 This server handles tool submissions from the website")
     
-    # Run on port 5002 (different from main API on 5001)
-    app.run(debug=True, host='0.0.0.0', port=5002)
+    # Run on port 8080 (commonly available port)
+    app.run(debug=True, host='0.0.0.0', port=8080)
